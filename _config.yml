@@ -1,0 +1,71 @@
+site: John Long
+url: http://johnzl.com/
+title: John Long's Personal Website
+author:
+  name: John Long
+  email: johnzl@protonmail.ch
+  url: www.johnzl.com
+permalink: pretty
+
+baseurl: ""
+
+# highlighter: rouge
+
+exclude:
+  - .jekyll-cache
+  
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap  
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+google_analytics:
+  tracking_id: UA-133439443-2
+
+contact:
+  email:
+    personal: johnzl@protonmail.ch
+  linkedin: 
+    username: jzl
+    link: https://www.linkedin.com/in/jzl/
+  github:
+    username: johnzl-777
+    link: https://github.com/johnzl-777
+  pgp_key:
+    link: https://keys.openpgp.org/search?q=johnzl%40protonmail.ch
+  pgp_fingerprint: "0xDA4692E85D0C8AB519569AACE609BC42EE457F4D"

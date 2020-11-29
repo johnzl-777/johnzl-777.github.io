@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<section class="post">
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+
+  {% for proj_category in site.data.projects %}
+    <h3 style="margin: 0rem 0; padding-top: 0.5em">
+      {% if proj_category.icon %}
+        <i class="{{ proj_category.icon }}"></i>
+      {% endif %}
+      {{proj_category.category}}
+    </h3>
+    <p>{{proj_category.description}}</p>
+    <table class="projects">
+      {% for project in proj_category.projects %}
+      <tr>
+        <td style="vertical-align:top; width:30%">
+            <p style="margin: 0rem; font-style: oblique">{{ project.name }}</p>
+        </td>
+        <td style="vertical-align:top; width:70%">
+            {{ project.description }}
+            <br/>
+            {% if project.links %}
+              {% for resource in project.links %}
+              <div style="padding-bottom:0.2em; padding-right:0.4em; float:left">
+              <a class="hvr-fade button" href="{{ resource.link }}"><i class="{{ resource.icon }}"></i> {{ resource.name }}</a>
+              </div>
+              {% endfor %}
+            {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% endfor %}
+</section>

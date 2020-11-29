@@ -1,0 +1,175 @@
+- category: Quantum Computing
+  icon: fas fa-atom
+  description: >
+    Things I've built related to Quantum Computing. A great deal of material is dedicated to
+    the Quantum Computing at Davis (QCaD) organization, although there are projects that I've deemed
+    unfit for organization usage that I use just for personal experimentation.
+  projects:
+    - name: Presentations/Lectures
+      description: >
+        Presentations/Lectures I've given to help develop an intuition behind Quantum Computing and some of its 
+        more confusing aspects
+      links:
+        - name: Quantum Computing Lectures
+          icon: fas fa-folder
+          link: https://johnzl-777.github.io/quantum-lectures
+    - name: ALALI 
+      description: >
+        Automated Loading assuming Atomic Level Interactions. Collaborated with others to produce a library for 
+        mapping molecules onto Quantum Computers. Contributed mapping software as well as circuit deconstruction
+        methods to avoid BRIDGE and SWAP gates.
+      links:
+        - name: Github
+          icon: fab fa-github 
+          link: https://github.com/QC-at-Davis/ALALI
+    - name: npquantum
+      description: >
+        A collection of mathematical tools for learning the math behind quantum circuits, built on numpy.
+        Contains demos used in the Quantum Computing at Davis "Circuits I" and "Circuits II" workshops.
+      links:
+        - name: Github      
+          icon: fab fa-github
+          link: https://github.com/Quantum-Computing-at-Davis/npquantum
+    - name: Workshops
+      description: >
+        A series of self-contained, software-oriented workshops introducing the 
+        fundamentals of Quantum Computing
+      links:
+        - name: Github
+          icon: fab fa-github
+          link: https://github.com/Quantum-Computing-at-Davis/Workshops
+    - name: EQEnv
+      description: All the Quantum Computing tools. All in one place.
+      links:
+        - name: Github
+          icon: fab fa-github
+          link: https://github.com/johnzl-777/EQEnv
+    - name: QCC
+      description: A (Work-In-Progress) guide to Quantum Computing for those with little to no background in math/CS
+      links:
+        - name: Github
+          icon: fab fa-github
+          link: https://github.com/QC-at-Davis/QCC
+        - name: Live Copy
+          icon: fas fa-book
+          link: https://qc-at-davis.github.io/QCC/
+
+- category: Hardware
+  icon: fas fa-microchip
+  description: Projects I've built that deal with computer hardware, both cutting-edge and legacy
+  projects:
+    - name: DINO CPU
+      description: >
+        Fixes and contributions for an educational variant of the RISC-V rv32i CPU, written in Chisel
+        and created by Professor Jason Lowe-Power at UC Davis
+      links: 
+        - name: Main Repository
+          icon: fab fa-github
+          link: https://github.com/jlpteaching/dinocpu
+        - name: Spring Quarter 2020
+          icon: fab fa-github
+          link: https://github.com/jlpteaching/dinocpu-sq20
+    - name: DRAMutils
+      description: > 
+        A library designed to let Arduino UNO compatible platforms perform Read, Write, and specialized memory operations
+        On DIP-Style DRAM chips (targeted for the Hitachi HM50256-15 chips)
+      links:
+        - name: Github
+          icon: fab fa-github
+          link: https://github.com/johnzl-777/DRAMutils
+    - name: SRAM Read-Write 
+      description: >
+        a program for the Arduino UNO that llows it to read and write to older generation DIP format SRAM chips 
+        (targeted for the UM6126AK-15 chips)
+      links:
+        - name: Github
+          icon: fab fa-github
+          link: https://github.com/johnzl-777/SRAM-Read-Write
+    - name: EPROM Dumper
+      description: >
+        A program for the Arduino MEGA to dump the contents of UV-erasable EPROM chips
+      links:
+        - name: Github
+          icon: fab fa-github
+          link: https://github.com/johnzl-777/EPROM-Dumper
+
+
+- category: Scientific Computing
+  icon: fas fa-flask
+  description: Progams and tools I've built related to scientific computation
+  projects:
+    - name: SEMF-Rust
+      description: > 
+        An implementation of the Semi-Empirical Mass Formula for prediciting nuclear binding energies
+        written in Rust
+      links:
+        - name: Github 
+          icon: fab fa-github
+          link: https://github.com/johnzl-777/SEMF-Rust
+    - name: Docker PyNE
+      description: Docker Environment for the PyNE nuclear science/engineering toolkit
+      links:
+        - name: Github
+          icon: fab fa-github
+          link: https://github.com/johnzl-777/PyNE-Docker
+
+- category: Blockchain
+  icon: fas fa-link
+  description: >
+    Material (mostly educational) that I've developed due to tinkering with blockchain technology or 
+    mainly due to workshops for Blockchain at Davis (BaD)
+  projects:
+    - name: ECS 189F
+      description: > 
+        UC Davis' "Introduction to Distributed Ledgers" course. Co-authored the curriculum as well as gave a talk on
+        how Ethereum works
+      links:
+        - name: Talk Video
+          icon: fab fa-youtube 
+          link: https://www.youtube.com/watch?v=itJl0T2l81E&feature=youtu.be&ab_channel=ExpoLabatUCDavis
+        - name: ECS 189F Guest Speaker List
+          icon: fas fa-file-alt
+          link: https://expolab.org/ecs189f-fall-2020/speakers.html
+    - name: Secure File Transfer-eR (SFTR)
+      description: >
+        a (partial) decentralized application dedicated to encrypted file transmission between individuals using
+        Ethereum, IPFS, and NaCl cryptographic libraries. Designed as part of a workshop hosted at 2018 SacHacks 
+        event on behalf of Blockchain at Davis (BaD)
+      links:
+        - name: Github
+          icon: fab fa-github
+          link: https://github.com/johnzl-777/SFTR
+        - name: Workshop Video
+          icon: fab fa-youtube
+          link: https://www.youtube.com/watch?v=uDn1Wbs-JQs&t=1691s
+        - name: Workshop Slides
+          icon: fas fa-file-powerpoint
+          link: https://docs.google.com/presentation/d/151NNx2ClKLabkYI-24sAfcZxfFKux01m_hKspaIQEl4/edit?usp=sharing
+    - name: Instructor Workshop Solidity Examples
+      description: >
+        a set of examples created for a workshop to train new instructors for Blockchain at Davis (BaD)
+      links:
+        - name: Github
+          icon: fab fa-github
+          link: https://github.com/Blockchain-at-Davis/Instructor-Workshop-Solidity-Examples
+
+- category: Web Development
+  icon: fas fa-globe
+  description: >
+    Projects I've made with an emphasis on current internet/web-based technology
+  projects:
+    - name: H+ 
+      description: >
+        The theme this website currently uses, designed for usage with the Jekyll static site generator.
+        Oriented towards those looking to showcase projects/work experience with a blog on top.
+      links:
+        - name: Github
+          icon: fab fa-github
+          link: https://github.com/johnzl-777/H-Plus
+    - name: Former Personal Website
+      description: >
+        My old personal website, built using Less, Slim, and Bootstrap
+      links:
+        - name: Github
+          icon: fab fa-github
+          link: https://github.com/johnzl-777/johnzl-website

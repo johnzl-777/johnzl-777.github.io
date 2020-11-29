@@ -1,0 +1,19 @@
+<header role="banner">
+      <!--<h1 class="logo">{{ site.title }}</h1>-->
+<nav role="navigation">
+<ul>
+   {% for item in site.data.navigation.links %}
+      <li>
+         <a href="{{ item.url }}"
+            {% if item.url == page.url %} 
+               class="active"
+            {% else %}
+               class="hvr-sweep-to-left"
+            {% endif %}>
+            {{ item.title }}
+         </a>
+      </li>
+   {% endfor %}
+</ul>
+</nav>
+</header>

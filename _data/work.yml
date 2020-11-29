@@ -1,0 +1,137 @@
+- position: Workshop Director and Lead Quantum Algorithm Investigator
+  business: Quantum Computing at UC Davis
+  location: Davis, California
+  duration: October 2019 - Present
+  description: 
+    - Pioneered curriculum for Quantum Computing at the collegiate level
+    - Hosted physical and remote workshops for 15+ students on Quantum Computing
+    - Investigated qubit topologies and error reduction for molecular simulations on quantum computers
+  extras:
+    - recorded-meeting:
+      button-text: Lectures/Presentations
+      url: https://johnzl-777.github.io/quantum-lectures
+      icon: fas fa-folder
+    - workshops:
+      button-text: Software Workshops
+      url: https://github.com/Quantum-Computing-at-Davis/Workshops
+      icon: fab fa-github
+    - workshop-environment:
+      button-text: Workshop Environment
+      url: https://github.com/Quantum-Computing-at-Davis/Hephaestus
+      icon: fab fa-github
+    - ALALI:
+      button-text: ALALI 
+      url: https://github.com/QC-at-Davis/ALALI
+      icon: fab fa-github
+    - quantum-computing-codex:
+      button-text: Quantum Computing Codex
+      url: https://qc-at-davis.github.io/QCC/
+      icon: fas fa-book
+
+      
+- position: Head Instructor
+  business: Blockchain at Davis
+  location: Davis, California
+  duration: Oct 2018 - Present
+  description:
+    - Pioneered curriculum for university students learning Ethereum technology and blockchain development
+    - Accelerated blockchain project development through one-on-one tutoring
+  extras:
+    - solidity-examples:
+      button-text: Solidity Examples
+      url: https://github.com/Blockchain-at-Davis/Instructor-Workshop-Solidity-Examples
+      icon: fab fa-github
+    - BaD-DDE:
+      button-text: dApp Development Environment (DDE)
+      url: https://github.com/Blockchain-at-Davis/BaD-DDE
+      icon: fab fa-github
+
+- position: TITANS Software R&D Intern
+  business: Sandia National Laboratories
+  location: Albuquerque, New Mexico
+  duration: June - September 2020 
+  description:
+    - Pioneered Kuberentes-based testbed environment for nuclear detonation detection software
+    - Streamlined SSH and Docker integration with systemd fix
+    - Created Kubernetes/Docker oriented bash and tmux configurations for expedited development
+
+- position: Software Engineering Intern
+  business: General Dynamics Mission Systems
+  location: San Jose, California
+  duration: July - September 2019
+  description:
+    - Architected module with unit tests for internal SDR platform enabling remote hardware configuration in Python
+    - Presented discrepancies identified in algorithms on hardware to team of 10+ engineers 
+    - Formulated tools for HDLC frame analysis, generation, and bit stuffing in Python/C
+  extras:
+    - letter-of-rec-1:
+      button-text: Letter of Recommendation 1
+      url: https://www.dropbox.com/s/a3jjxnfd79qzire/Letter%20of%20Recommendation%20from%20Michael%20Jeung.pdf?dl=0
+      icon: fas fa-file-alt
+    - letter-of-rec-2:
+      button-text: Letter of Recommendation 2
+      url: https://www.dropbox.com/s/omtwecup2ngv4fc/Letter%20of%20Recommendation%20from%20Ben%20Dang.pdf?dl=0
+      icon: fas fa-file-alt
+
+- position: Software Engineering Intern
+  business: Intel Corporation
+  location: Folsom, California
+  duration: June - September 2018
+  description:
+    - Reduced errors and safety vulnerabilities in network deployment by creating the Newtork Configuration Generator (NCG) Appication
+    - Improved NCG extensibility by leveraging Hy and Selenium to create a debugging suite
+    - Gained hands-on experience with Cisco routing hardware and protocols
+  extras:
+    - letter-of-rec-1:
+      button-text: Letter of Recommendation 1
+      url: https://www.dropbox.com/s/2hl0jz7jwjo49xv/Letter%20of%20Recommendation%20from%20Greg%20Tharpe.pdf?dl=0
+      icon: fas fa-file-alt
+    - letter-of-rec-2:
+      button-text: Letter of Recommendation 2
+      url: https://www.dropbox.com/s/56z2zcp53oife9r/Letter%20of%20Recommendation%20from%20Kevin%20Kayser.pdf?dl=0
+      icon: fas fa-file-alt
+    - project-1:
+      button-text: Network Configuration Generator (NCG)
+      url: https://github.com/johnzl-777/NCG
+      icon: fab fa-github
+
+- position: Lab Operations Intern
+  business: Intel Corporation
+  location: Folsom, California
+  duration: June - September 2018
+  description:
+    - Created 20 development systems for memory testing and diagnostics
+    - Established equipment and development environments for 12 new hires
+
+
+- position: IT Helpdesk Technician Intern
+  business: California Department of Transportation (CalTrans)
+  location: Sacramento, California
+  duration: August 2015
+  description:
+    - Ensured machines stayed up-to-date by imaging 10+ machines with Novell ZENWorks remotely and on-site 
+    - Boosted performance of 5 machines through hardware upgrades
+    - Satisfied unique software environment request on behalf of the Transportation Lab (TransLab)
+  extras:
+    - letter-of-rec: 
+      button-text: Letter of Recommendation
+      url: https://www.dropbox.com/s/1i1ecwi8nhqx3wm/Letter%20of%20Recommendation%20from%20Maxwell%20J.C.%20Hamilton.pdf?dl=0
+      icon: fas fa-file-alt
+
+- position: Assistant IT Technician Intern
+  business: California Department of Transportation (CalTrans)
+  location: Sacramento, California
+  duration: Januaray 2013
+  description: 
+    - Ensured 5 computers stayed up-to-date through imaging
+    - Resolved 3 user problems including screen inactivity, failure to boot, loss of password
+
+- position: IT Infrastructure Assistant
+  business: University of Hawaii
+  location: University of Hawaii CLEAR (Center for Labor Education and Research)
+  duration: June - August 2012
+  description:
+    - Guided implementation of new terminals for staff and student usage
+    - Improved data access experience for staff and students by upgrading 10 archive terminals
+    - Eliminated 5 obsolete archival computers
+    

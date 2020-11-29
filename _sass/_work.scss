@@ -1,0 +1,23 @@
+div[attr="entry"]{
+	padding-left: 0.5em;
+	padding-bottom: 0.8em;
+
+	p[field="position"] {
+		font-size: 1.3em;
+		font-weight: 600;
+	}
+
+	p[field="business"] {
+		font-size: 1.1em;
+	}
+
+	p[field="duration"] {
+		font-size: 0.9em;
+	}
+
+	p[field="location"] {
+		font-style: italic;
+		font-size: 0.9em;
+		padding-bottom: 0.2em;
+	}
+}
