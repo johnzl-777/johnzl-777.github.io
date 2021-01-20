@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Quantum Computing Lectures
+redirect_to: https://www.qcatdavis.org/workshops
 ---
 
 The following is a list of recorded lectures I've given on behalf of Quantum Computing at Davis (QCaD) to help those interested in Quantum Computing learn the subject.
