@@ -12,7 +12,7 @@
       links:
         - name: Quantum Computing Lectures
           icon: fas fa-folder
-          link: https://johnzl-777.github.io/quantum-lectures
+          link: https://www.qcatdavis.org/workshops/
     - name: ALALI 
       description: >
         Automated Loading assuming Atomic Level Interactions. Collaborated with others to produce a library for 
