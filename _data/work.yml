@@ -9,7 +9,7 @@
   extras:
     - recorded-meeting:
       button-text: Lectures/Presentations
-      url: https://johnzl-777.github.io/quantum-lectures
+      url: www.qcatdavis.org/workshops
       icon: fas fa-folder
     - workshops:
       button-text: Software Workshops
