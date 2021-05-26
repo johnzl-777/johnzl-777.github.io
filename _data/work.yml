@@ -90,10 +90,6 @@
       button-text: Letter of Recommendation 2
       url: https://www.dropbox.com/s/56z2zcp53oife9r/Letter%20of%20Recommendation%20from%20Kevin%20Kayser.pdf?dl=0
       icon: fas fa-file-alt
-    - project-1:
-      button-text: Network Configuration Generator (NCG)
-      url: https://github.com/johnzl-777/NCG
-      icon: fab fa-github
 
 - position: Lab Operations Intern
   business: Intel Corporation
