@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<section class="work">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    <div style="padding-bottom:1.1em;"></div>
+    {% for job in site.data.work %}
+    <div attr="entry">
+            <p field="position"> {{ job.position }} </p>
+            <p field="business"><i class="fas fa-briefcase fa-fw"></i> {{ job.business }} </p>
+            <p field="duration"><i class="fas fa-clock fa-fw"></i> {{ job.duration }} </p>
+            <p field="location"><i class="fas fa-map-marker-alt fa-fw"></i> {{ job.location }} </p>
+            <div style="padding-left:1.6em">
+            <ul>
+                {% for details in job.description %}
+                    <li>{{ details }}</li>
+                {% endfor %}
+            </ul>
+            {% if job.extras %}
+                {% for extra in job.extras%}
+                <div style="padding-bottom:0.2em; padding-right:0.4em; float:left">
+                    <a class="button" href="{{extra.url}}">
+                        {% if extra.icon %}
+                            <i class="{{extra.icon}}"></i> {{ extra.button-text }}
+                        {% endif %}
+                    </a>
+                </div>
+                {% endfor %}
+            {% endif%}
+            </div>
+        </div>
+        {% endfor %}
+</section>
