@@ -1,3 +1,28 @@
+- position: Quantum Software Engineer
+  business: If and Only If (Iff) Technologies
+  location: Davis, California
+  duration: October 2021 - Present
+
+- position: Quantum Software Engineering Intern
+  business: If and Only If (Iff) Technologies
+  location: Davis, California
+  duration: June - September 2021
+  description:
+    - Built custom job submission system for Xanadu's X8 photonic chip
+    - Created QUBO generators for quantum annealers on the graph and subgraph isomorphism problem based on Calude et al.'s and Hua's algorithms 
+    - Architected graph isomorphism QUBO generation benchmarks using Erods-Renyi graphs
+    - Attempted simulation of SU(3) operations on qubits using Pyquil
+    - Programmed Boson sampling utility library for interferometer submatrix generation and output probability calculation 
+  extras:
+    - gsg-morph:
+      button-text: G/SG Morph
+      url: https://github.com/IffTech/GSG-Morph
+      icon: fab fa-github
+    - boson-sampling:
+      button-text: Boson Sampling
+      url: https://github.com/IffTech/Boson-Sampling
+      icon: fab fa-github
+
 - position: Workshop Director and Quantum Software Engineer
   business: Quantum Computing at UC Davis
   location: Davis, California
@@ -23,10 +48,6 @@
       button-text: ALALI 
       url: https://github.com/QC-at-Davis/ALALI
       icon: fab fa-github
-    - quantum-computing-codex:
-      button-text: Quantum Computing Codex
-      url: https://qc-at-davis.github.io/QCC/
-      icon: fas fa-book
 
       
 - position: Head Instructor

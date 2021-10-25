@@ -2,8 +2,8 @@
   icon: fas fa-atom
   description: >
     Things I've built related to Quantum Computing. A great deal of material is dedicated to
-    the Quantum Computing at Davis (QCaD) organization, although there are projects that I've deemed
-    unfit for organization usage that I use just for personal experimentation.
+    the Quantum Computing at Davis (QCaD) organization, although some projects were built during my
+    time with If and Only If (Iff) Technologies.
   projects:
     - name: Presentations/Lectures
       description: >
@@ -30,29 +30,20 @@
         - name: Github      
           icon: fab fa-github
           link: https://github.com/Quantum-Computing-at-Davis/npquantum
-    - name: Workshops
+    - name: G/SG Morph
       description: >
-        A series of self-contained, software-oriented workshops introducing the 
-        fundamentals of Quantum Computing
+        The Graph/Subgraph Isomorphism Library for Quantum Annealers, based on Calude, Dinneen, and Hua's "QUBO formulations for the graph isomorphism problem and related problems"
+      links:
+        - name: Github 
+          icon: fab fa-github
+          link: https://github.com/IffTech/GSG-Morph
+    - name: Boson Sampling
+      description: >
+        A library to help better understand Aaronson-Arkhipov Boson Sampling (AABS)
       links:
         - name: Github
           icon: fab fa-github
-          link: https://github.com/Quantum-Computing-at-Davis/Workshops
-    - name: EQEnv
-      description: All the Quantum Computing tools. All in one place.
-      links:
-        - name: Github
-          icon: fab fa-github
-          link: https://github.com/johnzl-777/EQEnv
-    - name: QCC
-      description: A (Work-In-Progress) guide to Quantum Computing for those with little to no background in math/CS
-      links:
-        - name: Github
-          icon: fab fa-github
-          link: https://github.com/QC-at-Davis/QCC
-        - name: Live Copy
-          icon: fas fa-book
-          link: https://qc-at-davis.github.io/QCC/
+          link: https://github.com/IffTech/Boson-Sampling
 
 - category: Hardware
   icon: fas fa-microchip
