@@ -2,6 +2,13 @@
   business: If and Only If (Iff) Technologies
   location: Davis, California
   duration: October 2021 - Present
+  description:
+    - Investigated Bose-Hubbard Hamiltonian simulations on Quantum Computers
+  extras:
+    - UCLA-Qiskit-Workshop:
+      button-text: Intro to Qiskit @ UCLA
+      url: https://www.youtube.com/watch?v=laHUfOAHrkM
+      icon: fa-brands fa-youtube
 
 - position: Quantum Software Engineering Intern
   business: If and Only If (Iff) Technologies
@@ -31,24 +38,28 @@
     - Pioneered curriculum for Quantum Computing at the collegiate level
     - Hosted physical and remote workshops for 15+ students on Quantum Computing
     - Investigated qubit topologies and error reduction for molecular simulations on quantum computers
+    - Devised Given's Rotations for IonQ Trapped Ion Quantum Computers with Google Cirq
   extras:
     - recorded-meeting:
-      button-text: Lectures/Presentations
-      url: www.qcatdavis.org/workshops
+      button-text: Lectures/Workshops
+      url: https://www.qcatdavis.org/workshops/
       icon: fas fa-folder
-    - workshops:
-      button-text: Software Workshops
-      url: https://github.com/Quantum-Computing-at-Davis/Workshops
-      icon: fab fa-github
-    - workshop-environment:
-      button-text: Workshop Environment
-      url: https://github.com/Quantum-Computing-at-Davis/Hephaestus
-      icon: fab fa-github
     - ALALI:
       button-text: ALALI 
       url: https://github.com/QC-at-Davis/ALALI
       icon: fab fa-github
-
+    - grovefold:
+      button-text: GroveFold Contributions
+      url: https://github.com/QC-at-Davis/GroveFold/pull/4
+      icon: fab fa-github
+    - grovers-algorithm:
+      button-text: Grover's Algorithm
+      url: https://github.com/QC-at-Davis/Grovers-Algorithm
+      icon: fab fa-github
+    - Deutsch-Jozsa:
+      button-text: Deutsch-Josza
+      url: https://github.com/QC-at-Davis/Deutsch-Jozsa-II-Qubit-Viz
+      icon: fab fa-github
       
 - position: Head Instructor
   business: Blockchain at Davis
