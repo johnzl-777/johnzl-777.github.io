@@ -6,5 +6,5 @@ Here are some of the places I'm either currently working at or have worked at. F
 
 If you'd like, you can also view and download a copy of my resume below:
 <div>
-<a class="button" href="https://www.dropbox.com/s/y09jkvzc1atvhpf/John%20Long%20Resume.pdf?dl=0"><i class="fas fa-file-alt"></i> Download Resume</a>
+<a class="button" href="https://www.dropbox.com/s/etxi0afyhsh1vjm/John%20Long%20Resume.pdf?dl=0"><i class="fas fa-file-alt"></i> Download Resume</a>
 </div>
