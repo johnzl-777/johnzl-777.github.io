@@ -8,7 +8,7 @@
     - UCLA-Qiskit-Workshop:
       button-text: Intro to Qiskit @ UCLA
       url: https://www.youtube.com/watch?v=laHUfOAHrkM
-      icon: fa-brands fa-youtube
+      icon: fab fa-youtube
 
 - position: Quantum Software Engineering Intern
   business: If and Only If (Iff) Technologies
