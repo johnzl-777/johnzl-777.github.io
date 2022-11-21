@@ -8,16 +8,6 @@ Fonts from [Google Fonts](https://fonts.google.com/), icons from [Font Awesome](
 
 If you're interested in just the sidey theme with the stuff I've added/hybridized on top of it, you can check out [H+](https://github.com/johnzl-777/H-Plus)
 
-## Note about Tags
-
-The tags used in posts need to be generated separately through a python script that creates a `tags` folder with a markdown file for each tag.
-
-The script should be run from the main website directory, NOT within the script directory.
-
-```
-python3 /_scripts/tag_generator.py
-```
-
 ## Local Development - Live
 ```
 docker run --env=DEBUG=true --rm --volume="$PWD:/srv/jekyll" -p 3000:4000 -it jekyll/jekyll:3.8 jekyll serve -w --force_polling

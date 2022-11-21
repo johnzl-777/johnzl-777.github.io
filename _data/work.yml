@@ -1,10 +1,33 @@
+- positions: Scientific Software Developer
+  business: QuEra Computing Inc.
+  location: Boston, Massachusetts
+  duration: September 2022 - Present
+  description:
+    - Currently working on neutral atom simulation package Bloqade.jl
+  extras:
+    - Bloqade:
+      button-text: Bloqade.jl
+      url: https://github.com/QuEraComputing/Bloqade.jl
+      icon: fab fa-github
+    - amazon-braket-examples:
+      button-text: Amazon Braket Examples
+      url: https://github.com/aws/amazon-braket-examples
+      icon: fab fa-github
+
 - position: Quantum Software Engineer
   business: If and Only If (Iff) Technologies
   location: Davis, California
-  duration: October 2021 - Present
+  duration: October 2021 - June 2022
   description:
     - Investigated Bose-Hubbard Hamiltonian simulations on Quantum Computers
+    - Presented on VQE and GBS at the PERF (Petroleum Environmental Research Forum) Spring 2022
+    - Explored simple Bose Einstein Condensate (BEC) simulations
+    - Investigated simulation of beam splitters on superconducting qubits using Sabin's (2020) (https://www.mdpi.com/2624-960X/2/1/13) paper
   extras:
+    - Simple-BEC-Simulation:
+      button-text: BEC Simulation
+      url: https://github.com/QC-at-Davis/BEC-Simulation
+      icon: fab fa-github
     - UCLA-Qiskit-Workshop:
       button-text: Intro to Qiskit @ UCLA
       url: https://www.youtube.com/watch?v=laHUfOAHrkM
