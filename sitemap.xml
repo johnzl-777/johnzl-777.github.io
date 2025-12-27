@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://johnzl.com/</loc>
+    </url>
+    <url>
+        <loc>https://johnzl.com/about/</loc>
+    </url>
+    <url>
+        <loc>https://johnzl.com/categories/</loc>
+    </url>
+    <url>
+        <loc>https://johnzl.com/contact/</loc>
+    </url>
+    <url>
+        <loc>https://johnzl.com/experience/</loc>
+    </url>
+    <url>
+        <loc>https://johnzl.com/posts/</loc>
+    </url>
+    <url>
+        <loc>https://johnzl.com/posts/5-5-times-a-charm/</loc>
+        <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+        <loc>https://johnzl.com/tags/</loc>
+    </url>
+    <url>
+        <loc>https://johnzl.com/tags/dev/</loc>
+    </url>
+    <url>
+        <loc>https://johnzl.com/tags/webdev/</loc>
+    </url>
+</urlset>

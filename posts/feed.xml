@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>My Blog</title>
+	<subtitle>My blog site.</subtitle>
+	<link rel="self" type="application/atom+xml" href="https://johnzl.com/posts/feed.xml"/>
+  <link rel="alternate" type="text/html" href="https://johnzl.com/posts/"/>
+  
+	<updated>2025-12-25T00:00:00+00:00</updated>
+	
+	<id>https://johnzl.com/posts/feed.xml</id>
+	<entry xml:lang="en">
+		<title>5.5 times a Charm!</title>
+		<published>2025-12-25T00:00:00+00:00</published>
+		<updated>2025-12-25T00:00:00+00:00</updated>
+		<link rel="alternate" type="text/html" href="https://johnzl.com/posts/5-5-times-a-charm/"/>
+		<id>https://johnzl.com/posts/5-5-times-a-charm/</id>
+    
+		<content type="html" xml:base="https://johnzl.com/posts/5-5-times-a-charm/">&lt;p&gt;I figured it would be nice for my first blog post on this site (especially before I publish this on the open web as I continue to tweak parts of the wonderful &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;serene&#x2F;tree&#x2F;main&quot;&gt;serene&lt;&#x2F;a&gt; theme by &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isunjn&quot;&gt;Jianan Sun&lt;&#x2F;a&gt; for &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt;  to my liking!) to ask myself why I want a personal website in the first place and how I got to the current tech stack I’m using.&lt;&#x2F;p&gt;
+&lt;p&gt;I also feel it a bit odd to publish the website with out at least ONE blog post considering the whole blog-oriented theme I’m using (:&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-have-a-new-personal-site&quot;&gt;Why Have (a new) Personal Site?&lt;a class=&quot;zola-anchor&quot; href=&quot;#why-have-a-new-personal-site&quot; aria-label=&quot;Anchor link for: why-have-a-new-personal-site&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;When I made my first website I didn’t really give much thought to the idea of blogging or long-term maintainability. I just wanted something I could impress recruiters with in my first year as a student in college. As a result the very first iteration was incredibly hacky, fragile, and practically unmaintainable but it did the job.&lt;&#x2F;p&gt;
+&lt;p&gt;As time went on more of the “shiny object syndrome”&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; of my youth began to give way to an appreciation of simpler, more hackable and robust tools. I also found I quite missed the amount of writing I used to do when I was younger. As a kid my Dad used to make me write entries by hand in a daily journal, which I used to hate because I felt it was such a time consuming venture with no immediate benefit (none of the other kids I knew were forced to do anything like this, making me feel even worse about it). Now, as an adult, I still try to carve out time to do the equivalent in Obsidian thanks to the Daily Notes feature.&lt;&#x2F;p&gt;
+&lt;p&gt;I also find it would be great to have a way to share what I learn and build in a more structured format. Sure, since most of my work is open source I can easily pull up the Github issues&#x2F;pull requests I’ve closed but some of those were part of a thread of learning I felt might be great to have properly written up. If not for other developers who might be interested in my work, then for myself to be able to look back on and appreciate what I’ve accomplished (:&lt;&#x2F;p&gt;
+&lt;p&gt;There’s an added bonus that having such a means to share my work also incentivizes me to keep working on projects that might just sit on the backburner indefinitely. I’ve always found that while it’s quite easy for me to think of things I want to build and learn, it’s a bit harder to keep the necessary momentum such that I bring those things to fruition. Being able to share my enthusiasm and progress is a pretty nice tool for motivation and record keeping in general.&lt;&#x2F;p&gt;
+&lt;p&gt;The cherry on top for me is also having my own little corner of the World Wide Web. Social media can certainly let me do that but there’s something nice about having more control over the platform my work is on not to mention the ability to tweak that platform to my liking. I like being able to roll up my sleeves every now and then and get into the weeds to say, change the colors for the theme of my website or add and remove pages as I please. It’s my corner of the net and nobody else’s!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;iterations&quot;&gt;Iterations&lt;a class=&quot;zola-anchor&quot; href=&quot;#iterations&quot; aria-label=&quot;Anchor link for: iterations&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;I don’t think it’s worth putting down too much technical detail here but I think some of the problems as well as what I gained with each iteration of my website are fun to share and reflect on.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;1st-iteration&quot;&gt;1st Iteration&lt;a class=&quot;zola-anchor&quot; href=&quot;#1st-iteration&quot; aria-label=&quot;Anchor link for: 1st-iteration&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Considering I was a first year in college trying to impress recruiters (and at the peak of my own “shiny object syndrome” moment) I cooked up a site with &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;getbootstrap.com&#x2F;&quot;&gt;Bootstrap&lt;&#x2F;a&gt;, &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;lesscss.org&#x2F;&quot;&gt;less&lt;&#x2F;a&gt;, and &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;slim-template.github.io&#x2F;&quot;&gt;slim&lt;&#x2F;a&gt;.  While it’s possible for me to bring it back considering I saved all of that older work &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;johnzl-777&#x2F;johnzl-website&quot;&gt;here&lt;&#x2F;a&gt; I shudder to remember the aesthetics 2018&#x2F;19 John thought were great for a personal site. I know I pulled a lot of JS&#x2F;CSS tricks from CodePen examples and I definitely leaned into &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;vincentgarreau.com&#x2F;particles.js&#x2F;&quot;&gt;particles.js&lt;&#x2F;a&gt; as a totally overkill and unnecessary background effect.&lt;&#x2F;p&gt;
+&lt;p&gt;The result of gluing together all the Bootstrap examples I saw floating around, on top of hacking together the CSS&#x2F;JS examples I saw (I had no prior web development experience other than a very simple UI for an app I built at Intel) was this very bloated, pain in the butt to modify, mobile-unfriendly site. I know I had Google Analytics enabled on it too, something I’m no longer a fan of.&lt;&#x2F;p&gt;
+&lt;p&gt;Despite all the problems with this first iteration, it was a fantastic learning experience for me and set the bedrock for much of the knowledge I’d carry into tinkering with future iterations.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;2nd-iteration&quot;&gt;2nd Iteration&lt;a class=&quot;zola-anchor&quot; href=&quot;#2nd-iteration&quot; aria-label=&quot;Anchor link for: 2nd-iteration&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;This time I put a bit more thought towards building something easier to maintain and more scalable. I was still in college at the time but a bit more experienced so I went down the Static Site Generator (SSG) rabbit hole and the myriad of themes that came with them and opted to go with &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;jekyllrb.com&#x2F;&quot;&gt;Jekyll&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I was initially pretty happy with Jekyll but the slowness I felt along with live-reloading issues and Ruby version wrestling dampened my enthusiasm for it. At one point I recall having to spin up a Docker instance just because I was so frustrated with trying to resolve issues on my own machine (which certainly didn&#x27;t help with build latency). I’m sure if I spent some more time with it I might be able to fix those issues now but it felt like it was better to just start from scratch.&lt;&#x2F;p&gt;
+&lt;p&gt;I had started out with a &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ronv&#x2F;sidey&quot;&gt;nice theme&lt;&#x2F;a&gt; that I eventually found myself adding on so much to that I probably broke a lot of things in the process. I was brash enough at the time to think what I had built was worth other people using and that theme still lives on as &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;johnzl-777&#x2F;H-Plus&quot;&gt;H-Plus&lt;&#x2F;a&gt;. I&#x27;ll probably consider archiving it considering I haven&#x27;t revisited&#x2F;maintained it in some time.&lt;&#x2F;p&gt;
+&lt;p&gt;Despite all the problems I ran into, I look at the current version I have online now and still find myself quite pleased with what I was able to accomplish in learning the &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;shopify.github.io&#x2F;liquid&#x2F;&quot;&gt;Liquid Templating Language&lt;&#x2F;a&gt; Jekyll natively supports. I’m especially happy with the “Work&quot; page that I made and I have yet to find a template that has as many “batteries-included&quot; options I managed to glue together for linking projects and specifying job locations. That’s probably the one permanent skill I gained from this second iteration.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img
+        src=&quot;&amp;#x2F;posts&amp;#x2F;old-site-work-entries.png&quot;
+        
+        
+        
+    &gt;
+    
+    &lt;figcaption&gt;&lt;p&gt;The Work Page on my old site. It will be missed!&lt;&#x2F;p&gt;
+&lt;&#x2F;figcaption&gt;
+    
+&lt;&#x2F;figure&gt;
+&lt;h3 id=&quot;3-5th-and-4th-iteration&quot;&gt;3.5th and 4th Iteration&lt;a class=&quot;zola-anchor&quot; href=&quot;#3-5th-and-4th-iteration&quot; aria-label=&quot;Anchor link for: 3-5th-and-4th-iteration&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;At this point I’d graduated college and moved away from my home state of California for work. As time went on I found myself wishing I had something that could hold a candle to what my colleagues had. In particular, my boss &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;rogerluo.dev&#x2F;&quot;&gt;Xiu-Zhe (Roger) Luo&lt;&#x2F;a&gt; had this really nice site made with &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;astro.build&#x2F;&quot;&gt;Astro&lt;&#x2F;a&gt; and another colleague Casey Duckering has this &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;caseyduckering.com&#x2F;&quot;&gt;wonderful site&lt;&#x2F;a&gt; made with Bootstrap.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img
+        src=&quot;&amp;#x2F;posts&amp;#x2F;rogers-website.png&quot;
+        
+        
+        
+    &gt;
+    
+    &lt;figcaption&gt;&lt;p&gt;Xiu-Zhe (Roger) Luo&#x27;s Website using the AstroPaper theme&lt;&#x2F;p&gt;
+&lt;&#x2F;figcaption&gt;
+    
+&lt;&#x2F;figure&gt;
+&lt;figure&gt;
+    &lt;img
+        src=&quot;&amp;#x2F;posts&amp;#x2F;cduck-website.png&quot;
+        
+        
+        
+    &gt;
+    
+    &lt;figcaption&gt;&lt;p&gt;Casey Duckering&#x27;s Website&lt;&#x2F;p&gt;
+&lt;&#x2F;figcaption&gt;
+    
+&lt;&#x2F;figure&gt;
+&lt;p&gt;I didn’t really feel like touching Bootstrap again after how painful it felt working with it in the first iteration of my site so Astro it was! I was especially impressed by the templates that were being offered but felt Roger’s use of &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;astro.build&#x2F;themes&#x2F;details&#x2F;astropaper&#x2F;&quot;&gt;AstroPaper&lt;&#x2F;a&gt; was more than enough for me.&lt;&#x2F;p&gt;
+&lt;p&gt;Originally I just forked the entirety of Roger’s page but noticed he was using an older version of the template. So, I scrapped what I had started to essentially graft onto his site and pulled in the latest version of the theme. In the beginning I was pretty happy with how things were going but I found hacking on the template to be a bit tricky, probably because I wasn’t all that familiar with TypeScript and I found myself running into situations where my intuition from Jekyll seemed to fall apart.&lt;&#x2F;p&gt;
+&lt;p&gt;I had to put everything on pause considering the pace of work had ramped up quite a bit around that time but despite having 80% of what I wanted I still found myself wondering if I really wanted to keep going with it.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;4-5th-iteration&quot;&gt;4.5th Iteration&lt;a class=&quot;zola-anchor&quot; href=&quot;#4-5th-iteration&quot; aria-label=&quot;Anchor link for: 4-5th-iteration&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;According to my Obsidian project tracking system I went down this rabbit hole November 14th, 2025 &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; but it occurred to me that maybe Astro was just &lt;em&gt;too much&lt;&#x2F;em&gt; and I needed to back to the basics. But, I still didn’t want to touch Bootstrap again.&lt;&#x2F;p&gt;
+&lt;p&gt;I thought about what features I &lt;em&gt;really&lt;&#x2F;em&gt; needed from an SSG to live and I figured all I really cared about was the ability to convert Markdown to HTML. Thus &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;pandoc.org&#x2F;&quot;&gt;Pandoc&lt;&#x2F;a&gt; came to my mind&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; and I was quite pleased to find that other folks (check out &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;wstyler.ucsd.edu&#x2F;posts&#x2F;pandoc_website.html&quot;&gt;Will Styler&lt;&#x2F;a&gt;, &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.sacredheartsc.com&#x2F;blog&#x2F;makefile-based-blogging&#x2F;&quot;&gt;Cullum Smith’s&lt;&#x2F;a&gt;, and &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;push-f.com&#x2F;posts&#x2F;2020-10-06-blog-with-make-pandoc-and-python&#x2F;&quot;&gt;Martin Fischer’s&lt;&#x2F;a&gt; sites!) used a pandoc-based workflow as well.&lt;&#x2F;p&gt;
+&lt;p&gt;My initial excitement and momentum quickly ground to a halt though when I realized there would still be some wrangling to be done in the domain of raw HTML&#x2F;CSS&#x2F;JS and it was very much not going to be the “batteries included” experience I had with Jekyll. While I wasn’t expecting everything I used to have to be available I immediately missed having something like Liquid available considering the limited abilities Pandoc had for similar functionality.&lt;&#x2F;p&gt;
+&lt;p&gt;Despite the setback it was still great to see how much could be done by keeping things simple. Just like the older iterations I’ve shown I don’t think this was a total loss either. If Astro showed me what having &lt;em&gt;too many&lt;&#x2F;em&gt; batteries looked like, Pandoc showed me what having &lt;em&gt;too little&lt;&#x2F;em&gt; looked like.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;5th-iteration&quot;&gt;5th Iteration&lt;a class=&quot;zola-anchor&quot; href=&quot;#5th-iteration&quot; aria-label=&quot;Anchor link for: 5th-iteration&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Right before the holidays I started looking around again for an SSG that felt a bit more hackable and friendlier to work with to me and Zola popped up on my radar. I loved the idea of just having a single binary and was blown away by just how fast it was. The serene theme is fantastic to use and while I still ran into a couple “rough edges” in terms of what I wanted to do the &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Keats&#x2F;tera&quot;&gt;Tera&lt;&#x2F;a&gt; template language (similar to Liquid) along with Jianan Sun’s work on the theme clicked with my previous experience quite nicely!&lt;&#x2F;p&gt;
+&lt;p&gt;I also fell in love with how easy it is to &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;themes&#x2F;installing-and-using-themes&#x2F;#customizing-a-theme&quot;&gt;selectively override parts of a theme&lt;&#x2F;a&gt; and the ease of using &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;linking&#x2F;&quot;&gt;internal links&lt;&#x2F;a&gt; and &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;shortcodes&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I look forward to doing some more hacking&#x2F;tinkering as time goes on!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;a class=&quot;zola-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;While I’m pretty confident Zola and serene will keep me a happy camper for a long time to come I still acknowledge the possibility that perhaps as this site grows and I want to add certain features another SSG will take the cake. Maybe I’ll have accumulated enough web development experience at some point I’ll go down the Bootstrap (or pandoc!) route again.&lt;&#x2F;p&gt;
+&lt;p&gt;I know this seems like a rather circuitous way of building a personal site but in every iteration I mention I managed to learn something new, so while I might have ended things physically empty-handed, mentally I’m grateful for all that accumulated experience.&lt;&#x2F;p&gt;
+&lt;p&gt;For anybody who’s read this far that either doesn’t have a personal website yet I hope this serves as some inspiration that it’s very much a worthy endeavor even if things don&#x27;t work out!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;If you’d like to get in touch to leave a comment, please reach out via my e-mail on the &lt;a href=&quot;https:&#x2F;&#x2F;johnzl.com&#x2F;contact&#x2F;&quot;&gt;contact&lt;&#x2F;a&gt; page&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;This is a term I use to describe the penchant certain folks have of always jumping to the newest tool&#x2F;most complex stack just because it sounds very cool, with little justification or thought to long-term benefit, stability, or ease of use. “New” doesn’t necessarily have to be new in terms of release time, just new to the person. Trust me, I’m just as guilty as the developer next to me!&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
+&lt;p&gt;I usually try to jot down ideas into my Obsidian vault as soon as I get them but it’s always possible there’s a couple days of lag depending on how busy I am.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;&#x2F;sup&gt;
+&lt;p&gt;I should mention I had never actually looked closely at all the things Pandoc was capable of, I just knew it from the occasional problem I’d have trying to convert Jupyter notebooks to PDFs. When I looked up tools that could convert Markdown to HTML &lt;em&gt;THEN&lt;&#x2F;em&gt; I finally played around with Pandoc proper. Shiny object syndrome strikes again!&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+</content>
+	</entry>
+</feed>
