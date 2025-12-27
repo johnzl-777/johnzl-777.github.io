@@ -22,7 +22,7 @@ recent_more_text = "more »"
 date_format = "%b %-d, %Y"
 +++
 
-{% quote(cite="Kobayashi Issa, translated from Japanese by Robert Hass ") %}
+{% quote(cite="Kobayashi Issa, translated by Robert Hass ") %}
 Climb Mt.Fuji, <br>
 O Snail, <br>
 but slowly, slowly
