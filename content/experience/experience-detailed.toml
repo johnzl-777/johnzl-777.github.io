@@ -1,0 +1,106 @@
+[[collection]]
+type = "card"
+title = "QuEra Computing Inc."
+location = "Boston, MA"
+link = "https://www.quera.com/"
+date = "August 2022 - Present"
+subtitle = "Scientific Software Developer"
+content = """
+- Engineered embedded Domain Specific Languages (eDSLs) and compiler infrastructure for
+error-corrected neutral atom quantum computers
+- Enhanced analog Hamiltonian simulation with custom multithreading and ODE-solving packages
+as well as enabling direct-to-QPU execution
+- Installed sensors and programmed data collection for quantum processing unit telemetry
+- Formulated educational materials for neutral atom quantum computing
+"""
+
+[[collection]]
+type = "card"
+title = "If and Only If (Iff) Technologies"
+location = "Davis, CA"
+link = "https://iff.bio/"
+date = "October 2021 - June 2022"
+subtitle = "Quantum Software Engineer (Part Time)"
+content = """
+- Investigated Bose-Hubbard Hamiltonian simulations on Quantum Computers
+- Presented on VQE and GBS at the PERF (Petroleum Environmental Research Forum) Spring 2022 meeting
+- Explored simple Bose Einstein Condensate (BEC) simulations
+- Investigated simulation of beam splitters on superconducting qubits using Sabin's (2020) (https://www.mdpi.com/2624-960X/2/1/13) paper
+"""
+
+[[collection]]
+type = "card"
+title = "If and Only If (Iff) Technologies"
+location = "Davis, CA"
+link = "https://iff.bio/"
+date = "June 2021 - September 2021"
+subtitle = "Quantum Software Engineering Intern"
+content = """
+- Built custom job submission system for Xanadu's X8 photonic chip
+- Created QUBO generators for quantum annealers on the graph and subgraph isomorphism problem based on Calude et al.'s and Hua's algorithms
+- Architected graph isomorphism QUBO generation benchmarks using Erdos-Renyi graphs
+- Programmed Boson sampling utility library for interferometer submatrix generation and output probability calculation
+"""
+
+[[collection]]
+type = "card"
+title = "Sandia National Laboratories"
+link = "https://www.sandia.gov/"
+location = "Albuquerque, NM (Remote)"
+date = "June 2020 - September 2020"
+subtitle = "TITANS Software Engineering R&D Intern"
+content = """
+- Pioneered Kuberentes-based testbed environment for nuclear detonation detection software
+- Streamlined SSH and Docker integration with systemd fix
+- Created custom Kubernetes/Docker oriented bash configurations for expedited development
+"""
+
+[[collection]]
+type = "card"
+title = "Quantum Computing at Davis"
+location = "Davis, CA"
+link = "https://www.linkedin.com/company/qc-at-davis"
+date = "October 2019 - May 2022"
+subtitle = "Workshop Director & Quantum Software Engineer"
+content = """
+- Pioneered curriculum for Quantum Computing at the collegiate level
+- Hosted physical and remote workshops for 15+ students on Quantum Computing
+- Investigated qubit topologies and error reduction for molecular simulations on quantum computers
+"""
+
+[[collection]]
+type = "card"
+title = "General Dynamics Mission Systems"
+link = "https://gdmissionsystems.com/"
+location = "San Jose, CA"
+date = "July 2019 - September 2019"
+subtitle = "Software Engineering Intern"
+content = """
+- Architected module with unit tests for internal SDR platform enabling remote hardware configuration in Python
+- Presented discrepancies identified in algorithms on hardware to team of 10+ engineers
+- Formulated tools for HDLC frame analysis, generation, and bit stuffing in Python/C
+"""
+
+[[collection]]
+type = "card"
+title = "Intel Corporation"
+location = "Folsom, CA"
+date = "June 2018 - September 2018"
+subtitle = "Software Engineering Intern"
+content = """
+- Reduced errors and safety vulnerabilities in network deployment by creating the Network
+Configuration Generator (NCG) Application
+- Improved NCG extensibility by leveraging Hy and Selenium to create a debugging suite
+- Gained hands-on experience with Cisco routing hardware and protocols
+"""
+
+[[collection]]
+type = "card"
+title = "Intel Corporation"
+location = "Folsom, CA"
+date = "June 2017 - August 2017"
+subtitle = "Lab Operations Intern"
+content = """
+- Created 20 development systems for memory testing and diagnostics
+- Established equipment and development environments for 12 new hires
+"""
