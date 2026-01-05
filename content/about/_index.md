@@ -14,6 +14,8 @@ reaction = false
 +++
 # About
 
+{{ figure(src="/profile-pictures/helsinki.jpg", width="250") }}
+
 I'm a Software Developer during the day and an enjoyer of poetry and cocktails in the evenings (: 
 
 I spend a lot of my free time experimenting with my [Obsidian](https://obsidian.md/) setup to capture more of the rabbit holes I go down for fun such as [which living thing has the largest genome](https://www.cell.com/iscience/fulltext/S2589-0042(24)01111-8) to [Quantum Chemistry](https://store.doverpublications.com/products/9780486691862). I also enjoy spending a great deal of time at the library and taking nice long walks (weather permitting). 

@@ -30,6 +30,6 @@ but slowly, slowly
 
 Greetings! Welcome to my corner of the Internet (: 
 
-If you'd like to know more about who I am as a person you can check out the [about](@/about/_index.md) page with more of what I've done in my career available in the [experience](@/experience/_index.md) section (you can also obtain a copy of my resume as well).
+If you'd like to know more about who I am as a person you can check out the [about](@/about/_index.md) page with more of what I've done in my career available in the [experience](@/experience/_index.md) section.
 
 You can get an idea of the inner machinations of my mind as well as things that I've been working on through my [posts](@/posts/_index.md)
