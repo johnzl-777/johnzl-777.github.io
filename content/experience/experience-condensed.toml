@@ -2,8 +2,15 @@
 type = "card_simple"
 title = "QuEra Computing Inc"
 link = "https://www.quera.com/"
+content = "Scientific Software Engineer"
+date = "Jan 2026 - Present"
+
+[[collection]]
+type = "card_simple"
+title = "QuEra Computing Inc"
+link = "https://www.quera.com/"
 content = "Scientific Software Developer"
-date = "Aug 2022 - Present"
+date = "Aug 2022 - Jan 2026"
 
 [[collection]]
 type = "card_simple"

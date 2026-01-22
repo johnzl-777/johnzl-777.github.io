@@ -3,7 +3,14 @@ type = "card"
 title = "QuEra Computing Inc."
 location = "Boston, MA"
 link = "https://www.quera.com/"
-date = "August 2022 - Present"
+date = "January 2026 - Present"
+subtitle = "Scientific Software Engineer"
+content = ""
+
+[[collection]]
+type = "card"
+title = "QuEra Computing Inc."
+link = "https://www.quera.com/"
 subtitle = "Scientific Software Developer"
 content = """
 - Engineered embedded Domain Specific Languages (eDSLs) and compiler infrastructure for
