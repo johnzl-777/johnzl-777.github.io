@@ -8,7 +8,7 @@ title = "Experience"
 +++
 You can get a birds-eye view of my career experience in the [Overview](@/experience/_index.md#overview) below with a more detailed view [below that](@/experience/_index.md#more-details).
 
-My resume with my most recent work experience is available for viewing and download [on DropBox](https://www.dropbox.com/scl/fi/4l8pjoq013y6ur9b9dhqp/John-Long-Resume.pdf?rlkey=ip3z0i4xgakz895cwasy9r7ku&st=6t7fozpb&dl=0)
+My resume with my most recent work experience is also available for download as a [PDF from this website](John-Long-Resume.pdf)
 
 # Overview
 {{ collection(file="experience-condensed.toml") }}
