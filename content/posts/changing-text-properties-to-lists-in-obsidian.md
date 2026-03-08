@@ -163,6 +163,8 @@ note the absence of preceding spaces! I did try a native python string substitut
 
 That being said, I’m pretty happy with what I was able to piece together with a chunk of my weekend and the fact I can even do something like this with my notes is just a reminder to me of how much I love the hackable nature of Obsidian ❤️
 
+*If you'd like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (first name) z (first letter of my last name).dev@gmail.com*
+
 
 [^1]: As you can tell, I do not have the most descriptive palate but these keywords suffice when I’m deciding what I’d like to have on an evening from how I usually think of cocktail flavors (:
 [^2]: I briefly thought about forcing myself to cook something up with `sed`/`awk` because I wanted to get more familiar with those tools but felt it just wasn’t worth the time considering I wanted something in say, an hour or so as a nice weekend project.

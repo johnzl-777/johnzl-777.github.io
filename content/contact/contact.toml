@@ -1,13 +1,7 @@
 [[collection]]
 type = "card_simple"
 title = "E-mail"
-content = """
-<style>
-div.email > span:nth-child(1) { display: none;}
-div.email > span:nth-child(4) { display: none;}
-</style>
-<div class="email">johnzl<span>wumbo</span>.<span>d</span>ev@<span>gm</span><span>cats</span>ail.</span>com</div>
-"""
+content = "(first name) z (first letter of my last name).dev@gmail.com"
 
 [[collection]]
 type = "card_simple"
