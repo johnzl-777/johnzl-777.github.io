@@ -18,10 +18,10 @@ I'm a Software Developer during the day and an enjoyer of poetry and cocktails i
 
 I spend a lot of my free time experimenting with my [Obsidian](https://obsidian.md/) setup to capture more of the rabbit holes I go down for fun such as [which living thing has the largest genome](https://www.cell.com/iscience/fulltext/S2589-0042(24)01111-8) to [nuclear semiotics](https://en.wikipedia.org/wiki/Long-term_nuclear_waste_warning_messages). I also enjoy spending a great deal of time at the library and taking nice long walks (weather permitting). 
 
-I adore old computer hardware and have many fond memories poking around old MS-DOS capable machines from the recycling center as a kid. The noisiness and tactility of it all still appeals me to deeply. I still remember the delight of [dumping old EPROMs with my Arduino Mega](https://github.com/johnzl-777/EPROM-Dumper) when I was younger.
+I adore old computer hardware and have many fond memories poking around old MS-DOS capable machines from the recycling center as a kid. The noisiness and tactility of it all still appeals to me deeply. I still remember the delight of [dumping old EPROMs with my Arduino Mega](https://github.com/johnzl-777/EPROM-Dumper) when I was younger.
 
 I was born and raised in California but moved to Massachusetts shortly after I finished my Bachelor's degree in Computer Science and Engineering (CSE) at [UC Davis](https://engineering.ucdavis.edu/). While I certainly miss the dry summers and mild winters of Sacramento, working on software (and even a little hardware!) for quantum computers has been an extraordinary experience.
 
 If you'd like to just say hi or discuss any of my work, feel free to reach out to me through the means listed on my [contact](@/contact/_index.md) page.
 
-{{ figure(src="/profile-pictures/helsinki.jpg", width="250") }}
+{{ figure(src="/profile-pictures/helsinki.jpg", caption="Yours truly in Helsinki, visiting as part of the 7th International Workshop on Quantum Compilation", width="250") }}
