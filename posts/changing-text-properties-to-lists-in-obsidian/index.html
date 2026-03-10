@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  
+  
+    
+  
+  <meta name="description" content="Changing an Obsidian property type with a neat Python script">
+
+  <title>Changing Text Properties to Lists in Obsidian</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://johnzl.com/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://johnzl.com/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://johnzl.com/img/apple-touch-icon.png">
+  
+  <style>
+
+  /* light mode colors */
+  body {
+    --primary-color: #5871a2;
+    --primary-pale-color: #5871a233;
+    --primary-decoration-color: #5871a210;
+    --bg-color: #ffffff;
+    --text-color: #2f3030;
+    --text-pale-color: #767676;
+    --text-decoration-color: #a9a9a9;
+    --highlight-mark-color: #5f75b020;
+
+    --callout-note-color: #5871a2;
+    --callout-tip-color: #268556;
+    --callout-important-color: #885fc9;
+    --callout-warning-color: #ab6632;
+    --callout-caution-color: #c64e4e;
+  }
+
+  /* dark mode colors */
+  body.dark {
+    --primary-color: #6f8fd1;
+    --primary-pale-color: #6f8fd166;
+    --primary-decoration-color: #6f8fd112;
+    --bg-color: #1c1c1c;
+    --text-color: #c1c1c1;
+    --text-pale-color: #848484;
+    --text-decoration-color: #5f5f5f;
+    --highlight-mark-color: #8296cb3b;
+
+    --callout-note-color: #6f8fd1;
+    --callout-tip-color: #47976f;
+    --callout-important-color: #9776cd;
+    --callout-warning-color: #ad7a52;
+    --callout-caution-color: #d06161;
+  }
+
+  /* typography */
+  body {
+    --main-font: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --homepage-max-width: 768px;
+    --main-max-width: 768px;
+    --avatar-size: 60px;
+    --font-size: 18px;
+    --line-height: 1.75;
+    --img-border-radius: 0px;
+    --detail-border-radius: 0px;
+    --dark-mode-img-brightness: 0.75;
+    --dark-mode-chart-brightness: 0.75;
+    --inline-code-border-radius: 2px;
+    --inline-code-bg-color: var(--primary-decoration-color);
+    --block-code-border-radius: 0px;
+    --block-code-border-color: var(--primary-color);
+    --detail-border-color: var(--primary-color);
+  }
+
+</style>
+
+  <link rel="stylesheet" href="https://johnzl.com/main.css">
+  
+
+<link id="hl" rel="stylesheet" type="text/css" href="/hl-light.css" />
+
+
+
+  
+</head>
+
+<body class="post">
+  
+  <script>
+    const theme = sessionStorage.getItem('theme');
+    const match = window.matchMedia("(prefers-color-scheme: dark)").matches
+    if ((theme && theme == 'dark') || (!theme && match)) {
+      document.body.classList.add('dark');
+      const hl = document.querySelector('link#hl');
+      if (hl) hl.href = 'https://johnzl.com/hl-dark.css';
+    }
+  </script>
+  
+  
+<div id="wrapper">
+  <div id="blank"></div>
+  <aside>
+    
+    
+    <nav>
+      <ul>
+        
+        <li>
+          <a class="h2" href="#gripes-with-the-text-property-type">Gripes with the Text Property Type</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#initial-attempt">Initial Attempt</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#result">Result</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#room-for-improvement">Room for Improvement</a>
+          
+        </li>
+        
+      </ul>
+    </nav>
+    
+    
+    <button id="back-to-top" aria-label="back to top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+
+    </button>
+    
+  </aside>
+  <main>
+    
+<header>
+  <nav>
+    <a id="back-link" href="https:&#x2F;&#x2F;johnzl.com&#x2F;posts">← Back</a>
+  </nav>
+</header>
+
+
+    <div>
+      
+      
+      
+      
+      <div id="copy-cfg" style="display: none;" data-copy-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+" data-check-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+"></div>
+      
+      <article class="prose">
+        <h1>Changing Text Properties to Lists in Obsidian</h1>
+        <div id="post-info">
+          <div id="date">
+            <span id="publish">Mar 8, 2026</span>
+            </div>
+
+          
+          <div id="tags">
+            <a class="instant" href="https://johnzl.com/tags/obsidian"><span>#</span>obsidian</a><a class="instant" href="https://johnzl.com/tags/dev"><span>#</span>dev</a><a class="instant" href="https://johnzl.com/tags/python"><span>#</span>python</a>
+          </div>
+          
+        </div>
+
+        
+        
+
+        
+
+        <h2 id="gripes-with-the-text-property-type">Gripes with the Text Property Type<a class="zola-anchor" href="#gripes-with-the-text-property-type" aria-label="Anchor link for: gripes-with-the-text-property-type" style="visibility: hidden;"></a>
+</h2>
+<p><a rel="nofollow noreferrer" href="https://help.obsidian.md/properties">Obsidian’s Properties</a> feature along with <a rel="nofollow noreferrer" href="https://blacksmithgu.github.io/obsidian-dataview/">Dataview</a> are things I use all the time to create little mini-databases within my Vault to keep track of things ranging from cocktail recipes, films, quotes, and for this particular project/post, poems (:</p>
+<p>When I originally started keeping track of my favorite poems, my template looked something like the following:</p>
+<pre class="z-code"><code><span class="z-text z-plain">---
+</span><span class="z-text z-plain">author: # Text, usually a link to another file in a &quot;Poets&quot; folder
+</span><span class="z-text z-plain">emotions: # Also Text, just a string with: word, word, word structure
+</span><span class="z-text z-plain">---
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">## Remarks
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">## Context
+</span></code></pre>
+<p>The reason for keeping <code>emotions</code> property as text-only was because I wasn’t the biggest fan of how Dataview renders the list type, with each entry of the list on its own line as opposed to some option where I could have one line (perhaps comma delimited?) that wraps around in a cell:</p>
+<figure>
+    <img
+        src="&#x2F;posts&#x2F;changing-text-properties-to-lists-in-obsidian&#x2F;thread-db.png"
+        
+        
+        
+    >
+    
+    <figcaption><p>This is from my “Thread DB” which I use to keep track of separate logs for projects. The rightmost column shows how Dataview renders the list type in a table</p>
+</figcaption>
+    
+</figure>
+<p>However, as I added more and more poems with varying combinations of emotions I came to realize the Obsidian UI would try to suggest previous whole entries as inputs, which looked silly and felt obnoxious to me. If I tried to start by typing something like “nature” it would recommend some other distant entry where I might have typed “nature, love, hope”. If I did NOT want that whole entry then I would have to work around it by hitting the Escape key and being cautious with the autocomplete which might spring up again.</p>
+<p><figure>
+    <img
+        src="&#x2F;posts&#x2F;changing-text-properties-to-lists-in-obsidian&#x2F;autosuggest.png"
+        
+        
+        
+    >
+    
+    <figcaption><p>Since I’ve already gone through with the changes to my Poem templates, the closest thing I have in my vault to quickly display this annoyance is my Cocktail recipes template. Note how if I wanted to just type in something like “sweet” I end up getting suggested a bunch of other stuff I don’t want.</p>
+</figcaption>
+    
+</figure>
+
+<sup class="footnote-reference"><a href="#1">1</a></sup></p>
+<p>With more experimentation I realized having a property as a list type gave much more control over the suggested strings and semantically felt more “in-line” with what one would expect when you have multiple distinct descriptors for something. Thus it made more sense to me to update the template to use a list type instead for the property.</p>
+<p>That being said though, I needed some way to update all the pre-existing poems to fall in line with this new type structure! While I was fortunate enough that all the strings were just words separated by commas, there didn’t seem to be a tool that could automatically do the conversion of turning each word into a list entry and then using that list to replace the old text property.</p>
+<p>The closest thing I could find was <a rel="nofollow noreferrer" href="https://github.com/technohiker">technohikers’</a> <a rel="nofollow noreferrer" href="https://github.com/technohiker/obsidian-multi-properties">Multi-Properties Plugin</a> which I’ve used when I need to add a tag retroactively to notes but doesn’t seem to have the ability to convert existing entries in one type to another.</p>
+<p>Considering Obsidian stores all your data as markdown files however, it felt like it wouldn’t be too daunting a task to hack something together to do this myself, leading to the creation of the Python snippet you see in this post (: <sup class="footnote-reference"><a href="#2">2</a></sup></p>
+<h2 id="initial-attempt">Initial Attempt<a class="zola-anchor" href="#initial-attempt" aria-label="Anchor link for: initial-attempt" style="visibility: hidden;"></a>
+</h2>
+<p>I initially thought of the following approach:</p>
+<ol>
+<li>Get all the relevant .md files in the Poems folder</li>
+<li>Regex for the starting and ending "---" in the files denoting the property section</li>
+<li>Extract the "emotions: ...." part of the regex</li>
+<li>Use some string manipulation to convert the string into a new string with the proper "-" and "\n" characters injected to be put into a list</li>
+<li>rewrite over the old file with the new entry</li>
+</ol>
+<p>At some point though I caught myself and asked if there was an existing library that could simplify some of this, particularly steps 2 through 4. Lo and behold, I discovered <a rel="nofollow noreferrer" href="https://python-frontmatter.readthedocs.io/en/latest/">Python Frontmatter</a> by <a rel="nofollow noreferrer" href="https://github.com/eyeseast">Chris Amico</a> which automatically latches onto the section of the markdown file that has the properties and gives a pretty nice interface to read and manipulate that data. While it isn’t advertised for use with Obsidian, properties are just embedded YAML and with some play scripts<sup class="footnote-reference"><a href="#3">3</a></sup> I figured out it pretty much did what I wanted.</p>
+<h2 id="result">Result<a class="zola-anchor" href="#result" aria-label="Anchor link for: result" style="visibility: hidden;"></a>
+</h2>
+<p>The final version of what I wanted to do ended up looking like the following. Note that I had to add some additional logic and compromise on my initial idea of overwriting things in place.</p>
+
+<blockquote class="callout note has-title">
+  
+  
+  <p class="title">
+    <span class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z" fill="currentColor"></path></svg>
+
+    </span>
+    <strong>Path Strings</strong>
+  </p>
+  <div class="content">
+    <p>I used Mac OS to develop this so if you're a Windows user you'll probably need to change the slashes to backslashes.</p>
+
+  </div>
+  
+</blockquote>
+
+<pre data-lang="python" class="language-python z-code"><code class="language-python" data-lang="python"><span class="z-source z-python"><span class="z-meta z-statement z-import z-python"><span class="z-keyword z-control z-import z-python">import</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">os</span></span></span> 
+</span><span class="z-source z-python"><span class="z-meta z-statement z-import z-python"><span class="z-keyword z-control z-import z-python">import</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">frontmatter</span></span></span>
+</span><span class="z-source z-python">
+</span><span class="z-source z-python"><span class="z-comment z-line z-number-sign z-python"><span class="z-punctuation z-definition z-comment z-python">#</span> Set up paths
+</span></span><span class="z-source z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">vault_root_path</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">my_vault_path<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span> 
+</span><span class="z-source z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">target_dir</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">Poems<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span>
+</span><span class="z-source z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">target_dir_full_path</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">vault_root_path</span></span> <span class="z-keyword z-operator z-arithmetic z-python">+</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">/<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span> <span class="z-keyword z-operator z-arithmetic z-python">+</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">target_dir</span></span>
+</span><span class="z-source z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">new_dir_full_path</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">vault_root_path</span></span> <span class="z-keyword z-operator z-arithmetic z-python">+</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">/<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span> <span class="z-keyword z-operator z-arithmetic z-python">+</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">Temp <span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span> <span class="z-keyword z-operator z-arithmetic z-python">+</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">target_dir</span></span>
+</span><span class="z-source z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">property_to_convert</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">emotions<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span>
+</span><span class="z-source z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">folders_to_exclude</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-sequence z-list z-python"><span class="z-punctuation z-section z-sequence z-begin z-python">[</span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">Poets<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-sequence z-end z-python">]</span></span>
+</span><span class="z-source z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">files_to_exclude</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-sequence z-list z-python"><span class="z-punctuation z-section z-sequence z-begin z-python">[</span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">Poem DB.md<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-sequence z-end z-python">]</span></span>
+</span><span class="z-source z-python">
+</span><span class="z-source z-python"><span class="z-comment z-line z-number-sign z-python"><span class="z-punctuation z-definition z-comment z-python">#</span> Create a new folder to hold the modified files
+</span></span><span class="z-source z-python"><span class="z-meta z-statement z-conditional z-if z-python"><span class="z-keyword z-control z-conditional z-if z-python">if</span> <span class="z-keyword z-operator z-logical z-python">not</span> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">os</span><span class="z-punctuation z-accessor z-dot z-python">.</span><span class="z-meta z-generic-name z-python">path</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">exists</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">new_dir_full_path</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span><span class="z-punctuation z-section z-block z-conditional z-if z-python">:</span></span>
+</span><span class="z-source z-python">    <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-support z-function z-builtin z-python">print</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">New directory does not exist, creating now<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
+</span><span class="z-source z-python">    <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">os</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">mkdir</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">new_dir_full_path</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
+</span><span class="z-source z-python">
+</span><span class="z-source z-python">
+</span><span class="z-source z-python"><span class="z-meta z-statement z-loop z-for z-python"><span class="z-keyword z-control z-loop z-for z-python">for</span> <span class="z-meta z-generic-name z-python">dirpath</span><span class="z-punctuation z-separator z-target-list z-python">,</span> <span class="z-variable z-language z-python">_</span><span class="z-punctuation z-separator z-target-list z-python">,</span> <span class="z-meta z-generic-name z-python">file_names</span> <span class="z-keyword z-control z-loop z-for z-in z-python">in</span></span><span class="z-meta z-statement z-loop z-for z-python"> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">os</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">walk</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">target_dir_full_path</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span></span><span class="z-meta z-statement z-loop z-for z-python"><span class="z-punctuation z-section z-block z-loop z-for z-python">:</span></span>
+</span><span class="z-source z-python">    <span class="z-meta z-statement z-conditional z-if z-python"><span class="z-keyword z-control z-conditional z-if z-python">if</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">dirpath</span></span> <span class="z-keyword z-operator z-logical z-python">not</span> <span class="z-keyword z-operator z-logical z-python">in</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">folders_to_exclude</span></span> <span class="z-punctuation z-section z-block z-conditional z-if z-python">:</span></span>
+</span><span class="z-source z-python">        <span class="z-meta z-statement z-loop z-for z-python"><span class="z-keyword z-control z-loop z-for z-python">for</span> <span class="z-meta z-generic-name z-python">file_name</span> <span class="z-keyword z-control z-loop z-for z-in z-python">in</span></span><span class="z-meta z-statement z-loop z-for z-python"> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">file_names</span></span></span><span class="z-meta z-statement z-loop z-for z-python"><span class="z-punctuation z-section z-block z-loop z-for z-python">:</span></span>
+</span><span class="z-source z-python">
+</span><span class="z-source z-python">            <span class="z-meta z-statement z-conditional z-if z-python"><span class="z-keyword z-control z-conditional z-if z-python">if</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">file_name</span></span> <span class="z-keyword z-operator z-logical z-python">in</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">files_to_exclude</span></span><span class="z-punctuation z-section z-block z-conditional z-if z-python">:</span></span>
+</span><span class="z-source z-python">                <span class="z-keyword z-control z-flow z-continue z-python">continue</span>
+</span><span class="z-source z-python">                
+</span><span class="z-source z-python">            <span class="z-meta z-statement z-with z-python"><span class="z-keyword z-control z-flow z-with z-python">with</span> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-support z-function z-builtin z-python">open</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">dirpath</span></span> <span class="z-keyword z-operator z-arithmetic z-python">+</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">/<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span> <span class="z-keyword z-operator z-arithmetic z-python">+</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">file_name</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span> <span class="z-meta z-statement z-with z-python"><span class="z-keyword z-control z-flow z-with z-as z-python">as</span></span></span><span class="z-meta z-statement z-with z-python"> <span class="z-meta z-generic-name z-python">f</span><span class="z-punctuation z-section z-block z-with z-python">:</span></span>
+</span><span class="z-source z-python">                <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">md_file_contents</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">frontmatter</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">load</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">f</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
+</span><span class="z-source z-python">                    
+</span><span class="z-source z-python">                <span class="z-comment z-line z-number-sign z-python"><span class="z-punctuation z-definition z-comment z-python">#</span> get the property of interest and do some simple string maniuplation.
+</span></span><span class="z-source z-python">                <span class="z-comment z-line z-number-sign z-python"><span class="z-punctuation z-definition z-comment z-python">#</span> The frontmatter library lets me just plug in a list of strings 
+</span></span><span class="z-source z-python">                <span class="z-comment z-line z-number-sign z-python"><span class="z-punctuation z-definition z-comment z-python">#</span> and handles conversion to text automatically!
+</span></span><span class="z-source z-python">                <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">property_with_commas</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-item-access z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">md_file_contents</span><span class="z-punctuation z-accessor z-dot z-python">.</span><span class="z-meta z-generic-name z-python">metadata</span></span></span><span class="z-meta z-item-access z-python"><span class="z-punctuation z-section z-brackets z-begin z-python">[</span></span><span class="z-meta z-item-access z-arguments z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">property_to_convert</span></span></span><span class="z-meta z-item-access z-python"><span class="z-punctuation z-section z-brackets z-end z-python">]</span></span>
+</span><span class="z-source z-python">                <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">property_as_list</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-sequence z-list z-python"><span class="z-punctuation z-section z-sequence z-begin z-python">[</span><span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">emotion</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">strip</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span> <span class="z-meta z-expression z-generator z-python"><span class="z-keyword z-control z-loop z-for z-generator z-python">for</span> <span class="z-meta z-generic-name z-python">emotion</span> <span class="z-keyword z-control z-loop z-for z-in z-python">in</span></span> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">property_with_commas</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">split</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">,<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span><span class="z-punctuation z-section z-sequence z-end z-python">]</span></span>
+</span><span class="z-source z-python">                <span class="z-meta z-item-access z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">md_file_contents</span><span class="z-punctuation z-accessor z-dot z-python">.</span><span class="z-meta z-generic-name z-python">metadata</span></span></span><span class="z-meta z-item-access z-python"><span class="z-punctuation z-section z-brackets z-begin z-python">[</span></span><span class="z-meta z-item-access z-arguments z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">property_to_convert</span></span></span><span class="z-meta z-item-access z-python"><span class="z-punctuation z-section z-brackets z-end z-python">]</span></span> <span class="z-keyword z-operator z-assignment z-python">=</span> <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">property_as_list</span></span>
+</span><span class="z-source z-python">
+</span><span class="z-source z-python">                <span class="z-comment z-line z-number-sign z-python"><span class="z-punctuation z-definition z-comment z-python">#</span> Write the modified file to the temporary directory
+</span></span><span class="z-source z-python">                <span class="z-meta z-statement z-with z-python"><span class="z-keyword z-control z-flow z-with z-python">with</span> <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-support z-function z-builtin z-python">open</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">new_dir_full_path</span></span> <span class="z-keyword z-operator z-arithmetic z-python">+</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">/<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span> <span class="z-keyword z-operator z-arithmetic z-python">+</span>  <span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">file_name</span></span><span class="z-punctuation z-separator z-arguments z-python">,</span> <span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">w<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span> <span class="z-meta z-statement z-with z-python"><span class="z-keyword z-control z-flow z-with z-as z-python">as</span></span></span><span class="z-meta z-statement z-with z-python"> <span class="z-meta z-generic-name z-python">new_f</span><span class="z-punctuation z-section z-block z-with z-python">:</span></span>
+</span><span class="z-source z-python">                    <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-support z-function z-builtin z-python">print</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-storage z-type z-string z-python">f</span><span class="z-meta z-string z-interpolated z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-interpolated z-python"><span class="z-string z-quoted z-double z-python">Writing modified </span><span class="z-meta z-interpolation z-python"><span class="z-punctuation z-section z-interpolation z-begin z-python">{</span><span class="z-source z-python z-embedded"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">file_name</span></span></span></span><span class="z-meta z-interpolation z-python"><span class="z-punctuation z-section z-interpolation z-end z-python">}</span></span><span class="z-string z-quoted z-double z-python"> to temporary dir for review<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
+</span><span class="z-source z-python">                    <span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">new_f</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">write</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">frontmatter</span></span><span class="z-meta z-qualified-name z-python"><span class="z-punctuation z-accessor z-dot z-python">.</span></span><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-meta z-generic-name z-python">dumps</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">md_file_contents</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
+</span></code></pre>
+<p>To better explain things I’ve generated a diagram of the file structure with <a rel="nofollow noreferrer" href="https://gitlab.com/nfriend">Nathan Friend’s</a> <a rel="nofollow noreferrer" href="https://tree.nathanfriend.com/">tree.nathanfriend.com</a> tool:</p>
+<figure>
+    <img
+        src="&#x2F;posts&#x2F;changing-text-properties-to-lists-in-obsidian&#x2F;file-structure.png"
+        
+        
+        
+    >
+    
+</figure>
+<p>I only want to touch the <code>Poem &lt;int&gt;.md</code> files, the Poets folder should be skipped along with the Poem DB.</p>
+<p>My original idea of rewriting a file in place would have required some reworking I wasn’t the biggest fan so I just opted for the safer option of creating a temporary directory to store all the markdown files with the modified property. The added benefit to this (besides being safer!) is that I can double check things have been correctly done via either a simple diff check or literally just copying in the <code>Poem DB.md</code> dataview query and modifying it a little to target the temporary folder.</p>
+<p>The query in question is super simple, just the following:</p>
+<pre class="z-code"><code><span class="z-text z-plain">TABLE author, emotions
+</span><span class="z-text z-plain">FROM &quot;Poems&quot; AND !&quot;Poems/Poets&quot;
+</span><span class="z-text z-plain">WHERE file != this.file
+</span></code></pre>
+<p>Once I was happy with everything, I just use <code>mv</code> from the command line to copy everything in and overwrite the old stuff.</p>
+<h2 id="room-for-improvement">Room for Improvement<a class="zola-anchor" href="#room-for-improvement" aria-label="Anchor link for: room-for-improvement" style="visibility: hidden;"></a>
+</h2>
+<p>It’s definitely not the most polished thing in the world but this is one of those things where I’m probably only going to use this snippet once or twice to reformat some existing files and call it a day.</p>
+<p>I think this could make for a neat little CLI tool or Obsidian plugin itself and I’m acutely aware this definitely isn’t the most memory friendly (after all, you load the entire file just to modify the metadata and then spit out a copy somewhere else!). With the path handling it probably would have been wiser to use <code>pathlib</code> instead of the more fragile string manipulation I'm doing.</p>
+<p>A very minor gripe that I also ran into but didn’t feel was worth fixing because it doesn’t seem to impact anything functionality-wise is that Obsidian has list properties represented like this</p>
+<pre class="z-code"><code><span class="z-text z-plain">list_property:
+</span><span class="z-text z-plain">  - thing
+</span><span class="z-text z-plain">  - another thing
+</span></code></pre>
+<p>But the output from the python <code>frontmatter</code> library just does the following:</p>
+<pre class="z-code"><code><span class="z-text z-plain">list_property:
+</span><span class="z-text z-plain">- thing
+</span><span class="z-text z-plain">- another thing
+</span></code></pre>
+<p>note the absence of preceding spaces! I did try a native python string substitution approach on the output of the <code>.dumps</code> from <code>frontmatter</code> but you latch onto the “---” which would have required some additional regex-fu on my end. Very pedantic of me but would have reduced some anxiety while hacking away at this.</p>
+<p>That being said, I’m pretty happy with what I was able to piece together with a chunk of my weekend and the fact I can even do something like this with my notes is just a reminder to me of how much I love the hackable nature of Obsidian ❤️</p>
+<p><em>If you'd like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com</em></p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>As you can tell, I do not have the most descriptive palate but these keywords suffice when I’m deciding what I’d like to have on an evening from how I usually think of cocktail flavors (:</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>I briefly thought about forcing myself to cook something up with <code>sed</code>/<code>awk</code> because I wanted to get more familiar with those tools but felt it just wasn’t worth the time considering I wanted something in say, an hour or so as a nice weekend project.</p>
+</div>
+<div class="footnote-definition" id="3"><sup class="footnote-definition-label">3</sup>
+<p>Essentially throw-away code to confirm an approach I’m thinking of works on a smaller scale.</p>
+</div>
+
+      </article>
+
+      
+      
+
+      
+      
+    </div>
+
+    
+
+
+<footer>
+  <div class="left">
+    <div class="copyright">
+      © 2025 John Long
+      
+      <span>|</span>
+      Built with <a href="https://www.getzola.org" rel="noreferrer" target="_blank">zola</a> and <a href="https://github.com/isunjn/serene" rel="noreferrer" target="_blank">serene</a>
+      
+    </div>
+  </div>
+
+  <div class="right">
+    
+    
+      
+    
+    
+    <a id="rss-btn" href="https://johnzl.com/posts/feed.xml">RSS</a>
+    
+    
+
+    
+    
+    
+    <button id="theme-toggle" aria-label="theme switch">
+      <span class="moon-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z" fill="currentColor"></path></svg>
+</span>
+      <span class="sun-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z" fill="currentColor"></path></svg>
+</span>
+    </button>
+    
+  </div>
+</footer>
+
+
+
+
+<dialog id="rss-mask">
+  <div>
+    <a href="https:&#x2F;&#x2F;johnzl.com&#x2F;posts&#x2F;feed.xml">https:&#x2F;&#x2F;johnzl.com&#x2F;posts&#x2F;feed.xml</a>
+    
+    
+    <button autofocus aria-label="copy" data-link="https:&#x2F;&#x2F;johnzl.com&#x2F;posts&#x2F;feed.xml" data-copy-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+" data-check-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+" >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z" fill="currentColor"></path></svg>
+
+    </button>
+  </div>
+</dialog>
+
+
+
+  </main>
+</div>
+
+  
+<script src="/js/lightense.min.js"></script>
+
+
+  <script src="https://johnzl.com/js/main.js"></script>
+</body>
+
+</html>
