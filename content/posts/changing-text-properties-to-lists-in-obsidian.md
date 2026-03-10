@@ -163,7 +163,7 @@ note the absence of preceding spaces! I did try a native python string substitut
 
 That being said, I’m pretty happy with what I was able to piece together with a chunk of my weekend and the fact I can even do something like this with my notes is just a reminder to me of how much I love the hackable nature of Obsidian ❤️
 
-*If you'd like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (first name) z (first letter of my last name).dev@gmail.com*
+*If you'd like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com*
 
 
 [^1]: As you can tell, I do not have the most descriptive palate but these keywords suffice when I’m deciding what I’d like to have on an evening from how I usually think of cocktail flavors (:

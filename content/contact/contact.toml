@@ -1,7 +1,7 @@
 [[collection]]
 type = "card_simple"
 title = "E-mail"
-content = "(first name) z (first letter of my last name).dev@gmail.com"
+content = "(my first name)z(first letter of my last name).dev@gmail.com"
 
 [[collection]]
 type = "card_simple"
