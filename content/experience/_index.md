@@ -6,7 +6,7 @@ template = "prose.html"
 [extra]
 title = "Experience"
 +++
-A more detailed view of my experience is [below the overview](@/experience/_index.md#more-details).
+A more detailed view of my experience is [below the Overview section](@/experience/_index.md#more-details).
 
 My resume with my most recent work experience is also available for download as a [PDF hosted on this website](John-Long-Resume.pdf)
 
