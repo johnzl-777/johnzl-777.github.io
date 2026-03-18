@@ -1,5 +1,5 @@
 +++
-title = "Contact"
+title = "Contact Me"
 description = "Ways to reach me and other related links"
 template = "prose.html"
 

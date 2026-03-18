@@ -28,8 +28,8 @@ O Snail, <br>
 but slowly, slowly
 {% end %}
 
-Greetings! Welcome to my corner of the Internet (: 
+Hi there! I'm John Long and I write software for a living to make quantum computers easier to use.
 
-If you'd like to know more about who I am as a person you can check out the [about](@/about/_index.md) page with more of what I've done in my career available in the [experience](@/experience/_index.md) section.
+In my spare time I enjoy poetry, penning the occasional [blog post](@/posts/_index.md), and going down rabbit holes such as  [which living thing has the largest genome](https://www.cell.com/iscience/fulltext/S2589-0042(24)01111-8) to [nuclear semiotics](https://en.wikipedia.org/wiki/Long-term_nuclear_waste_warning_messages) with my trusty [Obsidian](https://obsidian.md/) setup.
 
-You can get an idea of the inner machinations of my mind as well as things that I've been working on through my [posts](@/posts/_index.md)
+My work experience can be found in the [experience](@/experience/_index.md) section of this website, with some more information about who I am as a person in the [about](@/about/_index.md) page.
