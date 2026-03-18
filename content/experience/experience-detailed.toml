@@ -5,7 +5,9 @@ location = "Boston, MA"
 link = "https://www.quera.com/"
 date = "January 2026 - Present"
 subtitle = "Scientific Software Engineer"
-content = ""
+content="""
+- Built and maintained the decoding interface package for the Bloqade quantum computing SDK
+"""
 
 [[collection]]
 type = "card"
