@@ -35,7 +35,7 @@ emotions: # Also Text, just a string with: word, word, word structure
 ## Context
 ```
 
-The reason for keeping `emotions` property as text-only was because I wasn’t the biggest fan of how Dataview renders the list type, with each entry of the list on its own line as opposed to some option where I could have one line (perhaps comma delimited?) that wraps around in a cell:
+The reason for keeping the `emotions` property as text-only was because I wasn’t the biggest fan of how Dataview renders the list type, with each entry of the list on its own line as opposed to some option where I could have one line (perhaps comma delimited?) that wraps around in a cell:
 
 {{ figure(src="/posts/changing-text-properties-to-lists-in-obsidian/thread-db.png", caption="This is from my “Thread DB” which I use to keep track of separate logs for projects. The rightmost column shows how Dataview renders the list type in a table") }}
 
@@ -123,9 +123,9 @@ To better explain things I’ve generated a diagram of the file structure with [
 
 {{figure(src="/posts/changing-text-properties-to-lists-in-obsidian/file-structure.png")}}
 
-I only want to touch the `Poem <int>.md` files, the Poets folder should be skipped along with the Poem DB.
+I only want to touch the `Poem <int>.md` files, the `Poets` folder should be skipped along with the Poem DB.
 
-My original idea of rewriting a file in place would have required some reworking I wasn’t the biggest fan so I just opted for the safer option of creating a temporary directory to store all the markdown files with the modified property. The added benefit to this (besides being safer!) is that I can double check things have been correctly done via either a simple diff check or literally just copying in the `Poem DB.md` dataview query and modifying it a little to target the temporary folder. 
+My original idea of rewriting a file in place would have required some reworking that I wasn’t the biggest fan of so I just opted for the safer option of creating a temporary directory to store all the markdown files with the modifications. The added benefit to this (besides being safer!) is that I can double check things have been correctly done via either a simple diff check or literally just copying in the `Poem DB.md` dataview query and modifying it a little to target the temporary folder. 
 
 The query in question is super simple, just the following:
 
@@ -143,7 +143,7 @@ It’s definitely not the most polished thing in the world but this is one of th
 
 I think this could make for a neat little CLI tool or Obsidian plugin itself and I’m acutely aware this definitely isn’t the most memory friendly (after all, you load the entire file just to modify the metadata and then spit out a copy somewhere else!). With the path handling it probably would have been wiser to use `pathlib` instead of the more fragile string manipulation I'm doing.
 
-A very minor gripe that I also ran into but didn’t feel was worth fixing because it doesn’t seem to impact anything functionality-wise is that Obsidian has list properties represented like this
+A very minor gripe that I also ran into but didn’t feel was worth fixing because it doesn’t seem to impact anything functionality-wise is that Obsidian has list properties represented like this:
 
 ```
 list_property:
@@ -159,9 +159,9 @@ list_property:
 - another thing
 ```
 
-note the absence of preceding spaces! I did try a native python string substitution approach on the output of the `.dumps` from `frontmatter` but you latch onto the “---” which would have required some additional regex-fu on my end. Very pedantic of me but would have reduced some anxiety while hacking away at this.
+Note the absence of preceding spaces! I did try a native Python string substitution approach on the output of the `.dumps` from `frontmatter` but you latch onto the “---” which would have required some additional regex-fu on my end. Very pedantic of me but would have reduced some anxiety while hacking away at this.
 
-That being said, I’m pretty happy with what I was able to piece together with a chunk of my weekend and the fact I can even do something like this with my notes is just a reminder to me of how much I love the hackable nature of Obsidian ❤️
+That being said, I’m pretty happy with what I was able to piece together with a chunk of my weekend and the fact I can even do something like this is just a reminder to me of how much I love Obsidian's hackability ❤️
 
 *If you'd like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com*
 
