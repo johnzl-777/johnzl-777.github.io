@@ -1,5 +1,5 @@
 +++
-title = "hash(-1) == hash(-2) pain (but Quantum!)"
+title = "hash(-1) == hash(-2) in Compilers for Quantum"
 description = "A fun Python bug encountered in compiler development for quantum computing"
 date = 2026-03-22
 draft = false
