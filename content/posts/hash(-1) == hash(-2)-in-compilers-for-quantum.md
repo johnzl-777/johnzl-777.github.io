@@ -17,9 +17,6 @@ mermaid = false
 featured = false
 reaction = false
 +++
-
-*Maybe we should get the classical computers to make sense before the quantum computers…*
-
 This post is about how I (quite painfully) suffered the consequences of the CPython `hash(-1) == hash(-2)` behavior.
 
 If you know about this behavior already, I sincerely hope you’ve never encountered this in the wild and that this serves as a fun read on a consequence of it.
@@ -195,7 +192,7 @@ I was bewildered! Never in my career had I ever seen something so odd. At first 
 It wasn’t immediately apparent to me CSE was the problem but in retrospect, if I was even remotely aware Python (CPython to be exact) had this odd behavior[^3] I might have clocked it faster. 
 
 {% important(title="Acknowledgements") %}
-Before I go further I’d like to give kudos to my colleagues [Kai-Hsin Wu](https://github.com/kaihsin) and [Xiu-Zhe (Roger) Luo](https://rogerluo.dev/) who also implemented the additional logic in Kirin to avoid future incidences of this.
+Before I go further I’d like to give kudos to my colleagues [Kai-Hsin Wu](https://github.com/kaihsin) and [Xiu-Zhe (Roger) Luo](https://rogerluo.dev/) who helped identify the specifics of the bug and also implemented the fix in Kirin to avoid future incidences of this. Thanks guys!
 {% end %}
 
 At a high level, the Kirin CSE rewrite rule at the time of the bug (Kirin v0.18.0) did the following:
@@ -283,6 +280,10 @@ Some googling about this odd behavior led me to [Omair Majid’s blog post](http
 If you’re like me and wondering that there has to be a better way, there's a cited Reddit answer that points out C does not have the ability to throw exceptions.
 
 If you’re *still* like me and think there has to be some way around it, [there is](https://stackoverflow.com/a/2891916)! But I don’t think this would be wise to have in the CPython codebase (at least, not in this context)…
+
+{% tip(title="Idiomatic C") %}
+My colleague [Phillip Weinberg](https://github.com/weinbe58) (who has much more experience working in C/C++ than I do) pointed out to me the `setjmp` + `longjmp` combo linked above is considered idiomatic and can be useful if a problem occurs and you want to immediately go straight to cleaning things up. 
+{% end %}
 
 ## The Fix
 
@@ -381,6 +382,19 @@ If you’re as boggled as I am that `hash(-1) == hash(-2)` has just been a thing
 While the process of writing this post was a lot of fun[^6] I’m certainly glad this is no longer an issue. I do admit feeling a bit of nostalgia seeing how much Kirin has grown and once again, I’m grateful to work on a team where things like this can be quickly hammered out.
 
 In the grander scheme of things this was also a humbling reminder to me that while current Quantum Computers are noisy and prone to error, even in the domain of classical computation there’s still plenty of problems to be found (:
+
+*If you'd like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com*
+
+{% detail(title="Changelog", default_open=false) %}
+
+Mar 23, 2026
+- Added additional note from talking with Phillip Weinberg on idiomatic C
+- Make it clearer Kai-Hsin Wu and Xiu-Zhe (Roger) Luo also helped with finding the bug
+- Added missing contact information
+- Got rid of the first line of the post, kind of spoiled the conclusion :P
+
+{% end %}
+
 
 [^1]: The Bloqade SDK is really a namespace package. The eDSLs I mention here all belong in the `bloqade-circuit` package that gets pulled in.
 [^2]: The program I cooked up here should be compatible with the latest version of `bloqade-circuit` (v0.13.1). The syntax here is actually slightly different from what I remember working with because back then tuples with constants (ex: `(1,5)`) were the way to go for coordinates. Now lists are preferred, especially considering they offer more flexibility for construction/manipulation.
