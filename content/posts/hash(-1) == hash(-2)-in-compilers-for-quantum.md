@@ -395,7 +395,7 @@ Mar 23, 2026
 
 Mar 24, 2026
 - Fixed code example (incorrect kernel name)
-- Fixed footnote on Bloqade SDK as a namespace package. Forgot to mention `bloqade-decoders` as source for other eDSL.
+- Fixed footnote on Bloqade SDK as a namespace package. Forgot to mention `bloqade-decoders` as source for other relevant eDSL.
 
 {% end %}
 
