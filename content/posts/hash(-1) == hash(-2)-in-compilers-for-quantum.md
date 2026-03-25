@@ -395,11 +395,12 @@ Mar 23, 2026
 
 Mar 24, 2026
 - Fixed code example (incorrect kernel name)
+- Fixed footnote on Bloqade SDK as a namespace package. Forgot to mention `bloqade-decoders` as source for other eDSL.
 
 {% end %}
 
 
-[^1]: The Bloqade SDK is really a namespace package. The eDSLs I mention here all belong in the `bloqade-circuit` package that gets pulled in.
+[^1]: The Bloqade SDK is really a namespace package. The eDSLs I mention here mostly belong in the `bloqade-circuit` package that gets pulled in, although the ability to define detectors/observables comes from `bloqade-decoders`.
 [^2]: The program I cooked up here should be compatible with the latest version of `bloqade-circuit` (v0.13.1). The syntax here is actually slightly different from what I remember working with because back then tuples with constants (ex: `(1,5)`) were the way to go for coordinates. Now lists are preferred, especially considering they offer more flexibility for construction/manipulation.
 [^3]: I actually wonder if [other Python implementations](https://www.python.org/download/alternatives/) have this behavior as well but I haven’t confirmed it.
 [^4]: The latest version of Kirin (v0.22.8 as of the time of writing this) has even more logic in CSE  but the core remains pretty much the same.
