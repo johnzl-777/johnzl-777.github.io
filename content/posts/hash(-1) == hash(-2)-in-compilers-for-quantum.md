@@ -343,10 +343,10 @@ def example():
     ms = sq.broadcast.measure(qs)
     sq.set_detector([ms[-1], ms[-2]], coordinates=[0,0])
 
-SquinToStimPass(dialects=test.dialects)(test)
+SquinToStimPass(dialects=example.dialects)(example)
 # SquinToStimPass already has CSE applied inside of it, 
 # but I'm doing it again outside for clarity.
-Walk(CommonSubexpressionElimination()).rewrite(test.code)
+Walk(CommonSubexpressionElimination()).rewrite(example.code)
 ```
 
 (With some `print` statements inside CSE rewrite rule for debugging), the `Info`-generated hash ends up being exactly the same for the `-1` and `-2` constant statements.
@@ -392,6 +392,9 @@ Mar 23, 2026
 - Make it clearer Kai-Hsin Wu and Xiu-Zhe (Roger) Luo also helped with finding the bug
 - Added missing contact information
 - Got rid of the first line of the post, kind of spoiled the conclusion :P
+
+Mar 24, 2026
+- Fixed code example (incorrect kernel name)
 
 {% end %}
 
