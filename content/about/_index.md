@@ -21,7 +21,7 @@ I'm a big fan of:
 - Unique programming languages/real languages - Huge Prolog fan here
 - Cats!
 - Spending time at the library
-- Long walks (bonus if along the beach - cliche, I know but it can't be beat)
+- Long walks (bonus if along the beach - cliché, I know but it can't be beat)
 - Making cocktails
 - Writing - I do my best to journal daily and love seeing my Obsidian vault grow
 - Watching movies
