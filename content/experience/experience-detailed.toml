@@ -7,6 +7,8 @@ date = "January 2026 - Present"
 subtitle = "Scientific Software Engineer"
 content="""
 - Built and maintained the decoding interface package for the Bloqade quantum computing SDK
+- Architected language-level and hardware-aware resource estimation tools targeting different quantum error correction
+codes
 """
 
 [[collection]]
