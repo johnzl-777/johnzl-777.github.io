@@ -7,7 +7,7 @@
 
 base_url = "https://johnzl.com"
 title = "John Long's Website"
-description = "The digital home of John Long"
+description = "The digital home of John Long - Software Engineer and Poetry Enthusiast"
 default_language = "en"
 theme = "serene"
 output_dir = "public"

@@ -1,6 +1,6 @@
 +++
 title = "Experience"
-description = "My work/career experience"
+description = "John Long's work/career experience"
 template = "prose.html"
 
 [extra]
