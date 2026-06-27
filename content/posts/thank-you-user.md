@@ -44,7 +44,7 @@ May this little post encourage others to more openly share their projects, regar
 
 _If you'd like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com_
 
-[1]: Thanks Mom and Dad!
+[^1]: Thanks Mom and Dad!
 [^2]: I haven’t had to write C/C++ in some time but I’m skeptical if my usage of the preprocessor would be considered idiomatic…
 [^3]: While I still think it would be nice to get the money back from my MIT application, it’s funny to me that I’ve ended up working for a company that has heritage from the university :P 
 [^4]: If I had the chance today I would have probably extended the test through things like writing larger patterns and waiting a period of time to verify contents or repeatedly reading and writing to the same area.
