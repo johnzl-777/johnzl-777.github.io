@@ -22,10 +22,8 @@ recent_more_text = "more »"
 date_format = "%b %-d, %Y"
 +++
 
-{% quote(cite="Kobayashi Issa, translated by Robert Hass ") %}
-Climb Mt.Fuji, <br>
-O Snail, <br>
-but slowly, slowly
+{% quote(cite="Sōseki Natsume, translated by Erik. R. Lofgren") %}
+how I wish to be reborn as inconspicuos as a violet
 {% end %}
 
 Hi there! I write software for a living to make quantum computers easier to use (:
