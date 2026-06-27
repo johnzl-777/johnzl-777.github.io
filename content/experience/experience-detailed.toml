@@ -2,7 +2,7 @@
 type = "card"
 title = "QuEra Computing Inc."
 location = "Boston, MA"
-link = "https://www.quera.com/"
+link = "https://github.com/QuEraComputing"
 date = "January 2026 - Present"
 subtitle = "Scientific Software Engineer"
 content="""
@@ -14,7 +14,7 @@ codes
 [[collection]]
 type = "card"
 title = "QuEra Computing Inc."
-link = "https://www.quera.com/"
+link = "https://github.com/QuEraComputing"
 date = "August 2022 - January 2026"
 subtitle = "Scientific Software Developer"
 content = """
