@@ -22,8 +22,8 @@ recent_more_text = "more »"
 date_format = "%b %-d, %Y"
 +++
 
-{% quote(cite="Sōseki Natsume, translated by Erik. R. Lofgren") %}
-how I wish to be reborn as inconspicuos as a violet
+{% quote(cite="Sōseki Natsume, translated by Erik R. Lofgren") %}
+how I wish to be reborn as inconspicuous as a violet
 {% end %}
 
 Hi there! I write software for a living to make quantum computers easier to use (:
