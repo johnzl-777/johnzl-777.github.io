@@ -1,6 +1,6 @@
 +++
 title = "John Long's Blog"
-description = "My blog site."
+description = "The Blog of John Long - Software Engineer and Poetry Enthusiast"
 sort_by = "date"
 template = "blog.html"
 page_template = "post.html"
