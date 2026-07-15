@@ -1,0 +1,28 @@
+[[collection]]
+type = "card_simple"
+title = "E-mail"
+content = "(my first name)z(first letter of my last name).dev@gmail.com"
+
+[[collection]]
+type = "card_simple"
+title = "LinkedIn"
+link = "https://www.linkedin.com/in/jzl"
+content = "linkedin.com/in/jzl"
+
+[[collection]]
+type = "card_simple"
+title = "Github"
+link = "https://github.com/johnzl-777"
+content = "johnzl-777"
+
+[[collection]]
+type = "card_simple"
+title = "ORCID"
+link = "https://orcid.org/0009-0005-7557-197X"
+content = "0009-0005-7557-197X"
+
+[[collection]]
+type = "card_simple"
+title = "Google Scholar"
+link = "https://scholar.google.com/citations?user=qhZSK24AAAAJ&hl"
+content = "John Long"
