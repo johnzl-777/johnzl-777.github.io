@@ -3,7 +3,7 @@ type = "card"
 title = "QuEra Computing Inc."
 location = "Boston, MA"
 link = "https://github.com/QuEraComputing"
-date = "January 2026 - Present"
+date = "January 2026 - September 2026"
 subtitle = "Scientific Software Engineer"
 content="""
 - Built and maintained the decoding interface package for the Bloqade quantum computing SDK
