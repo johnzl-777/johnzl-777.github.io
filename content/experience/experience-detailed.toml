@@ -9,6 +9,7 @@ content="""
 - Built and maintained the decoding interface package for the Bloqade quantum computing SDK
 - Architected language-level and hardware-aware resource estimation tools targeting different quantum error correction
 codes
+- Identified time-optimal quantum error correction gadgets for high rate code in next-generation quantum computer
 """
 
 [[collection]]
