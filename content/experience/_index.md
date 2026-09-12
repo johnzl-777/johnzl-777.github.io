@@ -6,12 +6,19 @@ template = "prose.html"
 [extra]
 title = "Experience"
 +++
-A more detailed view of my experience is [below the Overview section](@/experience/_index.md#more-details).
 
-My resume with my most recent work experience is also available for download as a [PDF hosted on this website](John-Long-Resume.pdf)
+My resume can be downloaded from this website [here](John-Long-Resume.pdf).
+
+# Table of Contents
+- [Overview](@/experience/_index.md#more-details)
+- [More Details](@/experience/_index.md#more-details)
+- [Talks](@/experience/_index.md#talks)
 
 # Overview
 {{ collection(file="experience-condensed.toml") }}
 
 # More Details
 {{ collection(file="experience-detailed.toml") }}
+
+# Talks
+{{ collection(file="talks.toml") }}

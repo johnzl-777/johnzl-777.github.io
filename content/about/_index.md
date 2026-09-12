@@ -25,6 +25,7 @@ I'm a big fan of:
 - Making cocktails
 - Writing - I do my best to journal daily and love seeing my Obsidian vault grow
 - Watching movies
+- Photography
 
 I also wish that every application in existence supported Vim key bindings.
 
