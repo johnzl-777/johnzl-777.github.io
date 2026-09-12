@@ -7,12 +7,9 @@ template = "prose.html"
 title = "Experience"
 +++
 
-My resume can be downloaded from this website [here](John-Long-Resume.pdf).
+You can read more about each role in the [More Details](@/experience/_index.md#more-details) section as well as [talks I've given](@/experience/_index.md#talks).
 
-# Table of Contents
-- [Overview](@/experience/_index.md#more-details)
-- [More Details](@/experience/_index.md#more-details)
-- [Talks](@/experience/_index.md#talks)
+My resume can be downloaded from this website [here](John-Long-Resume.pdf).
 
 # Overview
 {{ collection(file="experience-condensed.toml") }}
