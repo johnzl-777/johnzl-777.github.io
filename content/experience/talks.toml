@@ -11,3 +11,17 @@ title = "Beaver Works Summer Institute @ MIT"
 link = "https://bwsi.mit.edu/"
 content = "Parallels in the Stack for Quantum and Classical Computation"
 date = "Jul 2026"
+
+[[collection]]
+type = "card_simple"
+title = "QCAD (Quantum Computing at Davis) Seminar"
+link = "https://quist.ucdavis.edu/events/qcad-seminar-john-long-quera"
+content = "Building Software for Neutral Atom Quantum Computers"
+date = "Nov 2023"
+
+[[collection]]
+type = "card_simple"
+title = "Q-munity Hack-Q-Thon"
+link = "https://youtu.be/e4WHN3Gd3Mk?si=k7O_9qSF6A0MeaYG"
+content = "New Perspectives on Quantum Annealing"
+date = "May 2022"
