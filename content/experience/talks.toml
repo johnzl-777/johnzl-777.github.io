@@ -21,6 +21,12 @@ date = "Nov 2023"
 
 [[collection]]
 type = "card_simple"
+title = "Laguna Creek High School"
+content = "(Quantum) Software Engineering as a Career"
+date = "Feb 2023"
+
+[[collection]]
+type = "card_simple"
 title = "Q-munity Hack-Q-Thon"
 link = "https://youtu.be/e4WHN3Gd3Mk?si=k7O_9qSF6A0MeaYG"
 content = "New Perspectives on Quantum Annealing"
