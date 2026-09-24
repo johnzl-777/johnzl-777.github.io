@@ -21,9 +21,9 @@ I returned to California after a solid four years and am in the process of figur
 (In no particular order) I'm a big fan of:
 - Old computers - more noise, more blinking lights, and more buttons/switches please!
 - Unique programming languages/real languages - Huge Prolog fan here
-- Cats 🐈🐈‍⬛!- I have a huge soft spot for tortoiseshells and calicos! 
+- Cats 🐈🐈‍⬛!- I have a huge soft spot for tortoiseshells and calicos
 - Spending time at the library
-- Long walks (bonus if along the beach - cliché, I know but it can't be beat)
+- Long walks
 - Making cocktails
 - Writing - I do my best to journal daily and love seeing my Obsidian vault grow
 - Watching movies
