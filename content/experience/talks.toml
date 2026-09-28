@@ -14,7 +14,7 @@ date = "Jul 2026"
 
 [[collection]]
 type = "card_simple"
-title = "QCAD (Quantum Computing at Davis) Seminar"
+title = "QCAD (Quantum Computing at Davis)"
 link = "https://quist.ucdavis.edu/events/qcad-seminar-john-long-quera"
 content = "Building Software for Neutral Atom Quantum Computers"
 date = "Nov 2023"
