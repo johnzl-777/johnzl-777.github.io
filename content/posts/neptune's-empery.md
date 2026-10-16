@@ -87,4 +87,4 @@ Either way, I dream and dream onwards! I let every word of a good poem take me t
 
 [^5]: I note here that it seems the majority of news about water on exoplanets usually indicates the water is in a state that is not conducive to the formation/hosting of life but that being said, it isn't a huge stretch of the imagination to imagine a world out there where the water is a bit milder :P. See [this NASA post](https://science.nasa.gov/universe/exoplanets/two-exoplanets-may-be-mostly-water-nasas-hubble-and-spitzer-find/) and [this Space.com post](https://www.space.com/astronomy/exoplanets/astronomers-discover-hot-watery-exoplanet-destined-to-be-swallowed-by-its-star).
 
-[^6]: Kudos to Danna Staaf's *Monarchs of the Sea: The Extraodinary 500-Million-Year History of Cephalopods* for introducing me to the Ediacaran period as well as *Kimberella*, I consulted the book in helping compose this sentence.
+[^6]: Kudos to Danna Staaf's *Monarchs of the Sea: The Extraordinary 500-Million-Year History of Cephalopods* for introducing me to the Ediacaran period as well as *Kimberella*, I consulted the book in helping compose this sentence.
