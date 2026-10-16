@@ -11,7 +11,7 @@ generate_feeds = true
 lang = "en"
 
 title = "Posts"
-subtitle = "Neat things I've worked on, the inner machinations of my mind, and everything in-between (:"
+subtitle = "Neat things I've worked on, the inner machinations of my mind, and everything in-between"
 
 date_format = "%b %-d, %Y"
 
