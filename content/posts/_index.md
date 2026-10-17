@@ -13,7 +13,7 @@ lang = "en"
 title = "Posts"
 subtitle = "Neat things I've worked on, the inner machinations of my mind, and everything in-between"
 
-date_format = "%b %-d, %Y"
+date_format = "%F"
 
 categorized = false # posts can be categorized
 back_to_top = true # show back-to-top button
