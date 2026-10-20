@@ -11,7 +11,7 @@ tags = ["dev"]
 lang = "en"
 toc = true
 comment = false
-copy = true
+code_copy = true
 math = false
 mermaid = false
 featured = false
@@ -23,9 +23,9 @@ A couple of months ago I got an email from somebody in Australia asking me if my
 The project itself was something I cooked up back when I was in high school, with my own “lab" space at home[^1] and plenty of old electronics to tinker with courtesy of a teacher I knew. I still remember reading the datasheets with the myriad of timing diagrams and the joy of seeing that I had successfully written to and read from the chip!
 
 
-{{ figure(src="/posts/thank-you-user/arduino-mega-sram-setup.jpg", caption="I’m sure there should be some capacitors/additional components somewhere but the chip seemed perfectly happy being directly plugged into the Arduino MEGA clone.") }}
+{{ <figure src="/posts/thank-you-user/arduino-mega-sram-setup.jpg" caption="I’m sure there should be some capacitors/additional components somewhere but the chip seemed perfectly happy being directly plugged into the Arduino MEGA clone." /> }}
 
-{{ figure(src="/posts/thank-you-user/timing-diagram.png", caption="Timing diagram for writing to the SRAM chip.") }}
+{{ <figure src="/posts/thank-you-user/timing-diagram.png" caption="Timing diagram for writing to the SRAM chip." /> }}
 
 It’s definitely not my finest work[^2] but I learned a great deal about how SRAM worked and for a high schooler it was a welcome addition to a portfolio for college applications[^3].
 

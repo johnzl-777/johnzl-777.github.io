@@ -7,14 +7,6 @@ lang = 'en'
 # Show footer in home page
 footer = false
 
-# If you don't want to display id/bio/avatar, simply comment out that line
-name = "John Long"
-# id = "jhonwick"
-bio = "Software Engineer and Poetry Enthusiast"
-# avatar = "img/avatar.webp"
-links = [
-]
-
 # Show a few recent posts in home page
 recent = false
 recent_max = 15
@@ -22,14 +14,14 @@ recent_more_text = "more »"
 date_format = "%b %-d, %Y"
 +++
 
-{% quote(cite="Sōseki Natsume, translated by Erik R. Lofgren") %}
+{% <quote cite="Sōseki Natsume, translated by Erik R. Lofgren"> %}
 how I wish to be reborn as inconspicuous as a violet
-{% end %}
+{% </quote> %}
 
-{% tip(title="Open To New Roles") %}
-If you're looking for a software engineer with expertise in writing software for research, particularly in the domain of Quantum Computation (with an emphasis on compilers and QEC tooling), I'd love to be part of your team!
-You can get a feel for my work experience [here](@/experience/_index.md) and you can reach out to me via my information on the [contact page](@/contact/_index.md).
-{% end %}
+> [!TIP]
+> **Open To New Roles**\
+> If you're looking for a software engineer with expertise in writing software for research, particularly in the domain of Quantum Computation (with an emphasis on compilers and QEC tooling), I'd love to be part of your team!
+> You can get a feel for my work experience [here](@/experience/_index.md) and you can reach out to me via my information on the [contact page](@/contact/_index.md).
 
 Hi there! I write software for a living to make quantum computers easier to use (:
 

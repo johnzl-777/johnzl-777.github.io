@@ -9,4 +9,4 @@ title = "Contact"
 
 E-mail and LinkedIn are the best ways to reach me for anything. You can click on any of the colored text to go to a link. 
 
-{{ collection(file="contact.toml") }}
+{{ <collection file="contact.toml" section /> }}

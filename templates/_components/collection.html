@@ -1,0 +1,135 @@
+{#
+  Site override of serene's collection component: adds a `location` line to
+  card items for the resume on the experience page.
+
+  This component is used inside markdown content, which is rendered as a Tera
+  template first and *then* processed as markdown (zola >= 0.23). Its HTML
+  output must therefore stay markdown-safe: no blank lines in the middle of
+  an HTML block, and no lines indented by 4+ spaces.
+
+  Collection file schema:
+    layout  = "card" | "row" | "tile" | "gallery"   (default "card")
+    flow    = "stack" | "inline" | "grid"           (default: card/gallery -> "stack", row/tile -> "inline")
+    [[item]]
+    title / subtitle / content / icon / image / link / badge / tags / featured / rotate
+#}
+
+{% component collection(file: string, section) -%}
+{%- set data = load_data(path="content" ~ section.path ~ file, format="toml") -%}
+{%- set layout = data.layout if data.layout is defined else "card" -%}
+{%- if layout not in ["card", "row", "tile", "gallery"] -%}
+{%- set layout = "card" -%}
+{%- endif -%}
+{%- if data.flow is defined and data.flow in ["stack", "inline", "grid"] -%}
+{%- set flow = data.flow -%}
+{%- elif layout == "row" or layout == "tile" -%}
+{%- set flow = "inline" -%}
+{%- else -%}
+{%- set flow = "stack" -%}
+{%- endif -%}
+{%- if layout == "card" and flow == "inline" -%}
+{%- set flow = "grid" -%}
+{%- endif -%}
+<div class="collection layout-{{ layout }} flow-{{ flow }}">
+{%- for item in data.item -%}
+{%- set img_src = "" -%}
+{%- if item.image is defined -%}
+{%- if item.image is starting_with(pat="http") or item.image is starting_with(pat="/") or item.image is starting_with(pat="data:") -%}
+{%- set img_src = item.image -%}
+{%- else -%}
+{%- set img_src = get_url(path=section.colocated_path ~ item.image) -%}
+{%- endif -%}
+{%- endif -%}
+{%- set icon_src = "" -%}
+{%- if item.icon is defined -%}
+{%- if item.icon is starting_with(pat="http") or item.icon is starting_with(pat="/") or item.icon is starting_with(pat="data:") -%}
+{%- set icon_src = item.icon -%}
+{%- else -%}
+{%- set icon_src = get_url(path=section.colocated_path ~ item.icon) -%}
+{%- endif -%}
+{%- endif -%}
+{%- set external = item.link is defined and not item.link is starting_with(pat="/") -%}
+{%- if layout == "card" -%}
+<div class="item{% if item.featured %} featured{% endif %}">
+{%- if img_src -%}<div class="image"><img src="{{ img_src }}" alt="{{ item.title }}"></div>{%- endif -%}
+<div class="body">
+<div class="meta">
+{%- if icon_src -%}<span class="icon"><img class="no-lightense" src="{{ icon_src }}" alt="" width="16" height="16"></span>{%- endif -%}
+{%- if item.link -%}
+<a class="title" href="{{ item.link }}"{% if external %} target="_blank" rel="noreferrer noopener"{% endif %}><span>{{ item.title }}</span></a>
+{%- else -%}
+<span class="title">{{ item.title }}</span>
+{%- endif -%}
+{%- if item.badge -%}<span class="badge">{{ item.badge }}</span>{%- endif -%}
+</div>
+{%- if item.location -%}
+<div class="location">{{ item.location }}</div>
+{%- endif -%}
+{%- if item.subtitle -%}
+<div class="subtitle">{{ item.subtitle | trim | markdown(inline=true) | trim | safe }}</div>
+{%- endif -%}
+{%- if item.content -%}
+<div class="content">
+{{ item.content | trim | markdown | trim | safe }}
+</div>
+{%- endif -%}
+{%- if item.tags -%}
+<div class="tags">
+{%- for tag in item.tags -%}
+<span class="tag"><span>#</span>{{ tag }}</span>
+{%- endfor -%}
+</div>
+{%- endif -%}
+</div>
+</div>
+{%- elif layout == "row" -%}
+<span class="item{% if item.featured %} featured{% endif %}">
+<span class="main">
+{%- if icon_src -%}<span class="icon"><img class="no-lightense" src="{{ icon_src }}" alt="" width="16" height="16"></span>{%- endif -%}
+{%- if item.link -%}
+<a class="title" href="{{ item.link }}"{% if external %} target="_blank" rel="noreferrer noopener"{% endif %}><span>{{ item.title }}</span></a>
+{%- else -%}
+<span class="title">{{ item.title }}</span>
+{%- endif -%}
+</span>
+{%- if item.subtitle -%}<span class="subtitle">{{ item.subtitle | trim | markdown(inline=true) | trim | safe }}</span>{%- endif -%}
+{%- if item.badge -%}<span class="badge">{{ item.badge }}</span>{%- endif -%}
+</span>
+{%- elif layout == "tile" -%}
+{%- if item.link -%}
+<a class="item" href="{{ item.link }}"{% if external %} target="_blank" rel="noreferrer noopener"{% endif %}>
+{%- else -%}
+<span class="item">
+{%- endif -%}
+<span class="text">
+<span class="title">{{ item.title }}</span>
+{%- if item.subtitle -%}<span class="subtitle">{{ item.subtitle | trim | markdown(inline=true) | trim | safe }}</span>{%- endif -%}
+</span>
+{%- if img_src -%}
+<img class="no-lightense{% if item.rotate %} rotate{% endif %}" src="{{ img_src }}" alt="{{ item.title }}" width="48" height="48">
+{%- else -%}
+<span class="placehold"></span>
+{%- endif -%}
+{%- if item.link -%}</a>{%- else -%}</span>{%- endif -%}
+{%- elif layout == "gallery" -%}
+<div class="item">
+{%- if img_src -%}<div class="image"><img src="{{ img_src }}" alt="{{ item.title }}"></div>{%- endif -%}
+<div class="text">
+{%- if item.link -%}
+<a class="title" href="{{ item.link }}"{% if external %} target="_blank" rel="noreferrer noopener"{% endif %}><span>{{ item.title }}</span></a>
+{%- else -%}
+<span class="title">{{ item.title }}</span>
+{%- endif -%}
+{%- if item.subtitle -%}<span class="subtitle">{{ item.subtitle | trim | markdown(inline=true) | trim | safe }}</span>{%- endif -%}
+{%- if item.content -%}
+<div class="content">
+{{ item.content | trim | markdown | trim | safe }}
+</div>
+{%- endif -%}
+{%- if item.badge -%}<span class="badge">{{ item.badge }}</span>{%- endif -%}
+</div>
+</div>
+{%- endif -%}
+{%- endfor -%}
+</div>
+{%- endcomponent collection %}

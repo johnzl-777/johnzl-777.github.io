@@ -1,9 +1,10 @@
-[[collection]]
-type = "card"
+layout = "card"
+
+[[item]]
 title = "QuEra Computing Inc."
 location = "Boston, MA"
 link = "https://github.com/QuEraComputing"
-date = "January 2026 - September 2026"
+badge = "January 2026 - September 2026"
 subtitle = "Scientific Software Engineer"
 content="""
 - Built and maintained the decoding interface package for the Bloqade quantum computing SDK
@@ -12,11 +13,10 @@ codes
 - Identified time-optimal quantum error correction gadgets for high rate code in next-generation quantum computer
 """
 
-[[collection]]
-type = "card"
+[[item]]
 title = "QuEra Computing Inc."
 link = "https://github.com/QuEraComputing"
-date = "August 2022 - January 2026"
+badge = "August 2022 - January 2026"
 subtitle = "Scientific Software Developer"
 content = """
 - Engineered embedded Domain Specific Languages (eDSLs) and compiler infrastructure for
@@ -27,12 +27,11 @@ as well as enabling direct-to-QPU execution
 - Formulated educational materials for neutral atom quantum computing
 """
 
-[[collection]]
-type = "card"
+[[item]]
 title = "If and Only If (Iff) Technologies"
 location = "Davis, CA"
 link = "https://iff.bio/"
-date = "October 2021 - June 2022"
+badge = "October 2021 - June 2022"
 subtitle = "Quantum Software Engineer (Part Time)"
 content = """
 - Investigated Bose-Hubbard Hamiltonian simulations on Quantum Computers
@@ -41,12 +40,11 @@ content = """
 - Investigated simulation of beam splitters on superconducting qubits using Sabin's (2020) (https://www.mdpi.com/2624-960X/2/1/13) paper
 """
 
-[[collection]]
-type = "card"
+[[item]]
 title = "If and Only If (Iff) Technologies"
 location = "Davis, CA"
 link = "https://iff.bio/"
-date = "June 2021 - September 2021"
+badge = "June 2021 - September 2021"
 subtitle = "Quantum Software Engineering Intern"
 content = """
 - Built custom job submission system for Xanadu's X8 photonic chip
@@ -55,12 +53,11 @@ content = """
 - Programmed Boson sampling utility library for interferometer submatrix generation and output probability calculation
 """
 
-[[collection]]
-type = "card"
+[[item]]
 title = "Sandia National Laboratories"
 link = "https://www.sandia.gov/"
 location = "Albuquerque, NM (Remote)"
-date = "June 2020 - September 2020"
+badge = "June 2020 - September 2020"
 subtitle = "TITANS Software Engineering R&D Intern"
 content = """
 - Pioneered Kuberentes-based testbed environment for nuclear detonation detection software
@@ -68,12 +65,11 @@ content = """
 - Created custom Kubernetes/Docker oriented bash configurations for expedited development
 """
 
-[[collection]]
-type = "card"
+[[item]]
 title = "Quantum Computing at Davis"
 location = "Davis, CA"
 link = "https://www.linkedin.com/company/qc-at-davis"
-date = "October 2019 - May 2022"
+badge = "October 2019 - May 2022"
 subtitle = "Workshop Director & Quantum Software Engineer"
 content = """
 - Pioneered curriculum for Quantum Computing at the collegiate level
@@ -81,12 +77,11 @@ content = """
 - Investigated qubit topologies and error reduction for molecular simulations on quantum computers
 """
 
-[[collection]]
-type = "card"
+[[item]]
 title = "General Dynamics Mission Systems"
 link = "https://gdmissionsystems.com/"
 location = "San Jose, CA"
-date = "July 2019 - September 2019"
+badge = "July 2019 - September 2019"
 subtitle = "Software Engineering Intern"
 content = """
 - Architected module with unit tests for internal SDR platform enabling remote hardware configuration in Python
@@ -94,11 +89,10 @@ content = """
 - Formulated tools for HDLC frame analysis, generation, and bit stuffing in Python/C
 """
 
-[[collection]]
-type = "card"
+[[item]]
 title = "Intel Corporation"
 location = "Folsom, CA"
-date = "June 2018 - September 2018"
+badge = "June 2018 - September 2018"
 subtitle = "Software Engineering Intern"
 content = """
 - Reduced errors and safety vulnerabilities in network deployment by creating the Network
@@ -107,11 +101,10 @@ Configuration Generator (NCG) Application
 - Gained hands-on experience with Cisco routing hardware and protocols
 """
 
-[[collection]]
-type = "card"
+[[item]]
 title = "Intel Corporation"
 location = "Folsom, CA"
-date = "June 2017 - August 2017"
+badge = "June 2017 - August 2017"
 subtitle = "Lab Operations Intern"
 content = """
 - Created 20 development systems for memory testing and diagnostics

@@ -11,7 +11,7 @@ tags = ["obsidian", "dev", "python"]
 lang = "en"
 toc = true
 comment = false
-copy = true
+code_copy = true
 math = false
 mermaid = false
 featured = false
@@ -37,12 +37,12 @@ emotions: # Also Text, just a string with: word, word, word structure
 
 The reason for keeping the `emotions` property as text-only was because I wasn’t the biggest fan of how Dataview renders the list type, with each entry of the list on its own line as opposed to some option where I could have one line (perhaps comma delimited?) that wraps around in a cell:
 
-{{ figure(src="/posts/changing-text-properties-to-lists-in-obsidian/thread-db.png", caption="This is from my “Thread DB” which I use to keep track of separate logs for projects. The rightmost column shows how Dataview renders the list type in a table") }}
+{{ <figure src="/posts/changing-text-properties-to-lists-in-obsidian/thread-db.png" caption="This is from my “Thread DB” which I use to keep track of separate logs for projects. The rightmost column shows how Dataview renders the list type in a table" /> }}
 
 However, as I added more and more poems with varying combinations of emotions I came to realize the Obsidian UI would try to suggest previous whole entries as inputs, which looked silly and felt obnoxious to me. If I tried to start by typing something like “nature” it would recommend some other distant entry where I might have typed “nature, love, hope”. If I did NOT want that whole entry then I would have to work around it by hitting the Escape key and being cautious with the autocomplete which might spring up again.
 
 
-{{ figure(src="/posts/changing-text-properties-to-lists-in-obsidian/autosuggest.png", caption="Since I’ve already gone through with the changes to my Poem templates, the closest thing I have in my vault to quickly display this annoyance is my Cocktail recipes template. Note how if I wanted to just type in something like “sweet” I end up getting suggested a bunch of other stuff I don’t want.")}}
+{{ <figure src="/posts/changing-text-properties-to-lists-in-obsidian/autosuggest.png" caption="Since I’ve already gone through with the changes to my Poem templates, the closest thing I have in my vault to quickly display this annoyance is my Cocktail recipes template. Note how if I wanted to just type in something like “sweet” I end up getting suggested a bunch of other stuff I don’t want." /> }}
 [^1]
 
 With more experimentation I realized having a property as a list type gave much more control over the suggested strings and semantically felt more “in-line” with what one would expect when you have multiple distinct descriptors for something. Thus it made more sense to me to update the template to use a list type instead for the property.
@@ -70,9 +70,9 @@ At some point though I caught myself and asked if there was an existing library 
 
 The final version of what I wanted to do ended up looking like the following. Note that I had to add some additional logic and compromise on my initial idea of overwriting things in place. 
 
-{% note(title="Path Strings") %}
-I used Mac OS to develop this so if you're a Windows user you'll probably need to change the slashes to backslashes.
-{% end %}
+> [!NOTE]
+> **Path Strings**\
+> I used Mac OS to develop this so if you're a Windows user you'll probably need to change the slashes to backslashes.
 
 
 
@@ -121,7 +121,7 @@ for dirpath, _, file_names in os.walk(target_dir_full_path):
 To better explain things I’ve generated a diagram of the file structure with [Nathan Friend’s](https://gitlab.com/nfriend) [tree.nathanfriend.com](https://tree.nathanfriend.com/) tool:
 
 
-{{figure(src="/posts/changing-text-properties-to-lists-in-obsidian/file-structure.png")}}
+{{ <figure src="/posts/changing-text-properties-to-lists-in-obsidian/file-structure.png" /> }}
 
 I only want to touch the `Poem <int>.md` files, the `Poets` folder should be skipped along with the Poem DB.
 

@@ -11,7 +11,7 @@ tags = ["dev", "python", "quantum", "compiler"]
 lang = "en"
 toc = true
 comment = false
-copy = true
+code_copy = true
 math = false
 mermaid = false
 featured = false
@@ -25,11 +25,10 @@ If you do NOT know about this behavior then let this post be a warning (and stil
 
 ## Context
 
-{% note(title="Note") %}
-While I bring up a couple quantum computing tools in this post this is primarily geared towards the compiler engineering side of things. Therefore it's safe to think of things like "Stim" as just a tool with its own DSL that I try to correctly produce from the DSL that lives inside the SDK I work on. 
-
-If you _are_ well-versed in the quantum computing AND compiler space (quite a niche, but a growing one at that!) then I hope you will find even more entertainment from this post (:
-{% end %}
+> [!NOTE]
+> While I bring up a couple quantum computing tools in this post this is primarily geared towards the compiler engineering side of things. Therefore it's safe to think of things like "Stim" as just a tool with its own DSL that I try to correctly produce from the DSL that lives inside the SDK I work on.
+>
+> If you _are_ well-versed in the quantum computing AND compiler space (quite a niche, but a growing one at that!) then I hope you will find even more entertainment from this post (:
 
 
 One of the things I’ve been working on at [QuEra](https://github.com/QuEraComputing) is transpilation from our SQUIN (Structural Quantum Information) eDSL (embedded Domain Specific Language) to our own [Stim](https://www.github.com/quantumlib/Stim) eDSL, all of which lives inside the [Bloqade SDK](https://github.com/QuEraComputing/bloqade-circuit)[^1]. From there we can easily generate the Stim text format that Stim itself can consume. 
@@ -191,9 +190,9 @@ I was bewildered! Never in my career had I ever seen something so odd. At first 
 
 It wasn’t immediately apparent to me CSE was the problem but in retrospect, if I was even remotely aware Python (CPython to be exact) had this odd behavior[^3] I might have clocked it faster. 
 
-{% important(title="Acknowledgements") %}
-Before I go further I’d like to give kudos to my colleagues [Kai-Hsin Wu](https://github.com/kaihsin) and [Xiu-Zhe (Roger) Luo](https://rogerluo.dev/) who helped identify the specifics of the bug and also implemented the fix in Kirin to avoid future incidences of this. Thanks guys!
-{% end %}
+> [!IMPORTANT]
+> **Acknowledgements**\
+> Before I go further I’d like to give kudos to my colleagues [Kai-Hsin Wu](https://github.com/kaihsin) and [Xiu-Zhe (Roger) Luo](https://rogerluo.dev/) who helped identify the specifics of the bug and also implemented the fix in Kirin to avoid future incidences of this. Thanks guys!
 
 At a high level, the Kirin CSE rewrite rule at the time of the bug (Kirin v0.18.0) did the following:
 
@@ -240,11 +239,11 @@ True
 
 Thus when you invoke CSE on something like:
 
-{% detail(title="Simplified SSA Format Ahead!", default_open=false) %}
+{% <detail title="Simplified SSA Format Ahead!" default_open={false}> %}
 The SSA form shown here is simplified from what you would actually see, there are some intermediate statements I've cut out to keep things concise here.
 
 If you're really curious, there's a `stim.aux.get_rec` statement that accepts the negative integer first, and THEN feeds into a `detector` or `observable` statement. 
-{% end %}
+{% </detail> %}
 
 ```
 ...
@@ -281,9 +280,9 @@ If you’re like me and wondering that there has to be a better way, there's a c
 
 If you’re *still* like me and think there has to be some way around it, [there is](https://stackoverflow.com/a/2891916)! But I don’t think this would be wise to have in the CPython codebase (at least, not in this context)…
 
-{% tip(title="Idiomatic C") %}
-My colleague [Phillip Weinberg](https://github.com/weinbe58) (who has much more experience working in C/C++ than I do) pointed out to me the `setjmp` + `longjmp` combo linked above is considered idiomatic and can be useful if a problem occurs and you want to immediately go straight to cleaning things up. 
-{% end %}
+> [!TIP]
+> **Idiomatic C**\
+> My colleague [Phillip Weinberg](https://github.com/weinbe58) (who has much more experience working in C/C++ than I do) pointed out to me the `setjmp` + `longjmp` combo linked above is considered idiomatic and can be useful if a problem occurs and you want to immediately go straight to cleaning things up.
 
 ## The Fix
 
@@ -385,7 +384,7 @@ In the grander scheme of things this was also a humbling reminder to me that whi
 
 *If you'd like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com*
 
-{% detail(title="Changelog", default_open=false) %}
+{% <detail title="Changelog" default_open={false}> %}
 
 Mar 23, 2026
 - Added additional note from talking with Phillip Weinberg on idiomatic C
@@ -397,7 +396,7 @@ Mar 24, 2026
 - Fixed code example (incorrect kernel name)
 - Fixed footnote on Bloqade SDK as a namespace package. Forgot to mention `bloqade-decoders` as source for other relevant eDSL.
 
-{% end %}
+{% </detail> %}
 
 
 [^1]: The Bloqade SDK is really a namespace package. The eDSLs I mention here mostly belong in the `bloqade-circuit` package that gets pulled in, although the ability to define detectors/observables comes from `bloqade-decoders`.

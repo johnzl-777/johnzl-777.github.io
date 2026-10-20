@@ -11,7 +11,7 @@ tags = ["space", "film"]
 lang = "en"
 toc = true
 comment = false
-copy = true
+code_copy = true
 math = false
 mermaid = false
 featured = false
@@ -20,18 +20,18 @@ reaction = false
 
 As an enthusiast of all things space-related, one of my favorite things to do when I’m waiting for some program to finish running at work is look at the [NASA Deep Space Network (DSN) Dashboard](https://eyes.nasa.gov/apps/dsn-now/dsn.html) on my portable monitor[^1] :
 
-{{ figure(src="/posts/project-hail-mary-and-mms-1-4/portable-monitor-dsn.jpeg", caption="The Work Page on my old site. It will be missed!", caption="Please pardon the dust (and desk trinkets)! Can you tell I also love my home state of California a bunch? :P" )}}
+{{ <figure src="/posts/project-hail-mary-and-mms-1-4/portable-monitor-dsn.jpeg" caption="Please pardon the dust (and desk trinkets)! Can you tell I also love my home state of California a bunch? :P" /> }}
 
 It’s really cool to me seeing lots of familiar names like Voyager 2, New Horizons, and Hayabusa2[^2] all sending and receiving data from Earth live! The dashboard/monitor also plays a similar role to the [Hollerith Cards](https://en.wikipedia.org/wiki/Punched_card) I used to have lining my cubicle at Intel: it’s a great way to start conversation with new folks on a topic I find really enjoyable.
 
 One nice consequence of looking at the DSN Dashboard long enough is that I’ve come to learn about satellites and missions I didn’t know about before. For example, [Solar TErrestrial RElations Observatory (STEREO) A](https://science.nasa.gov/mission/stereo/) (which, along with STEREO B obtained awesome 3D images of our sun) was not something I had any awareness of whatsoever until I saw the letters “STA” on the dashboard:
 
-{{ figure(src="/posts/project-hail-mary-and-mms-1-4/stereo-a-dsn.png")}}
+{{ <figure src="/posts/project-hail-mary-and-mms-1-4/stereo-a-dsn.png" /> }}
 
 Another set of satellites I wasn’t aware of was the [Magnetospheric Multiscale Mission (MMS)](https://mms.gsfc.nasa.gov/) which consists of four satellites (numbered 1-4) studying how the Earth and Sun's magnetic fields interact in the process of *magnetic reconnection*[^3]. I have to admit that it wasn’t so much seeing “MMS 3” on the dashboard that led me to research this mission further as it was the intriguing shape of the satellites themselves:
 
 
-{{ figure(src="/posts/project-hail-mary-and-mms-1-4/mms-art-nasa-gsfc.jpg" , caption="Image courtesy of NASA/GSFC") }}
+{{ <figure src="/posts/project-hail-mary-and-mms-1-4/mms-art-nasa-gsfc.jpg" caption="Image courtesy of NASA/GSFC" /> }}
 
 
 It has these rather long booms sticking from the top and bottom, with a similar “scaffolding” structure that made me think of the Voyager satellites when I first saw them[^4]. 
@@ -39,27 +39,27 @@ It has these rather long booms sticking from the top and bottom, with a similar 
 I also find the pancake/spinning-top like structure of the satellites to be distinct from what I’ve usually come to expect from most satellites I’ve seen: some kind of cube/cylinder with the solar panels sticking out:
 
 
-{{ figure(src="/posts/project-hail-mary-and-mms-1-4/mro-art.jpg" ,caption="Artist's Concept of the Mars Reconnaissance Orbiter - Image courtesy of NASA/JPL" ) }}
+{{ <figure src="/posts/project-hail-mary-and-mms-1-4/mro-art.jpg" caption="Artist's Concept of the Mars Reconnaissance Orbiter - Image courtesy of NASA/JPL" /> }}
 
 
 ### What Does This Have to Do with Project Hail Mary?
 
 
-{% caution(title="PROJECT HAIL MARY MOVIE SPOILERS AHEAD!") %}
-If you haven’t seen the film, I strongly encourage you to (saying this as somebody that’s watched it three times in theaters ❤️). Please consider reading the book too! I haven’t read it myself but some of the excerpts seem quite entertaining. 
-{% end %}
+> [!CAUTION]
+> **PROJECT HAIL MARY MOVIE SPOILERS AHEAD!**\
+> If you haven’t seen the film, I strongly encourage you to (saying this as somebody that’s watched it three times in theaters ❤️). Please consider reading the book too! I haven’t read it myself but some of the excerpts seem quite entertaining.
 
 Remember how part of the mission was to send back findings from the mission on “Beetle” probes? 
 
-{{ figure(src="/posts/project-hail-mary-and-mms-1-4/phm-probes-slide.png", caption="Please forgive the terrible image quality, I had to screenshot this from a video on YouTube")}}
+{{ <figure src="/posts/project-hail-mary-and-mms-1-4/phm-probes-slide.png" caption="Please forgive the terrible image quality, I had to screenshot this from a video on YouTube" /> }}
 
 And how the probes have the names of the members of the Beatles engraved/printed on them?
 
-{{ figure(src="/posts/project-hail-mary-and-mms-1-4/beetle-beatles-name.png") }}
+{{ <figure src="/posts/project-hail-mary-and-mms-1-4/beetle-beatles-name.png" /> }}
 
 Well guess what the other names for the MMS satellites are:
 
-{{ figure(src="/posts/project-hail-mary-and-mms-1-4/gunters-space-page-mms.png" ,  caption="Obtained from Krebs, Gunter D. “MMS 1, 2, 3, 4”. Gunter's Space Page. Retrieved July 13, 2026, from https://space.skyrocket.de/doc_sdat/mms.htm") }}
+{{ <figure src="/posts/project-hail-mary-and-mms-1-4/gunters-space-page-mms.png" caption="Obtained from Krebs, Gunter D. “MMS 1, 2, 3, 4”. Gunter's Space Page. Retrieved July 13, 2026, from https://space.skyrocket.de/doc_sdat/mms.htm" /> }}
 
 I don't think Andy Weir was specifically thinking of the MMS mission so much as The Beatles but I thought this was a rather fun coincidence. I at least hope the folks on the MMS mission find it entertaining (:
 
@@ -69,9 +69,9 @@ While Gunter’s Space Page was the first one I ran into that showed the alterna
 
 If anybody reading this knows somebody on the MMS mission that could give some more detail as to how this naming came about, I would love to hear about it! That and if there are any other missions that leverage The Beatles in naming (I imagine it would have to be some configuration of four satellites though...)
 
-{% note(title="Thanks Audrey!") %}
-I want to give a shout out to Audrey Dakis, a life-long friend of mine that I’ve known since elementary school. She obtained her Bachelor’s in Microbiology with minors in Chemistry, Physics, and Astronomy from Sacramento State and always comes to my mind when I learn more about space. I’m grateful beyond words to have her as a friend and hope there are more folks like her that will continue humanity's quest to explore the universe, how it works, and our place in the cosmos ✨
-{% end %}
+> [!NOTE]
+> **Thanks Audrey!**\
+> I want to give a shout out to Audrey Dakis, a life-long friend of mine that I’ve known since elementary school. She obtained her Bachelor’s in Microbiology with minors in Chemistry, Physics, and Astronomy from Sacramento State and always comes to my mind when I learn more about space. I’m grateful beyond words to have her as a friend and hope there are more folks like her that will continue humanity's quest to explore the universe, how it works, and our place in the cosmos ✨
 
 _If you'd like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com_
 

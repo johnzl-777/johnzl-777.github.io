@@ -2,7 +2,7 @@
 title = "John Long's Blog"
 description = "The Blog of John Long - Software Engineer and Poetry Enthusiast"
 sort_by = "date"
-template = "blog.html"
+template = "posts.html"
 page_template = "post.html"
 insert_anchor_links = "right"
 generate_feeds = true
@@ -19,10 +19,10 @@ categorized = false # posts can be categorized
 back_to_top = true # show back-to-top button
 toc = true # show table-of-contents
 comment = false # enable comment
-copy = true # show copy button in code block
+code_copy = true # show copy button in code block
 
-outdate_alert = false
-outdate_alert_days = 12
-outdate_alert_text_before = "This article was last updated "
-outdate_alert_text_after = " days ago and may be out of date."
+outdated_alert = false
+outdated_alert_days = 12
+outdated_alert_text_before = "This article was last updated "
+outdated_alert_text_after = " days ago and may be out of date."
 +++

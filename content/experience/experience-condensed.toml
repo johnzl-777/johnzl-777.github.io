@@ -1,60 +1,54 @@
-[[collection]]
-type = "card_simple"
+layout = "row"
+flow = "stack"
+
+[[item]]
 title = "QuEra Computing Inc"
 link = "https://github.com/QuEraComputing"
-content = "Scientific Software Engineer"
-date = "Jan 2026 - Sep 2026"
+subtitle = "Scientific Software Engineer"
+badge = "Jan 2026 - Sep 2026"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "QuEra Computing Inc"
 link = "https://github.com/QuEraComputing"
-content = "Scientific Software Developer"
-date = "Aug 2022 - Jan 2026"
+subtitle = "Scientific Software Developer"
+badge = "Aug 2022 - Jan 2026"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Iff Technologies"
 link = "https://iff.bio/"
-content = "Quantum Software Engineer (Part Time)"
-date = "Oct 2021 - Jun 2022"
+subtitle = "Quantum Software Engineer (Part Time)"
+badge = "Oct 2021 - Jun 2022"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Iff Technologies"
 link = "https://iff.bio/"
-content = "Quantum Software Engineering Intern"
-date = "Jun 2021 - Sep 2021"
+subtitle = "Quantum Software Engineering Intern"
+badge = "Jun 2021 - Sep 2021"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "QC at Davis"
 link = "https://www.linkedin.com/company/qc-at-davis"
-content = "Workshop Director & Quantum Software Engineer"
-date = "Oct 2019 - May 2022"
+subtitle = "Workshop Director & Quantum Software Engineer"
+badge = "Oct 2019 - May 2022"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Sandia National Labs"
 link = "https://www.sandia.gov/"
-content = "TITANS Software Engineering R&D Intern"
-date = "Jun 2020 - Sep 2020"
+subtitle = "TITANS Software Engineering R&D Intern"
+badge = "Jun 2020 - Sep 2020"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "General Dynamics Mission Systems"
 link = "https://gdmissionsystems.com/"
-content = "Software Engineering Intern"
-date = "Jul 2019 - Sep 2019"
+subtitle = "Software Engineering Intern"
+badge = "Jul 2019 - Sep 2019"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Intel Corporation"
-content = "Software Engineering Intern"
-date = "Jun 2018 - Sep 2018"
+subtitle = "Software Engineering Intern"
+badge = "Jun 2018 - Sep 2018"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Intel Corporation"
-content = "Lab Operations Intern"
-date = "Jun 2017 - Aug 2017"
+subtitle = "Lab Operations Intern"
+badge = "Jun 2017 - Aug 2017"

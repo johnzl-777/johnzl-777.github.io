@@ -9,7 +9,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: build_and_deploy
-        uses: shalzz/zola-deploy-action@v0.21.0
+        # Pinned to a master commit: no tagged release bundles Zola >= 0.23.4 yet (needed by serene v6)
+        uses: shalzz/zola-deploy-action@67789514e71b810b2d6a1ec9c19a7f76fc51d670 # bundles Zola 0.23.6
         env:
           # Target branch
           PAGES_BRANCH: gh-pages

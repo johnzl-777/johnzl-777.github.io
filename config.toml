@@ -1,4 +1,4 @@
-# serene v5.5.0
+# serene v6.0.0
 #
 # - docs: https://github.com/isunjn/serene/blob/latest/USAGE.md
 # - check for updates: https://github.com/isunjn/serene/releases
@@ -19,18 +19,17 @@ feed_filenames = ["feed.xml"] # "feed.xml" | "atom.xml" | "rss.xml", read docs f
 taxonomies = [{ name = "tags" }, { name = "categories" }]
 
 [markdown]
-highlight_code = true
-highlight_theme = "css"
-extra_syntaxes_and_themes = ["themes/serene/highlight_themes"]
-highlight_themes_css = [
-  { theme = "serene-light", filename = "hl-light.css" },
-  { theme = "serene-dark", filename = "hl-dark.css" },
-]
 render_emoji = false
 external_links_target_blank = false
 external_links_no_follow = true
 external_links_no_referrer = true
 smart_punctuation = false
+github_alerts = true
+
+[markdown.highlighting]
+style = "class"
+light_theme = "github-light"
+dark_theme = "github-dark"
 
 [slugify]
 paths = "on"
@@ -41,18 +40,26 @@ anchors = "on"
 
 [extra]
 
-sections = [
-  { name = "posts", path = "/posts", is_external = false },
-  { name = "tags", path = "/tags", is_external = false },
-  { name = "experience", path = "/experience", is_external = false},
-  { name = "about", path = "/about", is_external = false },
-  { name = "contact", path = "/contact", is_external = false}
-  # { name = "github", path = "https://github.com/<your-username>", is_external = true },
+nav = [
+  { name = "posts", path = "/posts" },
+  { name = "tags", path = "/tags" },
+  { name = "experience", path = "/experience" },
+  { name = "about", path = "/about" },
+  { name = "contact", path = "/contact" },
+  # { name = "github", path = "https://github.com/<your-username>" },
 ]
-blog_section_path = "/posts"
+
+# Your info on the home page, if you don't want to display handle/bio/avatar, simply comment out that line
+name = "John Long"
+# handle = "jhonwick"
+bio = "Software Engineer and Poetry Enthusiast"
+# avatar = "img/avatar.webp"
+links = []
+
+blog_section_path = "/posts" # Path of the main blog section, used by home page's recent posts and tags pages
 
 back_link_text = "Back" # Text of the back button
-force_theme = false # false | "light" | "dark"
+color_scheme = "auto" # "auto" | "light" | "dark"
 
 footer_copyright = "© 2026 John Long"
 footer_credits = true # Whether to show "Built with zola and serene" in footer

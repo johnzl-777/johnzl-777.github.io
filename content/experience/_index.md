@@ -12,10 +12,10 @@ You can read more about each role in the [More Details](@/experience/_index.md#m
 My resume can be downloaded from this website [here](John-Long-Resume.pdf).
 
 # Overview
-{{ collection(file="experience-condensed.toml") }}
+{{ <collection file="experience-condensed.toml" section /> }}
 
 # More Details
-{{ collection(file="experience-detailed.toml") }}
+{{ <collection file="experience-detailed.toml" section /> }}
 
 # Talks
-{{ collection(file="talks.toml") }}
+{{ <collection file="talks.toml" section /> }}

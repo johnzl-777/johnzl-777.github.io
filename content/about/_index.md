@@ -8,7 +8,7 @@ lang = 'en'
 
 math = false
 mermaid = false
-copy = false
+code_copy = false
 comment = false
 reaction = false
 +++
@@ -32,4 +32,4 @@ I returned to California after a solid four years and am in the process of figur
 I also wish that every application in existence supported Vim key bindings.
 
 
-{{ figure(src="/profile-pictures/helsinki.jpg", caption="Yours truly in Helsinki, visiting as part of the 7th International Workshop on Quantum Compilation", width="250") }}
+{{ <figure src="/profile-pictures/helsinki.jpg" caption="Yours truly in Helsinki, visiting as part of the 7th International Workshop on Quantum Compilation" width="250" /> }}

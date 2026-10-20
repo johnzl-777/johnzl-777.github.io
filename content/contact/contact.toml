@@ -1,28 +1,26 @@
-[[collection]]
-type = "card_simple"
-title = "E-mail"
-content = "(my first name)z(first letter of my last name).dev@gmail.com"
+layout = "row"
+flow = "stack"
 
-[[collection]]
-type = "card_simple"
+[[item]]
+title = "E-mail"
+subtitle = "(my first name)z(first letter of my last name).dev@gmail.com"
+
+[[item]]
 title = "LinkedIn"
 link = "https://www.linkedin.com/in/jzl"
-content = "linkedin.com/in/jzl"
+subtitle = "linkedin.com/in/jzl"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Github"
 link = "https://github.com/johnzl-777"
-content = "johnzl-777"
+subtitle = "johnzl-777"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "ORCID"
 link = "https://orcid.org/0009-0005-7557-197X"
-content = "0009-0005-7557-197X"
+subtitle = "0009-0005-7557-197X"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Google Scholar"
 link = "https://scholar.google.com/citations?user=qhZSK24AAAAJ&hl"
-content = "John Long"
+subtitle = "John Long"
