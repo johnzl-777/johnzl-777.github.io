@@ -46,6 +46,7 @@ nav = [
   { name = "experience", path = "/experience" },
   { name = "about", path = "/about" },
   { name = "contact", path = "/contact" },
+  { name = "flickr", path = "https://www.flickr.com/photos/205075872@N03/"},
   # { name = "github", path = "https://github.com/<your-username>" },
 ]
 

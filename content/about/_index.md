@@ -27,7 +27,7 @@ I returned to California after a solid four years and am in the process of figur
 - Making cocktails
 - Writing - I do my best to journal daily and love seeing my Obsidian vault grow
 - Watching movies
-- Photography - I ❤️ my Sony RX100 VII point-and-shoot as well as my toy Kodak Pixpro C1
+- Photography - I ❤️ my Sony RX100 VII and older point-and-shoots I've brought back to life
 
 I also wish that every application in existence supported Vim key bindings.
 
