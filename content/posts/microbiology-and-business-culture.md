@@ -48,6 +48,7 @@ So what does that all have to do with startups versus large companies?
 
 > [!NOTE]
 > I want to make it clear that the observations I provide here aren't meant to be commentary about the individual places I worked at, in that regard I had awesome experiences at each one and got to learn so much from truly brilliant people while building great software.
+>
 > Rather, these are more just challenges of an organic nature from having any number of people work in an organization. Individuals naturally have different ways they see and approach problems, and can have varying convictions on what the best way to tackle a problem should be. Having that diversity of thought is an incredible asset but also invites a degree of conflict to happen. I believe any healthy organization will have conflict, but how that conflict is resolved means all the difference between an organization that survives versus one that thrives.
 
 Startups are very much like Prokaryotes: you don’t have much of a split between engineers and scientists or scientists and business people. New ideas can get pitched easily and buy-in established very quickly through diffusion: just tap whoever you need on the shoulder or make a group chat on < insert messaging platform of choice >! 
