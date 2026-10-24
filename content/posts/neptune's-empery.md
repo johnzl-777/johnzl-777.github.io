@@ -5,7 +5,7 @@ date = 2026-10-16
 draft = false
 
 [taxonomies]
-tags = ["space", "poetry"]
+tags = ["space", "poetry", "biology"]
 
 [extra]
 lang = "en"
