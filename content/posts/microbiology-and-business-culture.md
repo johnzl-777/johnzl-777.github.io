@@ -71,13 +71,13 @@ The limited range of extent shouldn't be interpreted as a bad thing: larger comp
 
 It’s worth keeping in mind that all the ideas I’ve presented here are very general and they exist on a spectrum: unlike cells organizations are not forced into one category[^13] and as a company grows it may opt for some intermediate structure or attempt to follow one direction as far as possible before pivoting.
 
-If you’re considering what kind of place you’ll want to work in next I hope this post proves helpful in that endeavor! Despite the huge differences I found extraordinary value in my career working at both and made me a much better engineer in the process.
+If you’re considering what kind of place you’ll want to work in next I hope this post proves helpful in that endeavor! Despite the huge differences I found extraordinary value in my career working at both and it made me a much better engineer in the process.
 
 *If you'd like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com*
 
 [^1]: [Prokaryotes vs. Eukaryotes - by Arizona State University's Ask a Biologist page](https://askabiologist.asu.edu/prokaryotes-vs-eukaryotes)
 [^2]: [Organelle - Wikipedia](https://en.wikipedia.org/wiki/Organelle)
-[^3]: [Meet the Eukaryote, the First Cell to Get Organize](https://www.quantamagazine.org/meet-the-eukaryote-the-first-cell-to-get-organized-20241028/)
+[^3]: [Meet the Eukaryote, the First Cell to Get Organized](https://www.quantamagazine.org/meet-the-eukaryote-the-first-cell-to-get-organized-20241028/)
 [^4]: [Not so simple after all. A renaissance of research into prokaryotic evolution and cell structure - H. Philip](https://pmc.ncbi.nlm.nih.gov/articles/PMC2267389/)
 [^5]: [Cytoplasm - Wikipedia](https://en.wikipedia.org/wiki/Cytoplasm)
 [^6]: [Prokaryote - As distinct from Eukaryotes - Wikipedia](https://en.wikipedia.org/wiki/Prokaryote#As_distinct_from_eukaryotes)
