@@ -14,7 +14,7 @@ reaction = false
 +++
 # About
 
-I'm a Quantum (and classical!) Software Engineer born and raised in Northern California with a deep appreciation for science and poetry. I was born and raised in Northern California and had a brief stint in Boston, MA after I finished my Bachelor's degree in Computer Science and Engineering (CSE) from [UC Davis](https://engineering.ucdavis.edu/) to work on quantum computers. I've since returned to be closer to family and am grateful to continue the endeavor of making quantum computers more accessible and powerful.
+I'm a Quantum (and classical!) Software Engineer born and raised in Northern California with a deep appreciation for science and poetry. I  had a brief stint in Boston, MA after I finished my Bachelor's degree in Computer Science and Engineering (CSE) from [UC Davis](https://engineering.ucdavis.edu/) to work on quantum computers but have since returned to be closer to family. I'm grateful to have been able to re-establish roots in that time and to continue the endeavor of making quantum computers more accessible and powerful.
 
 (In no particular order) I'm a big fan of:
 - Old computers - more noise, more blinking lights, and more buttons/switches please!
