@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>John Long&#39;s Blog</title>
+	<subtitle>The Blog of John Long - Software Engineer and Poetry Enthusiast</subtitle>
+	<link rel="self" type="application/atom+xml" href="https://johnzl.com/posts/feed.xml"/>
+  <link rel="alternate" type="text/html" href="https://johnzl.com/posts/"/>
+  
+	<updated>2026-10-23T00:00:00+00:00</updated>
+	
+	<id>https://johnzl.com/posts/feed.xml</id>
+	<entry xml:lang="en">
+		<title>Microbiology and Business Culture</title>
+		<published>2026-10-23T00:00:00+00:00</published>
+		<updated>2026-10-23T00:00:00+00:00</updated>
+		<link rel="alternate" type="text/html" href="https://johnzl.com/posts/microbiology-and-business-culture/"/>
+		<id>https://johnzl.com/posts/microbiology-and-business-culture/</id>
+    
+		<content type="html" xml:base="https://johnzl.com/posts/microbiology-and-business-culture/">&lt;p&gt;Every now and then I have folks that ask me what it’s like working for a startup versus a big company. I’ve been fortunate enough to have experienced both cultures: I interned at places like Intel and Sandia National Labs which are absolutely huge as well as worked for startups like &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://iff.bio/&quot;&gt;Iff Technologies&lt;/a&gt; and &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/QuEraComputing&quot;&gt;QuEra Computing Inc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I find that a great way to think of the two is to revisit some high school biology and think of the distinction between Prokaryotes and Eukaryotes.&lt;/p&gt;
+&lt;h2 id=&quot;prokaryotes-and-eukaryotes&quot;&gt;Prokaryotes and Eukaryotes&lt;a class=&quot;zola-anchor&quot; href=&quot;#prokaryotes-and-eukaryotes&quot; aria-label=&quot;Anchor link for: prokaryotes-and-eukaryotes&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;blockquote class=&quot;markdown-alert-note&quot;&gt;
+&lt;p&gt;This LumenLearning LibreText &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(Boundless)/04%3A_Cell_Structure_of_Bacteria_Archaea_and_Eukaryotes/4.01%3A_Overview_of_Prokaryotic_and_Eukaryotic_Cells/4.1A%3A_Characteristics_of_Prokaryotic_Cells&quot;&gt;textbook section (4.1A: Characteristics of Prokaryotic Cells)&lt;/a&gt; served as a main source for most of the following paragraphs. Where supplementary information/sources have been helpful in my research, I have done my best to cite them in the footnotes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Prokaryotes and Eukaryotes are the two categories all cells fall into&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. There are a large number of distinguishing factors between the two but two in particular are the most relevant to business culture:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The absence/presence of organelles (literally “mini organs”&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;) in the cell&lt;/li&gt;
+&lt;li&gt;Cell size&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/microbiology-and-business-culture/prokaryote-eukaryote.jpg&quot;&gt;&lt;figcaption&gt;&lt;p&gt;A Prokaryote (left) and Eukaryote (right) side by side: notice the lack of organelles in the Prokaryote as well as the lack of a nucleus enclosing the genetic material. Credit: Prokaryotes vs. Eukaryotes - Ask a Biologist - Arizona State University&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Prokaryotes tend to be smaller than Eukaryotes and have a much simpler structure than Eukaryotes&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Most notably, Prokaryotes have no organelles (although ongoing research seems to be challenging this belief&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;) so all the chemistry that has to happen to sustain itself is sort of diffused throughout the cytoplasm (described as a “gel-like substance” primarily made of water&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;) and cell membrane that holds the cell together.&lt;/p&gt;
+&lt;p&gt;At small sizes, this setup tends to be fairly efficient: stuff that needs to go into the cell gets spread around quite quickly and any waste easily gets washed out. It’s good enough in fact, that relative to Eukaryotes Prokaryotes can metabolize and grow much faster&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#6&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#7&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;As you try to scale a Prokaryote however, you run into a problem: the volume of your cell tends to grow faster than the surface area&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#8&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;. Just relying on diffusion alone means you’ll eventually get to a point where incoming molecules take longer to reach the places they need to go and waste begins to accumulate. Furthermore, remember that there are all kinds of chemical reactions just happening “in the open”. With a larger volume you can imagine how inefficient this is, with molecules from one reaction inadvertently bumping into the molecules of another one with increasing frequency. I like to think of the following analogy: if your car’s battery and combustion engine reactions were forced to happen in some shared chamber it would be an absolute nightmare in terms of functionality!&lt;/p&gt;
+&lt;p&gt;Eukaryotes work around this by using organelles which are dedicated to specific functions, isolating reactions from different parts of the cell and relying on a more dedicated system (vesicles - literally something that wraps around molecules&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#9&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;) to get molecules to where they need to go. Eukaryotes are thus more efficient and able to scale to sizes much larger than Prokaryotes (1000x - 10000x increase in volume!)&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#10&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;. The “cost” to keep in mind though is that you now have additional structural complexity.&lt;/p&gt;
+&lt;h2 id=&quot;the-business-side&quot;&gt;The Business Side&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-business-side&quot; aria-label=&quot;Anchor link for: the-business-side&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;So what does that all have to do with startups versus large companies?&lt;/p&gt;
+&lt;blockquote class=&quot;markdown-alert-note&quot;&gt;
+&lt;p&gt;I want to make it clear that the observations I provide here aren&#39;t meant to be commentary about the individual places I worked at, in that regard I had awesome experiences at each one and got to learn so much from truly brilliant people while building great software.&lt;/p&gt;
+&lt;p&gt;Rather, these are more just challenges of an organic nature from having any number of people work in an organization. Individuals naturally have different ways they see and approach problems, and can have varying convictions on what the best way to tackle a problem should be. Having that diversity of thought is an incredible asset but also invites a degree of conflict to happen. I believe any healthy organization will have conflict, but how that conflict is resolved means all the difference between an organization that survives versus one that thrives.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Startups are very much like Prokaryotes: you don’t have much of a split between engineers and scientists or scientists and business people. New ideas can get pitched easily and buy-in established very quickly through diffusion: just tap whoever you need on the shoulder or make a group chat on &amp;lt; insert messaging platform of choice &amp;gt;!&lt;/p&gt;
+&lt;p&gt;At the same time, it’s not too difficult too imagine the problems that happen if you scale things up as-is: people get involved with things either prematurely or too late, sometimes conflicting and even opposite ideas (think chemical reactions with no compartmentalization) are built upon within the same team and without the right kind of coordination people can get frustrated pretty quickly.&lt;/p&gt;
+&lt;p&gt;The natural solution is some degree of compartmentalization, especially as the company grows: subteams are formed, hierarchies introduced, and stricter communication channels established (think vesicles and organelles). Thus, larger companies bear more resemblance to Eukaryotes&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#11&quot;&gt;11&lt;/a&gt;&lt;/sup&gt;. The downside of this is you sacrifice some of the ease to start collaborations and buy-in on novel ideas takes longer as it may have to work its way through different teams. By the time an idea gets approved and other teams can work on it, a Prokaryote may have already beaten the Eukaryote to the punch!&lt;/p&gt;
+&lt;p&gt;That being said, as an engineer in a larger company you have more of an opportunity to feel like you’re tackling a tightly scoped problem as opposed to several completely different problems at once. While I admit a preference towards having different problems I can take turns alternating between, there’s something to be said about being able to tackle just one over a long period of time&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#12&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;extent-of-ownership&quot;&gt;Extent of Ownership&lt;a class=&quot;zola-anchor&quot; href=&quot;#extent-of-ownership&quot; aria-label=&quot;Anchor link for: extent-of-ownership&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Another difference you’ll find between startups and large companies is the &lt;em&gt;extent of ownership&lt;/em&gt;: If you have something you’ve worked on, how tied are you to it? How much of it continues to be something you’re part of? Is it something you see to completion and continue to support as its used by others or do you have to hand it off to somebody else? I think the ultimate benchmark of this is if you have an idea that’s relevant to the business, how long does it take to get approval to work on it and how far can you keep working on it?&lt;/p&gt;
+&lt;p&gt;In startups you’re expected to have a very high extent of ownership: you’ll build something and continue iterating on it until it releases, getting to see people directly interact with it and potentially incorporate what they ask for immediately. With larger companies that ownership can be limited: you can imagine this as being part of an organelle and once you’ve finished your part a vesicle will send it to a different organelle for further processing.&lt;/p&gt;
+&lt;p&gt;The limited range of extent shouldn&#39;t be interpreted as a bad thing: larger companies ideally have the ability (and the need!) to work on products that are larger in scale than what a smaller organization can handle, which can demand more structure and specialized talent than a startup can provide. In contrast, while a larger extent does sound cooler it also means a small number of individuals must essentially take on several roles. Size doesn&#39;t necessarily translate to success, and there will always be an abundance of problems to tackle, just different in nature.&lt;/p&gt;
+&lt;h2 id=&quot;concluding-remarks&quot;&gt;Concluding Remarks&lt;a class=&quot;zola-anchor&quot; href=&quot;#concluding-remarks&quot; aria-label=&quot;Anchor link for: concluding-remarks&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;It’s worth keeping in mind that all the ideas I’ve presented here are very general and they exist on a spectrum: unlike cells organizations are not forced into one category&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#13&quot;&gt;13&lt;/a&gt;&lt;/sup&gt; and as a company grows it may opt for some intermediate structure or attempt to follow one direction as far as possible before pivoting.&lt;/p&gt;
+&lt;p&gt;If you’re considering what kind of place you’ll want to work in next I hope this post proves helpful in that endeavor! Despite the huge differences I found extraordinary value in my career working at both and it made me a much better engineer in the process.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you&#39;d like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;/sup&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://askabiologist.asu.edu/prokaryotes-vs-eukaryotes&quot;&gt;Prokaryotes vs. Eukaryotes - by Arizona State University&#39;s Ask a Biologist page&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;/sup&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://en.wikipedia.org/wiki/Organelle&quot;&gt;Organelle - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;/sup&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.quantamagazine.org/meet-the-eukaryote-the-first-cell-to-get-organized-20241028/&quot;&gt;Meet the Eukaryote, the First Cell to Get Organized&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;4&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;4&lt;/sup&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://pmc.ncbi.nlm.nih.gov/articles/PMC2267389/&quot;&gt;Not so simple after all. A renaissance of research into prokaryotic evolution and cell structure - H. Philip&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;5&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;5&lt;/sup&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://en.wikipedia.org/wiki/Cytoplasm&quot;&gt;Cytoplasm - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;6&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;6&lt;/sup&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://en.wikipedia.org/wiki/Prokaryote#As_distinct_from_eukaryotes&quot;&gt;Prokaryote - As distinct from Eukaryotes - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;7&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;7&lt;/sup&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/Introductory_Biology_(CK-12)/05%3A_Evolution/5.07%3A_Evolution_of_Eukaryotes&quot;&gt;Evolution of Eukaryotes - LibreText&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;8&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;8&lt;/sup&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://en.wikipedia.org/wiki/Surface-area-to-volume_ratio&quot;&gt;Surface-area-to-volume ratio - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;9&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;9&lt;/sup&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://en.wikipedia.org/wiki/Vesicle_(biology_and_chemistry)&quot;&gt;Vesicle (biology and chemistry) - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;10&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;10&lt;/sup&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.ncbi.nlm.nih.gov/books/NBK7286/&quot;&gt;Overview of Intracellular Compartments and Trafficking Pathways - A. A. Tokarev, A. Alfonso, N. Segev&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;11&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;11&lt;/sup&gt;
+&lt;p&gt;You can push this analogy even further with the fact that all multi-cellular organisms are Eukaryotic! If you think about really large businesses it&#39;s not unheard of they&#39;ll spin off a division to make a new company or split to survive, very much like multicellular life in the real world.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;12&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;12&lt;/sup&gt;
+&lt;p&gt;I also like it when I have potentially one or two large core problems to focus on followed by a mix of smaller ones.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;13&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;13&lt;/sup&gt;
+&lt;p&gt;Even in the domain of biology there is always the case something is discovered that doesn&#39;t seem to fit nicely into existing categories. &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://en.wikipedia.org/wiki/Parakaryon&quot;&gt;Parakaryon myojinensis&lt;/a&gt; is an example of this, believed to fall neither into the category of Prokaryote or Eukaryote!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Neptune&#39;s Empery</title>
+		<published>2026-10-16T00:00:00+00:00</published>
+		<updated>2026-10-16T00:00:00+00:00</updated>
+		<link rel="alternate" type="text/html" href="https://johnzl.com/posts/neptune-s-empery/"/>
+		<id>https://johnzl.com/posts/neptune-s-empery/</id>
+    
+		<content type="html" xml:base="https://johnzl.com/posts/neptune-s-empery/">&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;A Hymn in Praise of Neptune - Thomas Campion&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;figure&gt;
+&lt;img src=&quot;/posts/neptune&#39;s-empery/Neptune_Voyager2_color_calibrated.png&quot; width=&quot;400&quot;&gt;&lt;figcaption&gt;&lt;p&gt;NASA / Voyager 2 / PDS / OPUS / Ardenau4, CC0, via Wikimedia Commons&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;Of Neptune&#39;s empire let us sing,&lt;br /&gt;
+At whose command the waves obey;&lt;br /&gt;
+To whom the rivers tribute pay,&lt;br /&gt;
+Down the high mountains sliding:&lt;/em&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/neptune&#39;s-empery/neptune-clouds.jpg&quot; width=&quot;400&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Voyager 2 photo of clouds on Neptune, adjusted for true color. Credits: NASA/JPL&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;To whom the scaly nation yields&lt;br /&gt;
+Homage for the crystal fields&lt;br /&gt;
+        Wherein they dwell:&lt;br /&gt;
+And every sea-dog&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; pays a gem&lt;br /&gt;
+Yearly out of his wat&#39;ry cell&lt;br /&gt;
+To deck great Neptune&#39;s diadem&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/neptune&#39;s-empery/esa-nir-neptune-moons.jpg&quot; width=&quot;550&quot;&gt;&lt;figcaption&gt;&lt;p&gt;James Webb Space Telescope Near-Infrared Camera (NIRCam) photo of Neptune. Neptune&#39;s moon Triton is visible as the blue &#39;star&#39; upper left. Smaller moons are also visible. Credit: NASA, ESA, CSA, and STScI&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;The Tritons dancing in a ring&lt;br /&gt;
+Before his palace gates do make&lt;/em&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/neptune&#39;s-empery/triton-nasa.jpg&quot; width=&quot;400&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Global color mosaic of Triton, taken in 1989 by Voyager 2 during its flyby of the Neptune system. Credit: NASA/JPL/USGS&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;The water with their echoes quake,&lt;br /&gt;
+Like the great thunder sounding:&lt;/em&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/neptune&#39;s-empery/neptune-dark-spot.jpg&quot; width=&quot;400&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Neptune&#39;s Great Dark Spot. Credit: NASA/JPL&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;The sea-nymphs chant their accents shrill,&lt;br /&gt;
+And the sirens, taught to kill&lt;br /&gt;
+        With their sweet voice,&lt;br /&gt;
+Make ev&#39;ry echoing rock reply&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/neptune&#39;s-empery/triton-cryovolcanoes.jpg&quot; width=&quot;400&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Cryovolcanoes of Triton (see dark streaks!). Credit: NASA/JPL&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;Unto their gentle murmuring noise&lt;br /&gt;
+The praise of Neptune&#39;s empery&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;backstory&quot;&gt;Backstory&lt;a class=&quot;zola-anchor&quot; href=&quot;#backstory&quot; aria-label=&quot;Anchor link for: backstory&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;In my hunt for nice poems I stumbled upon Thomas Campion’s &lt;em&gt;A Hymn in Praise of Neptune&lt;/em&gt; while flipping through &lt;em&gt;The Oxford Book of English Verse, 1250-1900: Enriched Edition&lt;/em&gt;. I couldn’t help but close my eyes after reading and instead of thinking of grand ocean voyages or swashbuckling buccaneers I thought of those “blue empires” beyond Earth. I attribute part of this chain of thought from reading Ada Limón&#39;s beautiful poem &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://poets.org/poem/praise-mystery-poem-europa&quot;&gt;&lt;em&gt;In Praise of Mystery: A Poem for Europa&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Uranus also came to my mind, its uncanny pale hue and enormity just sitting in the vastness of space. I thought of what I’d read about Enceladus and Europa, icy marbles with oceans tucked away from the eyes of man. And I thought even further than our Solar System, to the news of watery exoplanets&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; and the tantalizing dream that life beyond what we know it to be could exist in those dark depths.&lt;/p&gt;
+&lt;p&gt;Perhaps we will get the chance to see life like that of the Ediacaran or Cambrian Periods on Earth: Sponges and &lt;em&gt;Kimberella&lt;/em&gt; abounding, the delightful-looking &lt;em&gt;Anomalocaris&lt;/em&gt;, &lt;em&gt;Opabinia&lt;/em&gt;, and &lt;em&gt;Hallucigenia&lt;/em&gt; wandering about&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#6&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;, a snapshot of our origins just waiting to be discovered!&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/neptune&#39;s-empery/cambrian-smithsonian.jpg&quot; width=&quot;600&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Anomalocaris depicted swimming above, with Hallucigenia (the spiky fellow) center bottom. Credit: Smithsonian Institution&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Or perhaps there is only a sad soup of organic compounds. Just salt, minerals, ice and the of the finitude of our being rendered naked against the cosmos.&lt;/p&gt;
+&lt;p&gt;Either way, I dream and dream onwards! I let every word of a good poem take me to worlds within and horizons beyond ✨&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you&#39;d like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;/sup&gt;
+&lt;p&gt;Veteran sailor - &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.merriam-webster.com/dictionary/sea-dog&quot;&gt;Merriam-Webster&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;/sup&gt;
+&lt;p&gt;Crown - &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.merriam-webster.com/dictionary/diadem&quot;&gt;Merriam-Webster&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;/sup&gt;
+&lt;p&gt;The Original NASA image caption does not use the term &quot;cryovolcano&quot; but this &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.skyatnightmagazine.com/space-science/cryovolcanism-in-the-solar-system&quot;&gt;BBC Sky at Night Magazine article&lt;/a&gt; uses the same image with the term &quot;cryovolcanism&quot;. I have elected to use that term in this image caption as it feels more closely tied to the words &quot;shrill&quot; and &quot;echoing rock&quot; in the poem (things I would associate with a normal volcano!).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;4&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;4&lt;/sup&gt;
+&lt;p&gt;Wide dominion - &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.merriam-webster.com/dictionary/empery&quot;&gt;Merriam-Webster&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;5&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;5&lt;/sup&gt;
+&lt;p&gt;I note here that it seems the majority of news about water on exoplanets usually indicates the water is in a state that is not conducive to the formation/hosting of life but that being said, it isn&#39;t a huge stretch of the imagination to imagine a world out there where the water is a bit milder :P. See &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://science.nasa.gov/universe/exoplanets/two-exoplanets-may-be-mostly-water-nasas-hubble-and-spitzer-find/&quot;&gt;this NASA post&lt;/a&gt; and &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.space.com/astronomy/exoplanets/astronomers-discover-hot-watery-exoplanet-destined-to-be-swallowed-by-its-star&quot;&gt;this Space.com post&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;6&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;6&lt;/sup&gt;
+&lt;p&gt;Kudos to Danna Staaf&#39;s &lt;em&gt;Monarchs of the Sea: The Extraordinary 500-Million-Year History of Cephalopods&lt;/em&gt; for introducing me to the Ediacaran period as well as &lt;em&gt;Kimberella&lt;/em&gt;, I consulted the book in helping compose this sentence.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Project Hail Mary and MMS 1-4</title>
+		<published>2026-07-14T00:00:00+00:00</published>
+		<updated>2026-07-14T00:00:00+00:00</updated>
+		<link rel="alternate" type="text/html" href="https://johnzl.com/posts/project-hail-mary-and-mms-1-4/"/>
+		<id>https://johnzl.com/posts/project-hail-mary-and-mms-1-4/</id>
+    
+		<content type="html" xml:base="https://johnzl.com/posts/project-hail-mary-and-mms-1-4/">&lt;p&gt;As an enthusiast of all things space-related, one of my favorite things to do when I’m waiting for some program to finish running at work is look at the &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://eyes.nasa.gov/apps/dsn-now/dsn.html&quot;&gt;NASA Deep Space Network (DSN) Dashboard&lt;/a&gt; on my portable monitor&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; :&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/project-hail-mary-and-mms-1-4/portable-monitor-dsn.jpeg&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Please pardon the dust (and desk trinkets)! Can you tell I also love my home state of California a bunch? :P&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;It’s really cool to me seeing lots of familiar names like Voyager 2, New Horizons, and Hayabusa2&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; all sending and receiving data from Earth live! The dashboard/monitor also plays a similar role to the &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://en.wikipedia.org/wiki/Punched_card&quot;&gt;Hollerith Cards&lt;/a&gt; I used to have lining my cubicle at Intel: it’s a great way to start conversation with new folks on a topic I find really enjoyable.&lt;/p&gt;
+&lt;p&gt;One nice consequence of looking at the DSN Dashboard long enough is that I’ve come to learn about satellites and missions I didn’t know about before. For example, &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://science.nasa.gov/mission/stereo/&quot;&gt;Solar TErrestrial RElations Observatory (STEREO) A&lt;/a&gt; (which, along with STEREO B obtained awesome 3D images of our sun) was not something I had any awareness of whatsoever until I saw the letters “STA” on the dashboard:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/project-hail-mary-and-mms-1-4/stereo-a-dsn.png&quot;&gt;&lt;/figure&gt;
+&lt;p&gt;Another set of satellites I wasn’t aware of was the &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://mms.gsfc.nasa.gov/&quot;&gt;Magnetospheric Multiscale Mission (MMS)&lt;/a&gt; which consists of four satellites (numbered 1-4) studying how the Earth and Sun&#39;s magnetic fields interact in the process of &lt;em&gt;magnetic reconnection&lt;/em&gt;&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. I have to admit that it wasn’t so much seeing “MMS 3” on the dashboard that led me to research this mission further as it was the intriguing shape of the satellites themselves:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/project-hail-mary-and-mms-1-4/mms-art-nasa-gsfc.jpg&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Image courtesy of NASA/GSFC&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;It has these rather long booms sticking from the top and bottom, with a similar “scaffolding” structure that made me think of the Voyager satellites when I first saw them&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;I also find the pancake/spinning-top like structure of the satellites to be distinct from what I’ve usually come to expect from most satellites I’ve seen: some kind of cube/cylinder with the solar panels sticking out:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/project-hail-mary-and-mms-1-4/mro-art.jpg&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Artist&#39;s Concept of the Mars Reconnaissance Orbiter - Image courtesy of NASA/JPL&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;what-does-this-have-to-do-with-project-hail-mary&quot;&gt;What Does This Have to Do with Project Hail Mary?&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-does-this-have-to-do-with-project-hail-mary&quot; aria-label=&quot;Anchor link for: what-does-this-have-to-do-with-project-hail-mary&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;blockquote class=&quot;markdown-alert-caution&quot;&gt;
+&lt;p&gt;&lt;strong&gt;PROJECT HAIL MARY MOVIE SPOILERS AHEAD!&lt;/strong&gt;&lt;br /&gt;
+If you haven’t seen the film, I strongly encourage you to (saying this as somebody that’s watched it three times in theaters ❤️). Please consider reading the book too! I haven’t read it myself but some of the excerpts seem quite entertaining.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Remember how part of the mission was to send back findings from the mission on “Beetle” probes?&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/project-hail-mary-and-mms-1-4/phm-probes-slide.png&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Please forgive the terrible image quality, I had to screenshot this from a video on YouTube&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;And how the probes have the names of the members of the Beatles engraved/printed on them?&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/project-hail-mary-and-mms-1-4/beetle-beatles-name.png&quot;&gt;&lt;/figure&gt;
+&lt;p&gt;Well guess what the other names for the MMS satellites are:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/project-hail-mary-and-mms-1-4/gunters-space-page-mms.png&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Obtained from Krebs, Gunter D. “MMS 1, 2, 3, 4”. Gunter&#39;s Space Page. Retrieved July 13, 2026, from https://space.skyrocket.de/doc_sdat/mms.htm&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;I don&#39;t think Andy Weir was specifically thinking of the MMS mission so much as The Beatles but I thought this was a rather fun coincidence. I at least hope the folks on the MMS mission find it entertaining (:&lt;/p&gt;
+&lt;h2 id=&quot;research-note&quot;&gt;Research Note&lt;a class=&quot;zola-anchor&quot; href=&quot;#research-note&quot; aria-label=&quot;Anchor link for: research-note&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;While Gunter’s Space Page was the first one I ran into that showed the alternate naming scheme I couldn’t find any more detail on what its exact origins are. I gave Google Gemini a shot and while it did dig up the &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://space.oscar.wmo.int/satellites/view/mms_a&quot;&gt;OSCAR page&lt;/a&gt; which had a bullet point giving more confirmation of the naming, it also ended up hallucinating explanations from other sources.&lt;/p&gt;
+&lt;p&gt;If anybody reading this knows somebody on the MMS mission that could give some more detail as to how this naming came about, I would love to hear about it! That and if there are any other missions that leverage The Beatles in naming (I imagine it would have to be some configuration of four satellites though...)&lt;/p&gt;
+&lt;blockquote class=&quot;markdown-alert-note&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Thanks Audrey!&lt;/strong&gt;&lt;br /&gt;
+I want to give a shout out to Audrey Dakis, a life-long friend of mine that I’ve known since elementary school. She obtained her Bachelor’s in Microbiology with minors in Chemistry, Physics, and Astronomy from Sacramento State and always comes to my mind when I learn more about space. I’m grateful beyond words to have her as a friend and hope there are more folks like her that will continue humanity&#39;s quest to explore the universe, how it works, and our place in the cosmos ✨&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;If you&#39;d like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;/sup&gt;
+&lt;p&gt;I actually have a whole thing where, depending on how I’m feeling, I have different kinds of “background visual noise” I put on that display. While I love the DSN Dashboard I also like to display:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.spaceweather.gov/communities/space-weather-enthusiasts-dashboard&quot;&gt;NOAA Space Weather Enthusiasts Dashboard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.youtube.com/watch?v=AlN9WQaTp-s&quot;&gt;HAL 9000 display animations in 4K&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/brunobraga/termsaver&quot;&gt;Internet Engineering Task Force RFCs slowly printed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;as well as &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/da-luce/astroterm&quot;&gt;tracking the stars from my terminal&lt;/a&gt;!
+If I feel like I &lt;em&gt;really&lt;/em&gt; need the noise I’ll set up tmux so I can see the two CLI apps mentioned previously run at once. Honorable mention to &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/aristocratos/btop&quot;&gt;btop&lt;/a&gt; as well, which actually does have utility for me in hunting down certain hungry processes while looking super cool!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;/sup&gt;
+&lt;p&gt;Congratulations to all involved at JAXA for Haybusa2’s &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://global.jaxa.jp/press/2026/07/20260706-3_e.html&quot;&gt;successful flyby of Torifune&lt;/a&gt;! It always amazes me I live in an age where we can obtain such close images of asteroids.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;/sup&gt;
+&lt;p&gt;This &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.americanscientist.org/article/reconnecting-magnetic-fields&quot;&gt;American Scientist article by James L. Burch and James F. Drake&lt;/a&gt; has a great explanation of what magnetic reconnection is along with the history of the research surrounding it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;4&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;4&lt;/sup&gt;
+&lt;p&gt;I have to admit I actually always thought the Voyager booms were antennae but some Googling has informed me they’re intended for sensors like a magnetometer. &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/&quot;&gt;This NASA Site&lt;/a&gt; has a helpful diagram of the instrumentation on the Voyager satellites while this &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://mms.gsfc.nasa.gov/spacecraft.html&quot;&gt;Goddard Space Flight Center page&lt;/a&gt; also confirms the structures in the images are booms.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Thank you, User!</title>
+		<published>2026-06-27T00:00:00+00:00</published>
+		<updated>2026-06-27T00:00:00+00:00</updated>
+		<link rel="alternate" type="text/html" href="https://johnzl.com/posts/thank-you-user/"/>
+		<id>https://johnzl.com/posts/thank-you-user/</id>
+    
+		<content type="html" xml:base="https://johnzl.com/posts/thank-you-user/">&lt;p&gt;A couple of months ago I got an email from somebody in Australia asking me if my old &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/johnzl-777/SRAM-Read-Write&quot;&gt;SRAM (Static Random Access Memory)-Read-Write&lt;/a&gt; project could help them diagnose a faulty SRAM chip in a CNC machine.&lt;/p&gt;
+&lt;p&gt;The project itself was something I cooked up back when I was in high school, with my own “lab&quot; space at home&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and plenty of old electronics to tinker with courtesy of a teacher I knew. I still remember reading the datasheets with the myriad of timing diagrams and the joy of seeing that I had successfully written to and read from the chip!&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/thank-you-user/arduino-mega-sram-setup.jpg&quot;&gt;&lt;figcaption&gt;&lt;p&gt;I’m sure there should be some capacitors/additional components somewhere but the chip seemed perfectly happy being directly plugged into the Arduino MEGA clone.&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/thank-you-user/timing-diagram.png&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Timing diagram for writing to the SRAM chip.&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;It’s definitely not my finest work&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; but I learned a great deal about how SRAM worked and for a high schooler it was a welcome addition to a portfolio for college applications&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;You can imagine my surprise then that &lt;em&gt;9 years&lt;/em&gt; after I put this project on GitHub somebody almost 10,000 miles away had run into problems with a CNC machine and thought my work could help!&lt;/p&gt;
+&lt;p&gt;Unfortunately the particular chip they were interested in testing was different enough that I didn’t feel comfortable recommending code changes without having some version of the chip to test against myself. Furthermore, the memory test in the project was not something I’d consider particularly robust either: it just wrote some random bytes and immediately read it back&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;They ended up pursuing a different solution but just knowing a project as small and as old as this one got attention from other people is an amazing feeling.&lt;/p&gt;
+&lt;p&gt;It reminds me what my mission in being a software engineer has always been:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;To build tools that enable people to do more&lt;/li&gt;
+&lt;li&gt;To feel good about building such tools (:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;May this little post encourage others to more openly share their projects, regardless of how small or niche it seems ❤️ You never know just how impactful the things you build are until you put them out there.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you&#39;d like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;/sup&gt;
+&lt;p&gt;Thanks Mom and Dad!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;/sup&gt;
+&lt;p&gt;I haven’t had to write C/C++ in some time but I’m skeptical if my usage of the preprocessor would be considered idiomatic…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;/sup&gt;
+&lt;p&gt;While I still think it would be nice to get the money back from my MIT application, it’s funny to me that I’ve ended up working for a company that has heritage from the university :P&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;4&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;4&lt;/sup&gt;
+&lt;p&gt;If I had the chance today I would have probably extended the test through things like writing larger patterns and waiting a period of time to verify contents or repeatedly reading and writing to the same area.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>hash(-1) == hash(-2) in Compilers for Quantum</title>
+		<published>2026-03-22T00:00:00+00:00</published>
+		<updated>2026-03-22T00:00:00+00:00</updated>
+		<link rel="alternate" type="text/html" href="https://johnzl.com/posts/hash-1-hash-2-in-compilers-for-quantum/"/>
+		<id>https://johnzl.com/posts/hash-1-hash-2-in-compilers-for-quantum/</id>
+    
+		<content type="html" xml:base="https://johnzl.com/posts/hash-1-hash-2-in-compilers-for-quantum/">&lt;p&gt;This post is about how I (quite painfully) suffered the consequences of the CPython &lt;code&gt;hash(-1) == hash(-2)&lt;/code&gt; behavior.&lt;/p&gt;
+&lt;p&gt;If you know about this behavior already, I sincerely hope you’ve never encountered this in the wild and that this serves as a fun read on a consequence of it.&lt;/p&gt;
+&lt;p&gt;If you do NOT know about this behavior then let this post be a warning (and still be a fun read)!&lt;/p&gt;
+&lt;h2 id=&quot;context&quot;&gt;Context&lt;a class=&quot;zola-anchor&quot; href=&quot;#context&quot; aria-label=&quot;Anchor link for: context&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;blockquote class=&quot;markdown-alert-note&quot;&gt;
+&lt;p&gt;While I bring up a couple quantum computing tools in this post this is primarily geared towards the compiler engineering side of things. Therefore it&#39;s safe to think of things like &quot;Stim&quot; as just a tool with its own DSL that I try to correctly produce from the DSL that lives inside the SDK I work on.&lt;/p&gt;
+&lt;p&gt;If you &lt;em&gt;are&lt;/em&gt; well-versed in the quantum computing AND compiler space (quite a niche, but a growing one at that!) then I hope you will find even more entertainment from this post (:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;One of the things I’ve been working on at &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/QuEraComputing&quot;&gt;QuEra&lt;/a&gt; is transpilation from our SQUIN (Structural Quantum Information) eDSL (embedded Domain Specific Language) to our own &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.github.com/quantumlib/Stim&quot;&gt;Stim&lt;/a&gt; eDSL, all of which lives inside the &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/QuEraComputing/bloqade-circuit&quot;&gt;Bloqade SDK&lt;/a&gt;&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. From there we can easily generate the Stim text format that Stim itself can consume.&lt;/p&gt;
+&lt;p&gt;To be more precise, the workflow I target is the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The user writes a program in &lt;code&gt;squin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;They apply a compiler pass (&lt;code&gt;SquinToStimPass&lt;/code&gt;) to convert the program to the &lt;code&gt;stim&lt;/code&gt; eDSL&lt;/li&gt;
+&lt;li&gt;They can now emit the text form of the &lt;code&gt;stim&lt;/code&gt; eDSL program&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can see a small example of this workflow below, starting with the &lt;code&gt;squin&lt;/code&gt; program:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;from&lt;/span&gt;&lt;span&gt; bloqade&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; import&lt;/span&gt;&lt;span&gt; squin&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; as&lt;/span&gt;&lt;span&gt; sq&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;sq&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;kernel&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt; example&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;    #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; allocate 10 qubits&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    qs&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;qalloc&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;10&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;    #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; apply H gate on all qubits&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;broadcast&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;h&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;qs&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;    #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; apply some 1 and 2Q gates&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;z&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;qs&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;0&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;y&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;qs&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;5&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;broadcast&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;cx&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-9 z-d-12&quot;&gt;controls&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;=&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span&gt;qs&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;0&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; qs&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;1&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span class=&quot;z-l-9 z-d-12&quot;&gt; targets&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;=&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span&gt;qs&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;3&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; qs&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;5&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;    #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; measure everything out&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;broadcast&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;measure&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;qs&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The eDSLs I mentioned as well as the ability to spit out files of other forms are all built on top of &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/QuEraComputing/kirin&quot;&gt;Kirin&lt;/a&gt;, which handles lowering from Python to &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://en.wikipedia.org/wiki/Static_single-assignment_form&quot;&gt;SSA IR&lt;/a&gt; form as well as common compiler optimization passes. We can see what the SSA form looks like immediately by just invoking the &lt;code&gt;.print()&lt;/code&gt; method all kernels have:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;func.func @example() -&amp;gt; !py.NoneType {&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  ^0(%example_self):&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %0 = py.constant.constant 10 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %qs = func.invoke qalloc(%0) : !py.IList[!py.Qubit, !Any] maybe_pure=False&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %1 = func.invoke h(%qs) : !py.NoneType maybe_pure=False&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %2 = py.constant.constant 0 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %3 = py.indexing.getitem(%qs, %2) : !py.Qubit&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %4 = func.invoke z(%3) : !py.NoneType maybe_pure=False&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %5 = py.constant.constant 5 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %6 = py.indexing.getitem(%qs, %5) : !py.Qubit&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %7 = func.invoke y(%6) : !py.NoneType maybe_pure=False&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %8 = py.constant.constant 0 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %9 = py.indexing.getitem(%qs, %8) : !py.Qubit&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %10 = py.constant.constant 1 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %11 = py.indexing.getitem(%qs, %10) : !py.Qubit&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %12 = py.ilist.new(values=(%9, %11)){elem_type=!Any} : !py.IList[!py.Qubit, Literal(2,int)]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %13 = py.constant.constant 3 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %14 = py.indexing.getitem(%qs, %13) : !py.Qubit&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %15 = py.constant.constant 5 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %16 = py.indexing.getitem(%qs, %15) : !py.Qubit&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %17 = py.ilist.new(values=(%14, %16)){elem_type=!Any} : !py.IList[!py.Qubit, Literal(2,int)]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %18 = func.invoke cx(%12, %17) : !py.NoneType maybe_pure=False&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %19 = func.invoke measure(%qs) : !py.IList[!py.MeasurementResult, ~N : !py.int] maybe_pure=False&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %20 = func.const.none() : !py.NoneType&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │       func.return %20&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;} // func.func example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If I now apply the &lt;code&gt;SquinToStimPass&lt;/code&gt; we get the program in our &lt;code&gt;stim&lt;/code&gt; eDSL form:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;from&lt;/span&gt;&lt;span&gt; bloqade&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;stim&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;passes&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; import&lt;/span&gt;&lt;span&gt; SquinToStimPass&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;SquinToStimPass&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-9 z-d-12&quot;&gt;dialects&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;=&lt;/span&gt;&lt;span&gt;example&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;dialects&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;example&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;example&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;print&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;func.func @example() -&amp;gt; !py.NoneType {&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  ^0(%example_self):&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %0 = stim.aux.constant.int 0 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %1 = stim.aux.constant.int 1 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %2 = stim.aux.constant.int 2 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %3 = stim.aux.constant.int 3 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %4 = stim.aux.constant.int 4 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %5 = stim.aux.constant.int 5 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %6 = stim.aux.constant.int 6 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %7 = stim.aux.constant.int 7 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %8 = stim.aux.constant.int 8 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │  %9 = stim.aux.constant.int 9 : !py.int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │       stim.gate.H(targets=(%0, %1, %2, %3, %4, %5, %6, %7, %8, %9)){dagger=False : !py.bool}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │       stim.gate.Z(targets=(%0)){dagger=False : !py.bool}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │       stim.gate.Y(targets=(%5)){dagger=False : !py.bool}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │       stim.gate.CX(targets=(%3, %5), controls=(%0, %1)){dagger=False : !py.bool}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %10 = stim.aux.constant.float 0.0 : !py.float&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │       stim.collapse.MZ(p=%10, targets=(%0, %1, %2, %3, %4, %5, %6, %7, %8, %9))&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │ %11 = func.const.none() : !py.NoneType&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  │       func.return %11&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;} // func.func example&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which you can then emit to text form:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;import&lt;/span&gt;&lt;span&gt; io&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;from&lt;/span&gt;&lt;span&gt; bloqade&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;stim&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; import&lt;/span&gt;&lt;span&gt; emit&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; as&lt;/span&gt;&lt;span&gt; emit_stim&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; main&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; as&lt;/span&gt;&lt;span&gt; main_dialect&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt; codegen&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;mt&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    buf&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; io&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;StringIO&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    emit&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; emit_stim&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;EmitStimMain&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-9 z-d-12&quot;&gt;dialects&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;=&lt;/span&gt;&lt;span&gt;main_dialect&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span class=&quot;z-l-9 z-d-12&quot;&gt; io&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;=&lt;/span&gt;&lt;span&gt;buf&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    emit&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;initialize&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    emit&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;run&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;mt&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;    return&lt;/span&gt;&lt;span&gt; buf&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;getvalue&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;strip&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;print&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;codegen&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;example&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;H 0 1 2 3 4 5 6 7 8 9&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Z 0&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Y 5&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;CX 0 3 1 5&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;MZ(0.00000000) 0 1 2 3 4 5 6 7 8 9&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;the-problem&quot;&gt;The Problem&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-problem&quot; aria-label=&quot;Anchor link for: the-problem&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;At some point as I was developing the &lt;code&gt;SquinToStimPass&lt;/code&gt; I ran into a rather peculiar problem.&lt;/p&gt;
+&lt;p&gt;Given a program that had &lt;code&gt;-1&lt;/code&gt; and &lt;code&gt;-2&lt;/code&gt; as Stim eDSL constant statements, when I ran the &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://en.wikipedia.org/wiki/Common_subexpression_elimination&quot;&gt;CSE (Common Subexpression Elimination)&lt;/a&gt; rewrite rule, &lt;code&gt;-1&lt;/code&gt; would disappear only to be replaced by &lt;code&gt;-2&lt;/code&gt; !&lt;/p&gt;
+&lt;p&gt;I’d have something in the original SQUIN language&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; like:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;sq&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;kernel&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt; example&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    qs&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;qalloc&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;10&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    ms&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;broadcast&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;measure&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;qs&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;    #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; get the last two measurements which, in time, are the&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;    #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; most recent so per Stim convention should be accessible&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;    #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; via the record index through -1 and -2&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;set_detector&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span&gt;ms&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;1&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; ms&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;2&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span class=&quot;z-l-9 z-d-12&quot;&gt; coordinates&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;=&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;0&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;0&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which SHOULD have come out to the following text form from the Stim eDSL:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;MZ(0.00000000) 0 1 2 3 4 5 6 7 8 9&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;DETECTOR(0, 0) rec[-1] rec[-2]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But instead I’d get&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;MZ(0.00000000) 0 1 2 3 4 5 6 7 8 9&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;DETECTOR(0, 0) rec[-2] rec[-2]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When I looked at the actual Stim eDSL output there was no &lt;code&gt;-1&lt;/code&gt; constant statement to be seen either.&lt;/p&gt;
+&lt;p&gt;I was bewildered! Never in my career had I ever seen something so odd. At first I was convinced some rewrite rule &lt;em&gt;I&lt;/em&gt; had created as part of the pass was the culprit but it eventually dawned on me that something at the Kirin level must be the culprit.&lt;/p&gt;
+&lt;h2 id=&quot;the-bug&quot;&gt;The Bug&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-bug&quot; aria-label=&quot;Anchor link for: the-bug&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;It wasn’t immediately apparent to me CSE was the problem but in retrospect, if I was even remotely aware Python (CPython to be exact) had this odd behavior&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; I might have clocked it faster.&lt;/p&gt;
+&lt;blockquote class=&quot;markdown-alert-important&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Acknowledgements&lt;/strong&gt;&lt;br /&gt;
+Before I go further I’d like to give kudos to my colleagues &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/kaihsin&quot;&gt;Kai-Hsin Wu&lt;/a&gt; and &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://rogerluo.dev/&quot;&gt;Xiu-Zhe (Roger) Luo&lt;/a&gt; who helped identify the specifics of the bug and also implemented the fix in Kirin to avoid future incidences of this. Thanks guys!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;At a high level, the Kirin CSE rewrite rule at the time of the bug (Kirin v0.18.0) did the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Generate an &lt;code&gt;int&lt;/code&gt; from Python’s built-in &lt;code&gt;hash&lt;/code&gt; function applied on components of the statement including its type, arguments, attributes (which are compile-time values, like constants that are immediately available), etc.&lt;/li&gt;
+&lt;li&gt;Check if the &lt;code&gt;int&lt;/code&gt; is present in a “&lt;code&gt;seen&lt;/code&gt;” dictionary that records all statements that have been encountered up to that point.&lt;/li&gt;
+&lt;li&gt;If the &lt;code&gt;int&lt;/code&gt; is present in &lt;code&gt;seen&lt;/code&gt;, replace references to the current statement to the previous equivalent statement.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The actual code we&#39;ll be focusing on from steps 1 and 2 looks like this:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;seen&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span&gt; dict&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;int&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; Statement&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;	hash_value&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;		(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;type&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;stmt&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		+&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; tuple&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;stmt&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;args&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		+&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; tuple&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;stmt&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;attributes&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;values&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		+&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; tuple&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;stmt&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;successors&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		+&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; tuple&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;stmt&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;regions&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;	)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;	&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;	if&lt;/span&gt;&lt;span&gt; hash_value&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; in&lt;/span&gt;&lt;span&gt; seen&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;		...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With the stim constant statements in the program I generated, the only part of those statements that was actually different between the two was the &lt;code&gt;stmts.attributes&lt;/code&gt; which would contain the original &lt;code&gt;-1&lt;/code&gt; and &lt;code&gt;-2&lt;/code&gt; Python integers.&lt;/p&gt;
+&lt;p&gt;When we started digging deeper we ran into this peculiar behavior:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;1&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;1&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;0&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;0&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; okay, nothing fishy with hashing positive integers...&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;1&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;2&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; wait, what?&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;2&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;2&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;1&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; ==&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;2&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;True&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; alright I give up.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Thus when you invoke CSE on something like:&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;span&gt;Simplified SSA Format Ahead!&lt;/span&gt;&lt;/summary&gt;
+&lt;p&gt;The SSA form shown here is simplified from what you would actually see, there are some intermediate statements I&#39;ve cut out to keep things concise here.&lt;/p&gt;
+&lt;p&gt;If you&#39;re really curious, there&#39;s a &lt;code&gt;stim.aux.get_rec&lt;/code&gt; statement that accepts the negative integer first, and THEN feeds into a &lt;code&gt;detector&lt;/code&gt; or &lt;code&gt;observable&lt;/code&gt; statement.&lt;/p&gt;
+&lt;/details&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;...&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;%0 = stim.aux.constant.int -1 &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;%1 = stim.aux.constant.int -2 &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;%2 = stim.aux.detector(record_indices = (%0, %1))&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You end up getting:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;...&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;%0 = stim.aux.constant.int -1&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;%1 = stim.aux.constant.int -2&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;# notice reference to %0 dropped in favor of %1!&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;%2 = stim.aux.detector(record_indices = (%1, %1)) &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;...&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And when &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://en.wikipedia.org/wiki/Dead-code_elimination&quot;&gt;DCE (Dead Code Elimination)&lt;/a&gt; gets run, -1 just vanishes altogether:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;# bye-bye -1 ):&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;%1 = stim.aux.constant.int -2&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;%2 = stim.aux.detector(record_indices = (%1, %1))&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;origins&quot;&gt;Origins&lt;a class=&quot;zola-anchor&quot; href=&quot;#origins&quot; aria-label=&quot;Anchor link for: origins&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Some googling about this odd behavior led me to &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://omairmajid.com/posts/2021-07-16-why-is-hash-in-python/&quot;&gt;Omair Majid’s blog post&lt;/a&gt; which dives into the CPython source code to investigate. Omair points out that &lt;code&gt;-1&lt;/code&gt; is specifically avoided as a valid returnable hash value in the implementation because it’s used in C to indicate something went wrong.&lt;/p&gt;
+&lt;p&gt;If you’re like me and wondering that there has to be a better way, there&#39;s a cited Reddit answer that points out C does not have the ability to throw exceptions.&lt;/p&gt;
+&lt;p&gt;If you’re &lt;em&gt;still&lt;/em&gt; like me and think there has to be some way around it, &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://stackoverflow.com/a/2891916&quot;&gt;there is&lt;/a&gt;! But I don’t think this would be wise to have in the CPython codebase (at least, not in this context)…&lt;/p&gt;
+&lt;blockquote class=&quot;markdown-alert-tip&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Idiomatic C&lt;/strong&gt;&lt;br /&gt;
+My colleague &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/weinbe58&quot;&gt;Phillip Weinberg&lt;/a&gt; (who has much more experience working in C/C++ than I do) pointed out to me the &lt;code&gt;setjmp&lt;/code&gt; + &lt;code&gt;longjmp&lt;/code&gt; combo linked above is considered idiomatic and can be useful if a problem occurs and you want to immediately go straight to cleaning things up.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;the-fix&quot;&gt;The Fix&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-fix&quot; aria-label=&quot;Anchor link for: the-fix&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;I had to do some digging on the Kirin GitHub PRs and Slack but the &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/QuEraComputing/kirin/pull/412/files&quot;&gt;initial fix for this problem was made by Roger&lt;/a&gt; and it was just to add some additional logic to the statement attribute &lt;code&gt;__hash__&lt;/code&gt;. The additional logic literally being:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; in src/kirin/ir/attrs/py.py&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; __hash__&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;self&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;	if&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; isinstance&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;data&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; int&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		return&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;data&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;	#&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; default attribute hash behavior continued if not int&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;	return&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;data&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; +&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;type&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This wasn’t the complete solution though and if we jump to Kirin v0.18.1&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; (the patch version immediately after the bug was found) the final fix was made a bit more robust (albeit with more overhead for me to wrap my head around).&lt;/p&gt;
+&lt;p&gt;First, the attribute &lt;code&gt;__hash__&lt;/code&gt; returns to this definition:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; in src/kirin/ir/attrs/py.py&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; __hash__&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;self&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt; -&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; int&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;	return&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;type&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;data&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;BUT, on the CSE side:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Instead of generating an &lt;code&gt;int&lt;/code&gt; as a key into the &lt;code&gt;seen&lt;/code&gt; dictionary there’s now an &lt;code&gt;Info&lt;/code&gt; class that consumes pretty much what you saw before to instantiate it and is used as a key instead.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Info&lt;/code&gt; has its own &lt;code&gt;__hash__&lt;/code&gt; definition that uses the Python build-in &lt;code&gt;id&lt;/code&gt; on individual elements that would have just been &lt;code&gt;hash&lt;/code&gt;’ed before. This is a bump up from the old implementation where &lt;code&gt;hash&lt;/code&gt; was just called directly on things belonging to the statement.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The logic looks something like this:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; in src/kirin/rewrite/cse.py, as part of the `Info` class&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; __hash__&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;self&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt; -&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; int&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;	return&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;		(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;id&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;head&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		+&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; tuple&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;id&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;ssa&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; for&lt;/span&gt;&lt;span&gt; ssa&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; in&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;args&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;		  #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; Hmm something feels off about hash(attr)...&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		+&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; tuple&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;hash&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;attr&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; for&lt;/span&gt;&lt;span&gt; attr&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; in&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;attributes&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		+&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; tuple&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;id&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;succ&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; for&lt;/span&gt;&lt;span&gt; succ&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; in&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;successors&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		+&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; tuple&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;id&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;region&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; for&lt;/span&gt;&lt;span&gt; region&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; in&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;regions&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;	)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you think carefully though this still runs afoul of the identical hash problem that caused this bug in the first place! Indeed, if I take the program from the &lt;a href=&quot;https://johnzl.com/posts/hash-1-hash-2-in-compilers-for-quantum/#the-problem&quot;&gt;Problem section&lt;/a&gt; but run it through CSE after rewriting it:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;from&lt;/span&gt;&lt;span&gt; bloqade&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; import&lt;/span&gt;&lt;span&gt; squin&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; as&lt;/span&gt;&lt;span&gt; sq&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;from&lt;/span&gt;&lt;span&gt; bloqade&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;stim&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;passes&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; import&lt;/span&gt;&lt;span&gt; SquinToStimPass&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;from&lt;/span&gt;&lt;span&gt; kirin&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;rewrite&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; import&lt;/span&gt;&lt;span&gt; Walk&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; CommonSubexpressionElimination&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;sq&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt;kernel&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;z-l-6 z-d-7&quot;&gt; example&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    qs&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;qalloc&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;10&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    ms&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;broadcast&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;measure&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;qs&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    sq&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;set_detector&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span&gt;ms&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;1&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; ms&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;2&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span class=&quot;z-l-9 z-d-12&quot;&gt; coordinates&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;=&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;0&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;0&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;SquinToStimPass&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-9 z-d-12&quot;&gt;dialects&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;=&lt;/span&gt;&lt;span&gt;example&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;dialects&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;example&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; SquinToStimPass already has CSE applied inside of it, &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; but I&amp;#39;m doing it again outside for clarity.&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Walk&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;CommonSubexpressionElimination&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;rewrite&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;example&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;code&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(With some &lt;code&gt;print&lt;/code&gt; statements inside CSE rewrite rule for debugging), the &lt;code&gt;Info&lt;/code&gt;-generated hash ends up being exactly the same for the &lt;code&gt;-1&lt;/code&gt; and &lt;code&gt;-2&lt;/code&gt; constant statements.&lt;/p&gt;
+&lt;p&gt;How can it be the case that CSE behaves correctly this time though?&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Info&lt;/code&gt; has one additional magic/”dunder” method that’s been explicitly implemented, which is &lt;code&gt;__eq__&lt;/code&gt;. When two Python dictionary keys with identical hashes are encountered there’s a fallback to &lt;code&gt;__eq__&lt;/code&gt;&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#5&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. &lt;code&gt;__eq__&lt;/code&gt; in &lt;code&gt;Info&lt;/code&gt; explicitly looks at the equality between the same elements that went into producing the custom hash.&lt;/p&gt;
+&lt;p&gt;Here it should be clear that &lt;code&gt;False&lt;/code&gt; gets spit out between the &lt;code&gt;-1&lt;/code&gt; and &lt;code&gt;-2&lt;/code&gt; constant statements and CSE doesn’t touch anything.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;__eq__&lt;/code&gt; implementation looks like this:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; __eq__&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;self&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; other&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; object&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt; -&amp;gt;&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; bool&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;	if&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; not&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; isinstance&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;other&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; Info&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		return&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; False&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;	return&lt;/span&gt;&lt;span&gt; (&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;		self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;head&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; ==&lt;/span&gt;&lt;span&gt; other&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;head&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		and&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;args&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; ==&lt;/span&gt;&lt;span&gt; other&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;args&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;		#&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; attribute comparison immediately gives False with&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;		#&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; the ones in our program.&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		and&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;attributes&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; ==&lt;/span&gt;&lt;span&gt; other&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;attributes&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		and&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;successors&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; ==&lt;/span&gt;&lt;span&gt; other&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;successors&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;		and&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; self&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;regions&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; ==&lt;/span&gt;&lt;span&gt; other&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;regions&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;	)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;a class=&quot;zola-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;If you’re as boggled as I am that &lt;code&gt;hash(-1) == hash(-2)&lt;/code&gt; has just been a thing in Python, welcome to the club 😅&lt;/p&gt;
+&lt;p&gt;While the process of writing this post was a lot of fun&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#6&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; I’m certainly glad this is no longer an issue. I do admit feeling a bit of nostalgia seeing how much Kirin has grown and once again, I’m grateful to work on a team where things like this can be quickly hammered out.&lt;/p&gt;
+&lt;p&gt;In the grander scheme of things this was also a humbling reminder to me that while current Quantum Computers are noisy and prone to error, even in the domain of classical computation there’s still plenty of problems to be found (:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you&#39;d like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com&lt;/em&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;span&gt;Changelog&lt;/span&gt;&lt;/summary&gt;
+&lt;p&gt;Mar 23, 2026&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added additional note from talking with Phillip Weinberg on idiomatic C&lt;/li&gt;
+&lt;li&gt;Make it clearer Kai-Hsin Wu and Xiu-Zhe (Roger) Luo also helped with finding the bug&lt;/li&gt;
+&lt;li&gt;Added missing contact information&lt;/li&gt;
+&lt;li&gt;Got rid of the first line of the post, kind of spoiled the conclusion :P&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mar 24, 2026&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed code example (incorrect kernel name)&lt;/li&gt;
+&lt;li&gt;Fixed footnote on Bloqade SDK as a namespace package. Forgot to mention &lt;code&gt;bloqade-decoders&lt;/code&gt; as source for other relevant eDSL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;/sup&gt;
+&lt;p&gt;The Bloqade SDK is really a namespace package. The eDSLs I mention here mostly belong in the &lt;code&gt;bloqade-circuit&lt;/code&gt; package that gets pulled in, although the ability to define detectors/observables comes from &lt;code&gt;bloqade-decoders&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;/sup&gt;
+&lt;p&gt;The program I cooked up here should be compatible with the latest version of &lt;code&gt;bloqade-circuit&lt;/code&gt; (v0.13.1). The syntax here is actually slightly different from what I remember working with because back then tuples with constants (ex: &lt;code&gt;(1,5)&lt;/code&gt;) were the way to go for coordinates. Now lists are preferred, especially considering they offer more flexibility for construction/manipulation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;/sup&gt;
+&lt;p&gt;I actually wonder if &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.python.org/download/alternatives/&quot;&gt;other Python implementations&lt;/a&gt; have this behavior as well but I haven’t confirmed it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;4&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;4&lt;/sup&gt;
+&lt;p&gt;The latest version of Kirin (v0.22.8 as of the time of writing this) has even more logic in CSE  but the core remains pretty much the same.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;5&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;5&lt;/sup&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://hynek.me/articles/hashes-and-equality/&quot;&gt;Hynek Schlawack’s&lt;/a&gt; and &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://eng.lyft.com/hashing-and-equality-in-python-2ea8c738fb9d&quot;&gt;Roy Williams’&lt;/a&gt; posts on the topic were especially helpful in understanding this behavior!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;6&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;6&lt;/sup&gt;
+&lt;p&gt;Ha! You thought I was going to refute that in this footnote, but no (: It was however, also a decent amount of work. I wasn’t the most familiar with the &lt;code&gt;__eq__&lt;/code&gt; fallback behavior before writing this and caught onto it with the two blog posts above as well as help from an embedded &lt;code&gt;print(f&quot;eq invoked on {obj} against {self}&quot;)&lt;/code&gt; statement.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Changing Text Properties to Lists in Obsidian</title>
+		<published>2026-03-08T00:00:00+00:00</published>
+		<updated>2026-03-08T00:00:00+00:00</updated>
+		<link rel="alternate" type="text/html" href="https://johnzl.com/posts/changing-text-properties-to-lists-in-obsidian/"/>
+		<id>https://johnzl.com/posts/changing-text-properties-to-lists-in-obsidian/</id>
+    
+		<content type="html" xml:base="https://johnzl.com/posts/changing-text-properties-to-lists-in-obsidian/">&lt;h2 id=&quot;gripes-with-the-text-property-type&quot;&gt;Gripes with the Text Property Type&lt;a class=&quot;zola-anchor&quot; href=&quot;#gripes-with-the-text-property-type&quot; aria-label=&quot;Anchor link for: gripes-with-the-text-property-type&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://help.obsidian.md/properties&quot;&gt;Obsidian’s Properties&lt;/a&gt; feature along with &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://blacksmithgu.github.io/obsidian-dataview/&quot;&gt;Dataview&lt;/a&gt; are things I use all the time to create little mini-databases within my Vault to keep track of things ranging from cocktail recipes, films, quotes, and for this particular project/post, poems (:&lt;/p&gt;
+&lt;p&gt;When I originally started keeping track of my favorite poems, my template looked something like the following:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;---&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;author: # Text, usually a link to another file in a &amp;quot;Poets&amp;quot; folder&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;emotions: # Also Text, just a string with: word, word, word structure&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;---&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;## Remarks&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;## Context&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The reason for keeping the &lt;code&gt;emotions&lt;/code&gt; property as text-only was because I wasn’t the biggest fan of how Dataview renders the list type, with each entry of the list on its own line as opposed to some option where I could have one line (perhaps comma delimited?) that wraps around in a cell:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/changing-text-properties-to-lists-in-obsidian/thread-db.png&quot;&gt;&lt;figcaption&gt;&lt;p&gt;This is from my “Thread DB” which I use to keep track of separate logs for projects. The rightmost column shows how Dataview renders the list type in a table&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;However, as I added more and more poems with varying combinations of emotions I came to realize the Obsidian UI would try to suggest previous whole entries as inputs, which looked silly and felt obnoxious to me. If I tried to start by typing something like “nature” it would recommend some other distant entry where I might have typed “nature, love, hope”. If I did NOT want that whole entry then I would have to work around it by hitting the Escape key and being cautious with the autocomplete which might spring up again.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/changing-text-properties-to-lists-in-obsidian/autosuggest.png&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Since I’ve already gone through with the changes to my Poem templates, the closest thing I have in my vault to quickly display this annoyance is my Cocktail recipes template. Note how if I wanted to just type in something like “sweet” I end up getting suggested a bunch of other stuff I don’t want.&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+[^1]
+&lt;p&gt;With more experimentation I realized having a property as a list type gave much more control over the suggested strings and semantically felt more “in-line” with what one would expect when you have multiple distinct descriptors for something. Thus it made more sense to me to update the template to use a list type instead for the property.&lt;/p&gt;
+&lt;p&gt;That being said though, I needed some way to update all the pre-existing poems to fall in line with this new type structure! While I was fortunate enough that all the strings were just words separated by commas, there didn’t seem to be a tool that could automatically do the conversion of turning each word into a list entry and then using that list to replace the old text property.&lt;/p&gt;
+&lt;p&gt;The closest thing I could find was &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/technohiker&quot;&gt;technohikers’&lt;/a&gt; &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/technohiker/obsidian-multi-properties&quot;&gt;Multi-Properties Plugin&lt;/a&gt; which I’ve used when I need to add a tag retroactively to notes but doesn’t seem to have the ability to convert existing entries in one type to another.&lt;/p&gt;
+&lt;p&gt;Considering Obsidian stores all your data as markdown files however, it felt like it wouldn’t be too daunting a task to hack something together to do this myself, leading to the creation of the Python snippet you see in this post (: &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&quot;initial-attempt&quot;&gt;Initial Attempt&lt;a class=&quot;zola-anchor&quot; href=&quot;#initial-attempt&quot; aria-label=&quot;Anchor link for: initial-attempt&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;I initially thought of the following approach:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Get all the relevant .md files in the Poems folder&lt;/li&gt;
+&lt;li&gt;Regex for the starting and ending &quot;---&quot; in the files denoting the property section&lt;/li&gt;
+&lt;li&gt;Extract the &quot;emotions: ....&quot; part of the regex&lt;/li&gt;
+&lt;li&gt;Use some string manipulation to convert the string into a new string with the proper &quot;-&quot; and &quot;\n&quot; characters injected to be put into a list&lt;/li&gt;
+&lt;li&gt;rewrite over the old file with the new entry&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;At some point though I caught myself and asked if there was an existing library that could simplify some of this, particularly steps 2 through 4. Lo and behold, I discovered &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://python-frontmatter.readthedocs.io/en/latest/&quot;&gt;Python Frontmatter&lt;/a&gt; by &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/eyeseast&quot;&gt;Chris Amico&lt;/a&gt; which automatically latches onto the section of the markdown file that has the properties and gives a pretty nice interface to read and manipulate that data. While it isn’t advertised for use with Obsidian, properties are just embedded YAML and with some play scripts&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; I figured out it pretty much did what I wanted.&lt;/p&gt;
+&lt;h2 id=&quot;result&quot;&gt;Result&lt;a class=&quot;zola-anchor&quot; href=&quot;#result&quot; aria-label=&quot;Anchor link for: result&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The final version of what I wanted to do ended up looking like the following. Note that I had to add some additional logic and compromise on my initial idea of overwriting things in place.&lt;/p&gt;
+&lt;blockquote class=&quot;markdown-alert-note&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Path Strings&lt;/strong&gt;&lt;br /&gt;
+I used Mac OS to develop this so if you&#39;re a Windows user you&#39;ll probably need to change the slashes to backslashes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;import&lt;/span&gt;&lt;span&gt; os&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;import&lt;/span&gt;&lt;span&gt; frontmatter&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; Set up paths&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;vault_root_path&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt; &amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;my_vault_path&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;target_dir&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt; &amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;Poems&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;target_dir_full_path&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; vault_root_path&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; +&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt; &amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; +&lt;/span&gt;&lt;span&gt; target_dir&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;new_dir_full_path&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; vault_root_path&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; +&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt; &amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; +&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt; &amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;Temp &lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; +&lt;/span&gt;&lt;span&gt; target_dir&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;property_to_convert&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt; &amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;emotions&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;folders_to_exclude&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; [&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;Poets&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;files_to_exclude&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; [&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;Poem DB.md&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; Create a new folder to hold the modified files&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; not&lt;/span&gt;&lt;span&gt; os&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;path&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;exists&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;new_dir_full_path&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;    print&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;New directory does not exist, creating now&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    os&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;mkdir&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;new_dir_full_path&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;for&lt;/span&gt;&lt;span&gt; dirpath&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; _&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span&gt; file_names&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; in&lt;/span&gt;&lt;span&gt; os&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;walk&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;target_dir_full_path&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;    if&lt;/span&gt;&lt;span&gt; dirpath&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; not&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; in&lt;/span&gt;&lt;span&gt; folders_to_exclude&lt;/span&gt;&lt;span&gt; :&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;        for&lt;/span&gt;&lt;span&gt; file_name&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; in&lt;/span&gt;&lt;span&gt; file_names&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;            if&lt;/span&gt;&lt;span&gt; file_name&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; in&lt;/span&gt;&lt;span&gt; files_to_exclude&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;                continue&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;                &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;            with&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; open&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;dirpath&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; +&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt; &amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; +&lt;/span&gt;&lt;span&gt; file_name&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; as&lt;/span&gt;&lt;span&gt; f&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;                md_file_contents&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; frontmatter&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;load&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;f&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;                    &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;                #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; get the property of interest and do some simple string maniuplation.&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;                #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; The frontmatter library lets me just plug in a list of strings &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;                #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; and handles conversion to text automatically!&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;                property_with_commas&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; md_file_contents&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;metadata&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span&gt;property_to_convert&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;                property_as_list&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; [&lt;/span&gt;&lt;span&gt;emotion&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;strip&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; for&lt;/span&gt;&lt;span&gt; emotion&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; in&lt;/span&gt;&lt;span&gt; property_with_commas&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;split&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;                md_file_contents&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;metadata&lt;/span&gt;&lt;span&gt;[&lt;/span&gt;&lt;span&gt;property_to_convert&lt;/span&gt;&lt;span&gt;]&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; =&lt;/span&gt;&lt;span&gt; property_as_list&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt;                #&lt;/span&gt;&lt;span class=&quot;z-l-5 z-d-3&quot;&gt; Write the modified file to the temporary directory&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;                with&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt; open&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;new_dir_full_path&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; +&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt; &amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; +&lt;/span&gt;&lt;span&gt;  file_name&lt;/span&gt;&lt;span&gt;,&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt; &amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt; as&lt;/span&gt;&lt;span&gt; new_f&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;                    print&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-10&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;Writing modified &lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;{&lt;/span&gt;&lt;span&gt;file_name&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-4&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt; to temporary dir for review&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;                    new_f&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;write&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;frontmatter&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;span&gt;dumps&lt;/span&gt;&lt;span&gt;(&lt;/span&gt;&lt;span&gt;md_file_contents&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To better explain things I’ve generated a diagram of the file structure with &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://gitlab.com/nfriend&quot;&gt;Nathan Friend’s&lt;/a&gt; &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://tree.nathanfriend.com/&quot;&gt;tree.nathanfriend.com&lt;/a&gt; tool:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/changing-text-properties-to-lists-in-obsidian/file-structure.png&quot;&gt;&lt;/figure&gt;
+&lt;p&gt;I only want to touch the &lt;code&gt;Poem &amp;lt;int&amp;gt;.md&lt;/code&gt; files, the &lt;code&gt;Poets&lt;/code&gt; folder should be skipped along with the Poem DB.&lt;/p&gt;
+&lt;p&gt;My original idea of rewriting a file in place would have required some reworking that I wasn’t the biggest fan of so I just opted for the safer option of creating a temporary directory to store all the markdown files with the modifications. The added benefit to this (besides being safer!) is that I can double check things have been correctly done via either a simple diff check or literally just copying in the &lt;code&gt;Poem DB.md&lt;/code&gt; dataview query and modifying it a little to target the temporary folder.&lt;/p&gt;
+&lt;p&gt;The query in question is super simple, just the following:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;TABLE author, emotions&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;FROM &amp;quot;Poems&amp;quot; AND !&amp;quot;Poems/Poets&amp;quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;WHERE file != this.file&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once I was happy with everything, I just use &lt;code&gt;mv&lt;/code&gt; from the command line to copy everything in and overwrite the old stuff.&lt;/p&gt;
+&lt;h2 id=&quot;room-for-improvement&quot;&gt;Room for Improvement&lt;a class=&quot;zola-anchor&quot; href=&quot;#room-for-improvement&quot; aria-label=&quot;Anchor link for: room-for-improvement&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;It’s definitely not the most polished thing in the world but this is one of those things where I’m probably only going to use this snippet once or twice to reformat some existing files and call it a day.&lt;/p&gt;
+&lt;p&gt;I think this could make for a neat little CLI tool or Obsidian plugin itself and I’m acutely aware this definitely isn’t the most memory friendly (after all, you load the entire file just to modify the metadata and then spit out a copy somewhere else!). With the path handling it probably would have been wiser to use &lt;code&gt;pathlib&lt;/code&gt; instead of the more fragile string manipulation I&#39;m doing.&lt;/p&gt;
+&lt;p&gt;A very minor gripe that I also ran into but didn’t feel was worth fixing because it doesn’t seem to impact anything functionality-wise is that Obsidian has list properties represented like this:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;list_property:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  - thing&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  - another thing&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But the output from the python &lt;code&gt;frontmatter&lt;/code&gt; library just does the following:&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;list_property:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;- thing&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;- another thing&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note the absence of preceding spaces! I did try a native Python string substitution approach on the output of the &lt;code&gt;.dumps&lt;/code&gt; from &lt;code&gt;frontmatter&lt;/code&gt; but you latch onto the “---” which would have required some additional regex-fu on my end. Very pedantic of me but would have reduced some anxiety while hacking away at this.&lt;/p&gt;
+&lt;p&gt;That being said, I’m pretty happy with what I was able to piece together with a chunk of my weekend and the fact I can even do something like this is just a reminder to me of how much I love Obsidian&#39;s hackability ❤️&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you&#39;d like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;/sup&gt;
+&lt;p&gt;As you can tell, I do not have the most descriptive palate but these keywords suffice when I’m deciding what I’d like to have on an evening from how I usually think of cocktail flavors (:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;/sup&gt;
+&lt;p&gt;I briefly thought about forcing myself to cook something up with &lt;code&gt;sed&lt;/code&gt;/&lt;code&gt;awk&lt;/code&gt; because I wanted to get more familiar with those tools but felt it just wasn’t worth the time considering I wanted something in say, an hour or so as a nice weekend project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;/sup&gt;
+&lt;p&gt;Essentially throw-away code to confirm an approach I’m thinking of works on a smaller scale.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>5.5 times a Charm</title>
+		<published>2025-12-25T00:00:00+00:00</published>
+		<updated>2025-12-25T00:00:00+00:00</updated>
+		<link rel="alternate" type="text/html" href="https://johnzl.com/posts/5-5-times-a-charm/"/>
+		<id>https://johnzl.com/posts/5-5-times-a-charm/</id>
+    
+		<content type="html" xml:base="https://johnzl.com/posts/5-5-times-a-charm/">&lt;p&gt;I figured it would be nice for my first blog post on this site (especially before I publish this on the open web as I continue to tweak parts of the wonderful &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/isunjn/serene/tree/main&quot;&gt;serene&lt;/a&gt; theme by &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/isunjn&quot;&gt;Jianan Sun&lt;/a&gt; for &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.getzola.org/&quot;&gt;Zola&lt;/a&gt;  to my liking!) to ask myself why I want a personal website in the first place and how I got to the current tech stack I’m using.&lt;/p&gt;
+&lt;p&gt;I also feel it a bit odd to publish the website with out at least ONE blog post considering the whole blog-oriented theme I’m using (:&lt;/p&gt;
+&lt;h2 id=&quot;why-have-a-new-personal-site&quot;&gt;Why Have (a new) Personal Site?&lt;a class=&quot;zola-anchor&quot; href=&quot;#why-have-a-new-personal-site&quot; aria-label=&quot;Anchor link for: why-have-a-new-personal-site&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;When I made my first website I didn’t really give much thought to the idea of blogging or long-term maintainability. I just wanted something I could impress recruiters with in my first year as a student in college. As a result the very first iteration was incredibly hacky, fragile, and practically unmaintainable but it did the job.&lt;/p&gt;
+&lt;p&gt;As time went on more of the “shiny object syndrome”&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; of my youth began to give way to an appreciation of simpler, more hackable and robust tools. I also found I quite missed the amount of writing I used to do when I was younger. As a kid my Dad used to make me write entries by hand in a daily journal, which I used to hate because I felt it was such a time consuming venture with no immediate benefit (none of the other kids I knew were forced to do anything like this, making me feel even worse about it). Now, as an adult, I still try to carve out time to do the equivalent in Obsidian thanks to the Daily Notes feature.&lt;/p&gt;
+&lt;p&gt;I also find it would be great to have a way to share what I learn and build in a more structured format. Sure, since most of my work is open source I can easily pull up the Github issues/pull requests I’ve closed but some of those were part of a thread of learning I felt might be great to have properly written up. If not for other developers who might be interested in my work, then for myself to be able to look back on and appreciate what I’ve accomplished (:&lt;/p&gt;
+&lt;p&gt;There’s an added bonus that having such a means to share my work also incentivizes me to keep working on projects that might just sit on the backburner indefinitely. I’ve always found that while it’s quite easy for me to think of things I want to build and learn, it’s a bit harder to keep the necessary momentum such that I bring those things to fruition. Being able to share my enthusiasm and progress is a pretty nice tool for motivation and record keeping in general.&lt;/p&gt;
+&lt;p&gt;The cherry on top for me is also having my own little corner of the World Wide Web. Social media can certainly let me do that but there’s something nice about having more control over the platform my work is on not to mention the ability to tweak that platform to my liking. I like being able to roll up my sleeves every now and then and get into the weeds to say, change the colors for the theme of my website or add and remove pages as I please. It’s my corner of the net and nobody else’s!&lt;/p&gt;
+&lt;h2 id=&quot;iterations&quot;&gt;Iterations&lt;a class=&quot;zola-anchor&quot; href=&quot;#iterations&quot; aria-label=&quot;Anchor link for: iterations&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;I don’t think it’s worth putting down too much technical detail here but I think some of the problems as well as what I gained with each iteration of my website are fun to share and reflect on.&lt;/p&gt;
+&lt;h3 id=&quot;1st-iteration&quot;&gt;1st Iteration&lt;a class=&quot;zola-anchor&quot; href=&quot;#1st-iteration&quot; aria-label=&quot;Anchor link for: 1st-iteration&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Considering I was a first year in college trying to impress recruiters (and at the peak of my own “shiny object syndrome” moment) I cooked up a site with &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;, &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://lesscss.org/&quot;&gt;less&lt;/a&gt;, and &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://slim-template.github.io/&quot;&gt;slim&lt;/a&gt;.  While it’s possible for me to bring it back considering I saved all of that older work &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/johnzl-777/johnzl-website&quot;&gt;here&lt;/a&gt; I shudder to remember the aesthetics 2018/19 John thought were great for a personal site. I know I pulled a lot of JS/CSS tricks from CodePen examples and I definitely leaned into &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://vincentgarreau.com/particles.js/&quot;&gt;particles.js&lt;/a&gt; as a totally overkill and unnecessary background effect.&lt;/p&gt;
+&lt;p&gt;The result of gluing together all the Bootstrap examples I saw floating around, on top of hacking together the CSS/JS examples I saw (I had no prior web development experience other than a very simple UI for an app I built at Intel) was this very bloated, pain in the butt to modify, mobile-unfriendly site. I know I had Google Analytics enabled on it too, something I’m no longer a fan of.&lt;/p&gt;
+&lt;p&gt;Despite all the problems with this first iteration, it was a fantastic learning experience for me and set the bedrock for much of the knowledge I’d carry into tinkering with future iterations.&lt;/p&gt;
+&lt;h3 id=&quot;2nd-iteration&quot;&gt;2nd Iteration&lt;a class=&quot;zola-anchor&quot; href=&quot;#2nd-iteration&quot; aria-label=&quot;Anchor link for: 2nd-iteration&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;This time I put a bit more thought towards building something easier to maintain and more scalable. I was still in college at the time but a bit more experienced so I went down the Static Site Generator (SSG) rabbit hole and the myriad of themes that came with them and opted to go with &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was initially pretty happy with Jekyll but the slowness I felt along with live-reloading issues and Ruby version wrestling dampened my enthusiasm for it. At one point I recall having to spin up a Docker instance just because I was so frustrated with trying to resolve issues on my own machine (which certainly didn&#39;t help with build latency). I’m sure if I spent some more time with it I might be able to fix those issues now but it felt like it was better to just start from scratch.&lt;/p&gt;
+&lt;p&gt;I had started out with a &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/ronv/sidey&quot;&gt;nice theme&lt;/a&gt; that I eventually found myself adding on so much to that I probably broke a lot of things in the process. I was brash enough at the time to think what I had built was worth other people using and that theme still lives on as &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/johnzl-777/H-Plus&quot;&gt;H-Plus&lt;/a&gt;. I&#39;ll probably consider archiving it considering I haven&#39;t revisited/maintained it in some time.&lt;/p&gt;
+&lt;p&gt;Despite all the problems I ran into, I look at the current version I have online now and still find myself quite pleased with what I was able to accomplish in learning the &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid Templating Language&lt;/a&gt; Jekyll natively supports. I’m especially happy with the “Work&quot; page that I made and I have yet to find a template that has as many “batteries-included&quot; options I managed to glue together for linking projects and specifying job locations. That’s probably the one permanent skill I gained from this second iteration.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/5.5-times-a-charm/old-site-work-entries.png&quot;&gt;&lt;figcaption&gt;&lt;p&gt;The Work Page on my old site. It will be missed!&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;3-5th-and-4th-iteration&quot;&gt;3.5th and 4th Iteration&lt;a class=&quot;zola-anchor&quot; href=&quot;#3-5th-and-4th-iteration&quot; aria-label=&quot;Anchor link for: 3-5th-and-4th-iteration&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;At this point I’d graduated college and moved away from my home state of California for work. As time went on I found myself wishing I had something that could hold a candle to what my colleagues had. In particular, my boss &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://rogerluo.dev/&quot;&gt;Xiu-Zhe (Roger) Luo&lt;/a&gt; had this really nice site made with &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://astro.build/&quot;&gt;Astro&lt;/a&gt; and another colleague Casey Duckering has this &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://caseyduckering.com/&quot;&gt;wonderful site&lt;/a&gt; made with Bootstrap.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/5.5-times-a-charm/rogers-website.png&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Xiu-Zhe (Roger) Luo&#39;s Website using the AstroPaper theme&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/posts/5.5-times-a-charm/cduck-website.png&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Casey Duckering&#39;s Website&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;I didn’t really feel like touching Bootstrap again after how painful it felt working with it in the first iteration of my site so Astro it was! I was especially impressed by the templates that were being offered but felt Roger’s use of &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://astro.build/themes/details/astropaper/&quot;&gt;AstroPaper&lt;/a&gt; was more than enough for me.&lt;/p&gt;
+&lt;p&gt;Originally I just forked the entirety of Roger’s page but noticed he was using an older version of the template. So, I scrapped what I had started to essentially graft onto his site and pulled in the latest version of the theme. In the beginning I was pretty happy with how things were going but I found hacking on the template to be a bit tricky, probably because I wasn’t all that familiar with TypeScript and I found myself running into situations where my intuition from Jekyll seemed to fall apart.&lt;/p&gt;
+&lt;p&gt;I had to put everything on pause considering the pace of work had ramped up quite a bit around that time but despite having 80% of what I wanted I still found myself wondering if I really wanted to keep going with it.&lt;/p&gt;
+&lt;h3 id=&quot;4-5th-iteration&quot;&gt;4.5th Iteration&lt;a class=&quot;zola-anchor&quot; href=&quot;#4-5th-iteration&quot; aria-label=&quot;Anchor link for: 4-5th-iteration&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;According to my Obsidian project tracking system I went down this rabbit hole November 14th, 2025 &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; but it occurred to me that maybe Astro was just &lt;em&gt;too much&lt;/em&gt; and I needed to back to the basics. But, I still didn’t want to touch Bootstrap again.&lt;/p&gt;
+&lt;p&gt;I thought about what features I &lt;em&gt;really&lt;/em&gt; needed from an SSG to live and I figured all I really cared about was the ability to convert Markdown to HTML. Thus &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://pandoc.org/&quot;&gt;Pandoc&lt;/a&gt; came to my mind&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; and I was quite pleased to find that other folks (check out &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://wstyler.ucsd.edu/posts/pandoc_website.html&quot;&gt;Will Styler&lt;/a&gt;, &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.sacredheartsc.com/blog/makefile-based-blogging/&quot;&gt;Cullum Smith’s&lt;/a&gt;, and &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://push-f.com/posts/2020-10-06-blog-with-make-pandoc-and-python/&quot;&gt;Martin Fischer’s&lt;/a&gt; sites!) used a pandoc-based workflow as well.&lt;/p&gt;
+&lt;p&gt;My initial excitement and momentum quickly ground to a halt though when I realized there would still be some wrangling to be done in the domain of raw HTML/CSS/JS and it was very much not going to be the “batteries included” experience I had with Jekyll. While I wasn’t expecting everything I used to have to be available I immediately missed having something like Liquid available considering the limited abilities Pandoc had for similar functionality.&lt;/p&gt;
+&lt;p&gt;Despite the setback it was still great to see how much could be done by keeping things simple. Just like the older iterations I’ve shown I don’t think this was a total loss either. If Astro showed me what having &lt;em&gt;too many&lt;/em&gt; batteries looked like, Pandoc showed me what having &lt;em&gt;too little&lt;/em&gt; looked like.&lt;/p&gt;
+&lt;h3 id=&quot;5th-iteration&quot;&gt;5th Iteration&lt;a class=&quot;zola-anchor&quot; href=&quot;#5th-iteration&quot; aria-label=&quot;Anchor link for: 5th-iteration&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Right before the holidays I started looking around again for an SSG that felt a bit more hackable and friendlier to work with to me and Zola popped up on my radar. I loved the idea of just having a single binary and was blown away by just how fast it was. The serene theme is fantastic to use and while I still ran into a couple “rough edges” in terms of what I wanted to do the &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/Keats/tera&quot;&gt;Tera&lt;/a&gt; template language (similar to Liquid) along with Jianan Sun’s work on the theme clicked with my previous experience quite nicely!&lt;/p&gt;
+&lt;p&gt;I also fell in love with how easy it is to &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.getzola.org/documentation/themes/installing-and-using-themes/#customizing-a-theme&quot;&gt;selectively override parts of a theme&lt;/a&gt; and the ease of using &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.getzola.org/documentation/content/linking/&quot;&gt;internal links&lt;/a&gt; and &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.getzola.org/documentation/content/overview/#templating-your-content&quot;&gt;shortcodes (now components)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I look forward to doing some more hacking/tinkering as time goes on!&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;a class=&quot;zola-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;While I’m pretty confident Zola and serene will keep me a happy camper for a long time to come I still acknowledge the possibility that perhaps as this site grows and I want to add certain features another SSG will take the cake. Maybe I’ll have accumulated enough web development experience at some point I’ll go down the Bootstrap (or pandoc!) route again.&lt;/p&gt;
+&lt;p&gt;I know this seems like a rather circuitous way of building a personal site but in every iteration I mention I managed to learn something new, so while I might have ended things physically empty-handed, mentally I’m grateful for all that accumulated experience.&lt;/p&gt;
+&lt;p&gt;For anybody who’s read this far that either doesn’t have a personal website yet I hope this serves as some inspiration that it’s very much a worthy endeavor even if things don&#39;t work out!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you’d like to get in touch to leave a comment, please reach out via my e-mail: (my first name)z(first letter of my last name).dev@gmail.com&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;/sup&gt;
+&lt;p&gt;This is a term I use to describe the penchant certain folks have of always jumping to the newest tool/most complex stack just because it sounds very cool, with little justification or thought to long-term benefit, stability, or ease of use. “New” doesn’t necessarily have to be new in terms of release time, just new to the person. Trust me, I’m just as guilty as the developer next to me!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;/sup&gt;
+&lt;p&gt;I usually try to jot down ideas into my Obsidian vault as soon as I get them but it’s always possible there’s a couple days of lag depending on how busy I am.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;3&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;/sup&gt;
+&lt;p&gt;I should mention I had never actually looked closely at all the things Pandoc was capable of, I just knew it from the occasional problem I’d have trying to convert Jupyter notebooks to PDFs. When I looked up tools that could convert Markdown to HTML &lt;em&gt;THEN&lt;/em&gt; I finally played around with Pandoc proper. Shiny object syndrome strikes again!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+	</entry>
+</feed>

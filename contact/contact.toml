@@ -1,0 +1,26 @@
+layout = "row"
+flow = "stack"
+
+[[item]]
+title = "E-mail"
+subtitle = "(my first name)z(first letter of my last name).dev@gmail.com"
+
+[[item]]
+title = "LinkedIn"
+link = "https://www.linkedin.com/in/jzl"
+subtitle = "linkedin.com/in/jzl"
+
+[[item]]
+title = "Github"
+link = "https://github.com/johnzl-777"
+subtitle = "johnzl-777"
+
+[[item]]
+title = "ORCID"
+link = "https://orcid.org/0009-0005-7557-197X"
+subtitle = "0009-0005-7557-197X"
+
+[[item]]
+title = "Google Scholar"
+link = "https://scholar.google.com/citations?user=qhZSK24AAAAJ&hl"
+subtitle = "John Long"

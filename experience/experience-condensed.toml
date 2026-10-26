@@ -1,0 +1,54 @@
+layout = "row"
+flow = "stack"
+
+[[item]]
+title = "QuEra Computing Inc"
+link = "https://github.com/QuEraComputing"
+subtitle = "Scientific Software Engineer"
+badge = "Jan 2026 - Sep 2026"
+
+[[item]]
+title = "QuEra Computing Inc"
+link = "https://github.com/QuEraComputing"
+subtitle = "Scientific Software Developer"
+badge = "Aug 2022 - Jan 2026"
+
+[[item]]
+title = "Iff Technologies"
+link = "https://iff.bio/"
+subtitle = "Quantum Software Engineer (Part Time)"
+badge = "Oct 2021 - Jun 2022"
+
+[[item]]
+title = "Iff Technologies"
+link = "https://iff.bio/"
+subtitle = "Quantum Software Engineering Intern"
+badge = "Jun 2021 - Sep 2021"
+
+[[item]]
+title = "QC at Davis"
+link = "https://www.linkedin.com/company/qc-at-davis"
+subtitle = "Workshop Director & Quantum Software Engineer"
+badge = "Oct 2019 - May 2022"
+
+[[item]]
+title = "Sandia National Labs"
+link = "https://www.sandia.gov/"
+subtitle = "TITANS Software Engineering R&D Intern"
+badge = "Jun 2020 - Sep 2020"
+
+[[item]]
+title = "General Dynamics Mission Systems"
+link = "https://gdmissionsystems.com/"
+subtitle = "Software Engineering Intern"
+badge = "Jul 2019 - Sep 2019"
+
+[[item]]
+title = "Intel Corporation"
+subtitle = "Software Engineering Intern"
+badge = "Jun 2018 - Sep 2018"
+
+[[item]]
+title = "Intel Corporation"
+subtitle = "Lab Operations Intern"
+badge = "Jun 2017 - Aug 2017"
