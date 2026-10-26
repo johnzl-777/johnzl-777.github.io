@@ -14,9 +14,7 @@ reaction = false
 +++
 # About
 
-I was born and raised in California but moved to Boston, Massachusetts shortly after I finished my Bachelor's degree in Computer Science and Engineering (CSE) at [UC Davis](https://engineering.ucdavis.edu/) to work on quantum computers for a living (:
-
-I returned to California after a solid four years and am in the process of figuring out where I'll continue my mission to make quantum computing more powerful and accessible.
+I'm a Quantum (and classical!) Software Engineer born and raised in Northern California with a deep appreciation for science and poetry. I was born and raised in Northern California and had a brief stint in Boston, MA after I finished my Bachelor's degree in Computer Science and Engineering (CSE) from [UC Davis](https://engineering.ucdavis.edu/) to work on quantum computers. I've since returned to be closer to family and am grateful to continue the endeavor of making quantum computers more accessible and powerful.
 
 (In no particular order) I'm a big fan of:
 - Old computers - more noise, more blinking lights, and more buttons/switches please!
