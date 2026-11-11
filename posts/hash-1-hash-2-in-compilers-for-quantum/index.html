@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  
+    
+  <meta name="description" content="A fun Python bug encountered in compiler development for quantum computing">
+<link rel="canonical" href="https://johnzl.com/posts/hash-1-hash-2-in-compilers-for-quantum/">
+<meta property="og:site_name" content="John Long&#39;s Website">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hash(-1) == hash(-2) in Compilers for Quantum">
+<meta property="og:description" content="A fun Python bug encountered in compiler development for quantum computing">
+<meta property="og:url" content="https://johnzl.com/posts/hash-1-hash-2-in-compilers-for-quantum/">
+<meta property="og:locale" content="en">
+
+
+<meta property="article:published_time" content="2026-03-22">
+
+<meta property="article:tag" content="dev">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="quantum">
+<meta property="article:tag" content="compiler">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hash(-1) == hash(-2) in Compilers for Quantum">
+<meta name="twitter:description" content="A fun Python bug encountered in compiler development for quantum computing">
+
+
+
+  <title>hash(-1) == hash(-2) in Compilers for Quantum</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://johnzl.com/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://johnzl.com/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://johnzl.com/img/apple-touch-icon.png">
+  
+  <style>
+
+  /* light mode colors */
+  body {
+    --primary-color: #5871a2;
+    --primary-pale-color: #5871a233;
+    --primary-decoration-color: #5871a210;
+    --bg-color: #ffffff;
+    --text-color: #2f3030;
+    --text-pale-color: #767676;
+    --text-decoration-color: #a9a9a9;
+    --highlight-mark-color: #5f75b020;
+
+    --callout-note-color: #5871a2;
+    --callout-tip-color: #268556;
+    --callout-important-color: #885fc9;
+    --callout-warning-color: #ab6632;
+    --callout-caution-color: #c64e4e;
+  }
+
+  /* dark mode colors */
+  body.dark {
+    --primary-color: #6f8fd1;
+    --primary-pale-color: #6f8fd166;
+    --primary-decoration-color: #6f8fd112;
+    --bg-color: #1c1c1c;
+    --text-color: #c1c1c1;
+    --text-pale-color: #848484;
+    --text-decoration-color: #5f5f5f;
+    --highlight-mark-color: #8296cb3b;
+
+    --callout-note-color: #6f8fd1;
+    --callout-tip-color: #47976f;
+    --callout-important-color: #9776cd;
+    --callout-warning-color: #ad7a52;
+    --callout-caution-color: #d06161;
+  }
+
+  /* typography */
+  body {
+    --main-font: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --homepage-max-width: 768px;
+    --main-max-width: 768px;
+    --avatar-size: 60px;
+    --font-size: 18px;
+    --line-height: 1.75;
+    --img-border-radius: 0px;
+    --detail-border-radius: 0px;
+    --dark-mode-img-brightness: 0.75;
+    --dark-mode-chart-brightness: 0.75;
+    --inline-code-border-radius: 2px;
+    --inline-code-bg-color: var(--primary-decoration-color);
+    --block-code-border-radius: 0px;
+    --block-code-border-color: var(--primary-color);
+    --detail-border-color: var(--primary-color);
+  }
+
+  /* resume cards on the experience page */
+  .collection.layout-card .item .subtitle {
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  .collection.layout-card .item .location {
+    font-size: 0.8em;
+    font-style: italic;
+    color: var(--text-pale-color);
+  }
+
+</style>
+
+  <link rel="stylesheet" href="https://johnzl.com/main.css">
+  
+
+<link id="hl" rel="stylesheet" type="text/css" href="/giallo-light.css" />
+
+
+
+
+  
+</head>
+
+<body class="post">
+  
+  <script>
+    const theme = sessionStorage.getItem('theme');
+    const match = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if ((theme && theme == 'dark') || (!theme && match)) {
+      document.body.classList.add('dark');
+      const hl = document.querySelector('link#hl');
+      if (hl) hl.href = 'https://johnzl.com/giallo-dark.css';
+    }
+  </script>
+  
+  
+<div id="wrapper">
+  <div id="blank"></div>
+  <aside>
+    
+    
+    <nav>
+      <ul>
+        
+        <li>
+          <a class="h2" href="#context">Context</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#the-problem">The Problem</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#the-bug">The Bug</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#origins">Origins</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#the-fix">The Fix</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#conclusion">Conclusion</a>
+          
+        </li>
+        
+      </ul>
+    </nav>
+    
+    
+    <button id="back-to-top" aria-label="back to top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+
+    </button>
+    
+  </aside>
+  <main>
+    
+<header>
+  <nav>
+    <a id="back-link" href="https://johnzl.com/posts">← Back</a>
+  </nav>
+</header>
+
+
+    <div>
+      
+      
+      
+      
+      <div id="copy-cfg" style="display: none;" data-copy-icon="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+" data-check-icon="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+"></div>
+      
+      <article class="prose">
+        <h1>hash(-1) == hash(-2) in Compilers for Quantum</h1>
+        
+        <div id="post-info">
+          <div id="date">
+            <span id="publish">2026-03-22</span>
+            </div>
+
+          
+          <div id="tags">
+            <a class="instant" href="https://johnzl.com/tags/dev/"><span>#</span>dev</a><a class="instant" href="https://johnzl.com/tags/python/"><span>#</span>python</a><a class="instant" href="https://johnzl.com/tags/quantum/"><span>#</span>quantum</a><a class="instant" href="https://johnzl.com/tags/compiler/"><span>#</span>compiler</a>
+          </div>
+          
+        </div>
+
+        
+        
+
+        
+
+        <p>This post is about how I (quite painfully) suffered the consequences of the CPython <code>hash(-1) == hash(-2)</code> behavior.</p>
+<p>If you know about this behavior already, I sincerely hope you’ve never encountered this in the wild and that this serves as a fun read on a consequence of it.</p>
+<p>If you do NOT know about this behavior then let this post be a warning (and still be a fun read)!</p>
+<h2 id="context">Context<a class="zola-anchor" href="#context" aria-label="Anchor link for: context" style="visibility: hidden;"></a>
+</h2>
+<blockquote class="markdown-alert-note">
+<p>While I bring up a couple quantum computing tools in this post this is primarily geared towards the compiler engineering side of things. Therefore it's safe to think of things like "Stim" as just a tool with its own DSL that I try to correctly produce from the DSL that lives inside the SDK I work on.</p>
+<p>If you <em>are</em> well-versed in the quantum computing AND compiler space (quite a niche, but a growing one at that!) then I hope you will find even more entertainment from this post (:</p>
+</blockquote>
+<p>One of the things I’ve been working on at <a rel="nofollow noreferrer external" href="https://github.com/QuEraComputing">QuEra</a> is transpilation from our SQUIN (Structural Quantum Information) eDSL (embedded Domain Specific Language) to our own <a rel="nofollow noreferrer external" href="https://www.github.com/quantumlib/Stim">Stim</a> eDSL, all of which lives inside the <a rel="nofollow noreferrer external" href="https://github.com/QuEraComputing/bloqade-circuit">Bloqade SDK</a><sup class="footnote-reference"><a href="#1">1</a></sup>. From there we can easily generate the Stim text format that Stim itself can consume.</p>
+<p>To be more precise, the workflow I target is the following:</p>
+<ol>
+<li>The user writes a program in <code>squin</code></li>
+<li>They apply a compiler pass (<code>SquinToStimPass</code>) to convert the program to the <code>stim</code> eDSL</li>
+<li>They can now emit the text form of the <code>stim</code> eDSL program</li>
+</ol>
+<p>You can see a small example of this workflow below, starting with the <code>squin</code> program:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="python"><span class="giallo-l"><span class="z-l-8 z-d-10">from</span><span> bloqade</span><span class="z-l-8 z-d-10"> import</span><span> squin</span><span class="z-l-8 z-d-10"> as</span><span> sq</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-l-6 z-d-7">@</span><span class="z-l-6 z-d-7">sq</span><span class="z-l-6 z-d-7">.</span><span class="z-l-6 z-d-7">kernel</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">def</span><span class="z-l-6 z-d-7"> example</span><span>(</span><span>)</span><span>:</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">    #</span><span class="z-l-5 z-d-3"> allocate 10 qubits</span></span>
+<span class="giallo-l"><span>    qs</span><span class="z-l-8 z-d-10"> =</span><span> sq</span><span>.</span><span>qalloc</span><span>(</span><span class="z-l-1 z-d-4">10</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">    #</span><span class="z-l-5 z-d-3"> apply H gate on all qubits</span></span>
+<span class="giallo-l"><span>    sq</span><span>.</span><span>broadcast</span><span>.</span><span>h</span><span>(</span><span>qs</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">    #</span><span class="z-l-5 z-d-3"> apply some 1 and 2Q gates</span></span>
+<span class="giallo-l"><span>    sq</span><span>.</span><span>z</span><span>(</span><span>qs</span><span>[</span><span class="z-l-1 z-d-4">0</span><span>]</span><span>)</span></span>
+<span class="giallo-l"><span>    sq</span><span>.</span><span>y</span><span>(</span><span>qs</span><span>[</span><span class="z-l-1 z-d-4">5</span><span>]</span><span>)</span></span>
+<span class="giallo-l"><span>    sq</span><span>.</span><span>broadcast</span><span>.</span><span>cx</span><span>(</span><span class="z-l-9 z-d-12">controls</span><span class="z-l-8 z-d-10">=</span><span>[</span><span>qs</span><span>[</span><span class="z-l-1 z-d-4">0</span><span>]</span><span>,</span><span> qs</span><span>[</span><span class="z-l-1 z-d-4">1</span><span>]</span><span>]</span><span>,</span><span class="z-l-9 z-d-12"> targets</span><span class="z-l-8 z-d-10">=</span><span>[</span><span>qs</span><span>[</span><span class="z-l-1 z-d-4">3</span><span>]</span><span>,</span><span> qs</span><span>[</span><span class="z-l-1 z-d-4">5</span><span>]</span><span>]</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">    #</span><span class="z-l-5 z-d-3"> measure everything out</span></span>
+<span class="giallo-l"><span>    sq</span><span>.</span><span>broadcast</span><span>.</span><span>measure</span><span>(</span><span>qs</span><span>)</span></span></code></pre>
+<p>The eDSLs I mentioned as well as the ability to spit out files of other forms are all built on top of <a rel="nofollow noreferrer external" href="https://github.com/QuEraComputing/kirin">Kirin</a>, which handles lowering from Python to <a rel="nofollow noreferrer external" href="https://en.wikipedia.org/wiki/Static_single-assignment_form">SSA IR</a> form as well as common compiler optimization passes. We can see what the SSA form looks like immediately by just invoking the <code>.print()</code> method all kernels have:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="plain"><span class="giallo-l"><span>func.func @example() -&gt; !py.NoneType {</span></span>
+<span class="giallo-l"><span>  ^0(%example_self):</span></span>
+<span class="giallo-l"><span>  │  %0 = py.constant.constant 10 : !py.int</span></span>
+<span class="giallo-l"><span>  │ %qs = func.invoke qalloc(%0) : !py.IList[!py.Qubit, !Any] maybe_pure=False</span></span>
+<span class="giallo-l"><span>  │  %1 = func.invoke h(%qs) : !py.NoneType maybe_pure=False</span></span>
+<span class="giallo-l"><span>  │  %2 = py.constant.constant 0 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %3 = py.indexing.getitem(%qs, %2) : !py.Qubit</span></span>
+<span class="giallo-l"><span>  │  %4 = func.invoke z(%3) : !py.NoneType maybe_pure=False</span></span>
+<span class="giallo-l"><span>  │  %5 = py.constant.constant 5 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %6 = py.indexing.getitem(%qs, %5) : !py.Qubit</span></span>
+<span class="giallo-l"><span>  │  %7 = func.invoke y(%6) : !py.NoneType maybe_pure=False</span></span>
+<span class="giallo-l"><span>  │  %8 = py.constant.constant 0 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %9 = py.indexing.getitem(%qs, %8) : !py.Qubit</span></span>
+<span class="giallo-l"><span>  │ %10 = py.constant.constant 1 : !py.int</span></span>
+<span class="giallo-l"><span>  │ %11 = py.indexing.getitem(%qs, %10) : !py.Qubit</span></span>
+<span class="giallo-l"><span>  │ %12 = py.ilist.new(values=(%9, %11)){elem_type=!Any} : !py.IList[!py.Qubit, Literal(2,int)]</span></span>
+<span class="giallo-l"><span>  │ %13 = py.constant.constant 3 : !py.int</span></span>
+<span class="giallo-l"><span>  │ %14 = py.indexing.getitem(%qs, %13) : !py.Qubit</span></span>
+<span class="giallo-l"><span>  │ %15 = py.constant.constant 5 : !py.int</span></span>
+<span class="giallo-l"><span>  │ %16 = py.indexing.getitem(%qs, %15) : !py.Qubit</span></span>
+<span class="giallo-l"><span>  │ %17 = py.ilist.new(values=(%14, %16)){elem_type=!Any} : !py.IList[!py.Qubit, Literal(2,int)]</span></span>
+<span class="giallo-l"><span>  │ %18 = func.invoke cx(%12, %17) : !py.NoneType maybe_pure=False</span></span>
+<span class="giallo-l"><span>  │ %19 = func.invoke measure(%qs) : !py.IList[!py.MeasurementResult, ~N : !py.int] maybe_pure=False</span></span>
+<span class="giallo-l"><span>  │ %20 = func.const.none() : !py.NoneType</span></span>
+<span class="giallo-l"><span>  │       func.return %20</span></span>
+<span class="giallo-l"><span>} // func.func example</span></span></code></pre>
+<p>If I now apply the <code>SquinToStimPass</code> we get the program in our <code>stim</code> eDSL form:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="python"><span class="giallo-l"><span class="z-l-8 z-d-10">from</span><span> bloqade</span><span>.</span><span>stim</span><span>.</span><span>passes</span><span class="z-l-8 z-d-10"> import</span><span> SquinToStimPass</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>SquinToStimPass</span><span>(</span><span class="z-l-9 z-d-12">dialects</span><span class="z-l-8 z-d-10">=</span><span>example</span><span>.</span><span>dialects</span><span>)</span><span>(</span><span>example</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>example</span><span>.</span><span>print</span><span>(</span><span>)</span></span></code></pre><pre class="giallo z-l-code z-d-code" ><code data-lang="plain"><span class="giallo-l"><span>func.func @example() -&gt; !py.NoneType {</span></span>
+<span class="giallo-l"><span>  ^0(%example_self):</span></span>
+<span class="giallo-l"><span>  │  %0 = stim.aux.constant.int 0 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %1 = stim.aux.constant.int 1 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %2 = stim.aux.constant.int 2 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %3 = stim.aux.constant.int 3 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %4 = stim.aux.constant.int 4 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %5 = stim.aux.constant.int 5 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %6 = stim.aux.constant.int 6 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %7 = stim.aux.constant.int 7 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %8 = stim.aux.constant.int 8 : !py.int</span></span>
+<span class="giallo-l"><span>  │  %9 = stim.aux.constant.int 9 : !py.int</span></span>
+<span class="giallo-l"><span>  │       stim.gate.H(targets=(%0, %1, %2, %3, %4, %5, %6, %7, %8, %9)){dagger=False : !py.bool}</span></span>
+<span class="giallo-l"><span>  │       stim.gate.Z(targets=(%0)){dagger=False : !py.bool}</span></span>
+<span class="giallo-l"><span>  │       stim.gate.Y(targets=(%5)){dagger=False : !py.bool}</span></span>
+<span class="giallo-l"><span>  │       stim.gate.CX(targets=(%3, %5), controls=(%0, %1)){dagger=False : !py.bool}</span></span>
+<span class="giallo-l"><span>  │ %10 = stim.aux.constant.float 0.0 : !py.float</span></span>
+<span class="giallo-l"><span>  │       stim.collapse.MZ(p=%10, targets=(%0, %1, %2, %3, %4, %5, %6, %7, %8, %9))</span></span>
+<span class="giallo-l"><span>  │ %11 = func.const.none() : !py.NoneType</span></span>
+<span class="giallo-l"><span>  │       func.return %11</span></span>
+<span class="giallo-l"><span>} // func.func example</span></span></code></pre>
+<p>Which you can then emit to text form:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="python"><span class="giallo-l"><span class="z-l-8 z-d-10">import</span><span> io</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">from</span><span> bloqade</span><span>.</span><span>stim</span><span class="z-l-8 z-d-10"> import</span><span> emit</span><span class="z-l-8 z-d-10"> as</span><span> emit_stim</span><span>,</span><span> main</span><span class="z-l-8 z-d-10"> as</span><span> main_dialect</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">def</span><span class="z-l-6 z-d-7"> codegen</span><span>(</span><span>mt</span><span>)</span><span>:</span></span>
+<span class="giallo-l"><span>    buf</span><span class="z-l-8 z-d-10"> =</span><span> io</span><span>.</span><span>StringIO</span><span>(</span><span>)</span></span>
+<span class="giallo-l"><span>    emit</span><span class="z-l-8 z-d-10"> =</span><span> emit_stim</span><span>.</span><span>EmitStimMain</span><span>(</span><span class="z-l-9 z-d-12">dialects</span><span class="z-l-8 z-d-10">=</span><span>main_dialect</span><span>,</span><span class="z-l-9 z-d-12"> io</span><span class="z-l-8 z-d-10">=</span><span>buf</span><span>)</span></span>
+<span class="giallo-l"><span>    emit</span><span>.</span><span>initialize</span><span>(</span><span>)</span></span>
+<span class="giallo-l"><span>    emit</span><span>.</span><span>run</span><span>(</span><span>mt</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">    return</span><span> buf</span><span>.</span><span>getvalue</span><span>(</span><span>)</span><span>.</span><span>strip</span><span>(</span><span>)</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span class="z-l-1 z-d-4">print</span><span>(</span><span>codegen</span><span>(</span><span>example</span><span>)</span><span>)</span></span></code></pre><pre class="giallo z-l-code z-d-code" ><code data-lang="plain"><span class="giallo-l"><span>H 0 1 2 3 4 5 6 7 8 9</span></span>
+<span class="giallo-l"><span>Z 0</span></span>
+<span class="giallo-l"><span>Y 5</span></span>
+<span class="giallo-l"><span>CX 0 3 1 5</span></span>
+<span class="giallo-l"><span>MZ(0.00000000) 0 1 2 3 4 5 6 7 8 9</span></span></code></pre><h2 id="the-problem">The Problem<a class="zola-anchor" href="#the-problem" aria-label="Anchor link for: the-problem" style="visibility: hidden;"></a>
+</h2>
+<p>At some point as I was developing the <code>SquinToStimPass</code> I ran into a rather peculiar problem.</p>
+<p>Given a program that had <code>-1</code> and <code>-2</code> as Stim eDSL constant statements, when I ran the <a rel="nofollow noreferrer external" href="https://en.wikipedia.org/wiki/Common_subexpression_elimination">CSE (Common Subexpression Elimination)</a> rewrite rule, <code>-1</code> would disappear only to be replaced by <code>-2</code> !</p>
+<p>I’d have something in the original SQUIN language<sup class="footnote-reference"><a href="#2">2</a></sup> like:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="python"><span class="giallo-l"><span class="z-l-6 z-d-7">@</span><span class="z-l-6 z-d-7">sq</span><span class="z-l-6 z-d-7">.</span><span class="z-l-6 z-d-7">kernel</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">def</span><span class="z-l-6 z-d-7"> example</span><span>(</span><span>)</span><span>:</span></span>
+<span class="giallo-l"><span>    qs</span><span class="z-l-8 z-d-10"> =</span><span> sq</span><span>.</span><span>qalloc</span><span>(</span><span class="z-l-1 z-d-4">10</span><span>)</span></span>
+<span class="giallo-l"><span>    ms</span><span class="z-l-8 z-d-10"> =</span><span> sq</span><span>.</span><span>broadcast</span><span>.</span><span>measure</span><span>(</span><span>qs</span><span>)</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">    #</span><span class="z-l-5 z-d-3"> get the last two measurements which, in time, are the</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">    #</span><span class="z-l-5 z-d-3"> most recent so per Stim convention should be accessible</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">    #</span><span class="z-l-5 z-d-3"> via the record index through -1 and -2</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span>    sq</span><span>.</span><span>set_detector</span><span>(</span><span>[</span><span>ms</span><span>[</span><span class="z-l-8 z-d-10">-</span><span class="z-l-1 z-d-4">1</span><span>]</span><span>,</span><span> ms</span><span>[</span><span class="z-l-8 z-d-10">-</span><span class="z-l-1 z-d-4">2</span><span>]</span><span>]</span><span>,</span><span class="z-l-9 z-d-12"> coordinates</span><span class="z-l-8 z-d-10">=</span><span>[</span><span class="z-l-1 z-d-4">0</span><span>,</span><span class="z-l-1 z-d-4">0</span><span>]</span><span>)</span></span></code></pre>
+<p>Which SHOULD have come out to the following text form from the Stim eDSL:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="plain"><span class="giallo-l"><span>MZ(0.00000000) 0 1 2 3 4 5 6 7 8 9</span></span>
+<span class="giallo-l"><span>DETECTOR(0, 0) rec[-1] rec[-2]</span></span></code></pre>
+<p>But instead I’d get</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="plain"><span class="giallo-l"><span>MZ(0.00000000) 0 1 2 3 4 5 6 7 8 9</span></span>
+<span class="giallo-l"><span>DETECTOR(0, 0) rec[-2] rec[-2]</span></span></code></pre>
+<p>When I looked at the actual Stim eDSL output there was no <code>-1</code> constant statement to be seen either.</p>
+<p>I was bewildered! Never in my career had I ever seen something so odd. At first I was convinced some rewrite rule <em>I</em> had created as part of the pass was the culprit but it eventually dawned on me that something at the Kirin level must be the culprit.</p>
+<h2 id="the-bug">The Bug<a class="zola-anchor" href="#the-bug" aria-label="Anchor link for: the-bug" style="visibility: hidden;"></a>
+</h2>
+<p>It wasn’t immediately apparent to me CSE was the problem but in retrospect, if I was even remotely aware Python (CPython to be exact) had this odd behavior<sup class="footnote-reference"><a href="#3">3</a></sup> I might have clocked it faster.</p>
+<blockquote class="markdown-alert-important">
+<p><strong>Acknowledgements</strong><br />
+Before I go further I’d like to give kudos to my colleagues <a rel="nofollow noreferrer external" href="https://github.com/kaihsin">Kai-Hsin Wu</a> and <a rel="nofollow noreferrer external" href="https://rogerluo.dev/">Xiu-Zhe (Roger) Luo</a> who helped identify the specifics of the bug and also implemented the fix in Kirin to avoid future incidences of this. Thanks guys!</p>
+</blockquote>
+<p>At a high level, the Kirin CSE rewrite rule at the time of the bug (Kirin v0.18.0) did the following:</p>
+<ol>
+<li>Generate an <code>int</code> from Python’s built-in <code>hash</code> function applied on components of the statement including its type, arguments, attributes (which are compile-time values, like constants that are immediately available), etc.</li>
+<li>Check if the <code>int</code> is present in a “<code>seen</code>” dictionary that records all statements that have been encountered up to that point.</li>
+<li>If the <code>int</code> is present in <code>seen</code>, replace references to the current statement to the previous equivalent statement.</li>
+</ol>
+<p>The actual code we'll be focusing on from steps 1 and 2 looks like this:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="python"><span class="giallo-l"><span>seen</span><span>:</span><span> dict</span><span>[</span><span class="z-l-1 z-d-4">int</span><span>,</span><span> Statement</span><span>]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>	hash_value</span><span class="z-l-8 z-d-10"> =</span><span class="z-l-1 z-d-4"> hash</span><span>(</span></span>
+<span class="giallo-l"><span>		(</span><span class="z-l-1 z-d-4">type</span><span>(</span><span>stmt</span><span>)</span><span>,</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		+</span><span class="z-l-1 z-d-4"> tuple</span><span>(</span><span>stmt</span><span>.</span><span>args</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		+</span><span class="z-l-1 z-d-4"> tuple</span><span>(</span><span>stmt</span><span>.</span><span>attributes</span><span>.</span><span>values</span><span>(</span><span>)</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		+</span><span class="z-l-1 z-d-4"> tuple</span><span>(</span><span>stmt</span><span>.</span><span>successors</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		+</span><span class="z-l-1 z-d-4"> tuple</span><span>(</span><span>stmt</span><span>.</span><span>regions</span><span>)</span></span>
+<span class="giallo-l"><span>	)</span></span>
+<span class="giallo-l"><span>	</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">	if</span><span> hash_value</span><span class="z-l-8 z-d-10"> in</span><span> seen</span><span>:</span></span>
+<span class="giallo-l"><span class="z-l-1 z-d-4">		...</span></span></code></pre>
+<p>With the stim constant statements in the program I generated, the only part of those statements that was actually different between the two was the <code>stmts.attributes</code> which would contain the original <code>-1</code> and <code>-2</code> Python integers.</p>
+<p>When we started digging deeper we ran into this peculiar behavior:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="python"><span class="giallo-l"><span class="z-l-8 z-d-10">&gt;&gt;</span><span class="z-l-8 z-d-10">&gt;</span><span class="z-l-1 z-d-4"> hash</span><span>(</span><span class="z-l-1 z-d-4">1</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-1 z-d-4">1</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">&gt;&gt;</span><span class="z-l-8 z-d-10">&gt;</span><span class="z-l-1 z-d-4"> hash</span><span>(</span><span class="z-l-1 z-d-4">0</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-1 z-d-4">0</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">&gt;&gt;</span><span class="z-l-8 z-d-10">&gt;</span><span class="z-l-5 z-d-3"> #</span><span class="z-l-5 z-d-3"> okay, nothing fishy with hashing positive integers...</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">&gt;&gt;</span><span class="z-l-8 z-d-10">&gt;</span><span class="z-l-1 z-d-4"> hash</span><span>(</span><span class="z-l-8 z-d-10">-</span><span class="z-l-1 z-d-4">1</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">-</span><span class="z-l-1 z-d-4">2</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">&gt;&gt;</span><span class="z-l-8 z-d-10">&gt;</span><span class="z-l-5 z-d-3"> #</span><span class="z-l-5 z-d-3"> wait, what?</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">&gt;&gt;</span><span class="z-l-8 z-d-10">&gt;</span><span class="z-l-1 z-d-4"> hash</span><span>(</span><span class="z-l-8 z-d-10">-</span><span class="z-l-1 z-d-4">2</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">-</span><span class="z-l-1 z-d-4">2</span><span> </span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">&gt;&gt;</span><span class="z-l-8 z-d-10">&gt;</span><span class="z-l-1 z-d-4"> hash</span><span>(</span><span class="z-l-8 z-d-10">-</span><span class="z-l-1 z-d-4">1</span><span>)</span><span class="z-l-8 z-d-10"> ==</span><span class="z-l-1 z-d-4"> hash</span><span>(</span><span class="z-l-8 z-d-10">-</span><span class="z-l-1 z-d-4">2</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-1 z-d-4">True</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">&gt;&gt;</span><span class="z-l-8 z-d-10">&gt;</span><span class="z-l-5 z-d-3"> #</span><span class="z-l-5 z-d-3"> alright I give up.</span></span></code></pre>
+<p>Thus when you invoke CSE on something like:</p>
+<details>
+<summary><span>Simplified SSA Format Ahead!</span></summary>
+<p>The SSA form shown here is simplified from what you would actually see, there are some intermediate statements I've cut out to keep things concise here.</p>
+<p>If you're really curious, there's a <code>stim.aux.get_rec</code> statement that accepts the negative integer first, and THEN feeds into a <code>detector</code> or <code>observable</code> statement.</p>
+</details>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="plain"><span class="giallo-l"><span>...</span></span>
+<span class="giallo-l"><span>%0 = stim.aux.constant.int -1 </span></span>
+<span class="giallo-l"><span>%1 = stim.aux.constant.int -2 </span></span>
+<span class="giallo-l"><span>%2 = stim.aux.detector(record_indices = (%0, %1))</span></span>
+<span class="giallo-l"><span>...</span></span></code></pre>
+<p>You end up getting:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="plain"><span class="giallo-l"><span>...</span></span>
+<span class="giallo-l"><span>%0 = stim.aux.constant.int -1</span></span>
+<span class="giallo-l"><span>%1 = stim.aux.constant.int -2</span></span>
+<span class="giallo-l"><span># notice reference to %0 dropped in favor of %1!</span></span>
+<span class="giallo-l"><span>%2 = stim.aux.detector(record_indices = (%1, %1)) </span></span>
+<span class="giallo-l"><span>...</span></span></code></pre>
+<p>And when <a rel="nofollow noreferrer external" href="https://en.wikipedia.org/wiki/Dead-code_elimination">DCE (Dead Code Elimination)</a> gets run, -1 just vanishes altogether:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="plain"><span class="giallo-l"><span># bye-bye -1 ):</span></span>
+<span class="giallo-l"><span>%1 = stim.aux.constant.int -2</span></span>
+<span class="giallo-l"><span>%2 = stim.aux.detector(record_indices = (%1, %1))</span></span></code></pre><h2 id="origins">Origins<a class="zola-anchor" href="#origins" aria-label="Anchor link for: origins" style="visibility: hidden;"></a>
+</h2>
+<p>Some googling about this odd behavior led me to <a rel="nofollow noreferrer external" href="https://omairmajid.com/posts/2021-07-16-why-is-hash-in-python/">Omair Majid’s blog post</a> which dives into the CPython source code to investigate. Omair points out that <code>-1</code> is specifically avoided as a valid returnable hash value in the implementation because it’s used in C to indicate something went wrong.</p>
+<p>If you’re like me and wondering that there has to be a better way, there's a cited Reddit answer that points out C does not have the ability to throw exceptions.</p>
+<p>If you’re <em>still</em> like me and think there has to be some way around it, <a rel="nofollow noreferrer external" href="https://stackoverflow.com/a/2891916">there is</a>! But I don’t think this would be wise to have in the CPython codebase (at least, not in this context)…</p>
+<blockquote class="markdown-alert-tip">
+<p><strong>Idiomatic C</strong><br />
+My colleague <a rel="nofollow noreferrer external" href="https://github.com/weinbe58">Phillip Weinberg</a> (who has much more experience working in C/C++ than I do) pointed out to me the <code>setjmp</code> + <code>longjmp</code> combo linked above is considered idiomatic and can be useful if a problem occurs and you want to immediately go straight to cleaning things up.</p>
+</blockquote>
+<h2 id="the-fix">The Fix<a class="zola-anchor" href="#the-fix" aria-label="Anchor link for: the-fix" style="visibility: hidden;"></a>
+</h2>
+<p>I had to do some digging on the Kirin GitHub PRs and Slack but the <a rel="nofollow noreferrer external" href="https://github.com/QuEraComputing/kirin/pull/412/files">initial fix for this problem was made by Roger</a> and it was just to add some additional logic to the statement attribute <code>__hash__</code>. The additional logic literally being:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="python"><span class="giallo-l"><span class="z-l-5 z-d-3">#</span><span class="z-l-5 z-d-3"> in src/kirin/ir/attrs/py.py</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">def</span><span class="z-l-1 z-d-4"> __hash__</span><span>(</span><span>self</span><span>)</span><span>:</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">	if</span><span class="z-l-1 z-d-4"> isinstance</span><span>(</span><span class="z-l-1 z-d-4">self</span><span>.</span><span>data</span><span>,</span><span class="z-l-1 z-d-4"> int</span><span>)</span><span>:</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		return</span><span class="z-l-1 z-d-4"> self</span><span>.</span><span>data</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">	#</span><span class="z-l-5 z-d-3"> default attribute hash behavior continued if not int</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">	return</span><span class="z-l-1 z-d-4"> hash</span><span>(</span><span class="z-l-1 z-d-4">self</span><span>.</span><span>data</span><span>)</span><span class="z-l-8 z-d-10"> +</span><span class="z-l-1 z-d-4"> hash</span><span>(</span><span class="z-l-1 z-d-4">self</span><span>.</span><span>type</span><span>)</span></span></code></pre>
+<p>This wasn’t the complete solution though and if we jump to Kirin v0.18.1<sup class="footnote-reference"><a href="#4">4</a></sup> (the patch version immediately after the bug was found) the final fix was made a bit more robust (albeit with more overhead for me to wrap my head around).</p>
+<p>First, the attribute <code>__hash__</code> returns to this definition:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="python"><span class="giallo-l"><span class="z-l-5 z-d-3">#</span><span class="z-l-5 z-d-3"> in src/kirin/ir/attrs/py.py</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">def</span><span class="z-l-1 z-d-4"> __hash__</span><span>(</span><span>self</span><span>)</span><span> -&gt;</span><span class="z-l-1 z-d-4"> int</span><span>:</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">	return</span><span class="z-l-1 z-d-4"> hash</span><span>(</span><span>(</span><span class="z-l-1 z-d-4">self</span><span>.</span><span>type</span><span>,</span><span class="z-l-1 z-d-4"> self</span><span>.</span><span>data</span><span>)</span><span>)</span></span></code></pre>
+<p>BUT, on the CSE side:</p>
+<ol>
+<li>Instead of generating an <code>int</code> as a key into the <code>seen</code> dictionary there’s now an <code>Info</code> class that consumes pretty much what you saw before to instantiate it and is used as a key instead.</li>
+<li><code>Info</code> has its own <code>__hash__</code> definition that uses the Python build-in <code>id</code> on individual elements that would have just been <code>hash</code>’ed before. This is a bump up from the old implementation where <code>hash</code> was just called directly on things belonging to the statement.</li>
+</ol>
+<p>The logic looks something like this:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="python"><span class="giallo-l"><span class="z-l-5 z-d-3">#</span><span class="z-l-5 z-d-3"> in src/kirin/rewrite/cse.py, as part of the `Info` class</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">def</span><span class="z-l-1 z-d-4"> __hash__</span><span>(</span><span>self</span><span>)</span><span> -&gt;</span><span class="z-l-1 z-d-4"> int</span><span>:</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">	return</span><span class="z-l-1 z-d-4"> hash</span><span>(</span></span>
+<span class="giallo-l"><span>		(</span><span class="z-l-1 z-d-4">id</span><span>(</span><span class="z-l-1 z-d-4">self</span><span>.</span><span>head</span><span>)</span><span>,</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		+</span><span class="z-l-1 z-d-4"> tuple</span><span>(</span><span class="z-l-1 z-d-4">id</span><span>(</span><span>ssa</span><span>)</span><span class="z-l-8 z-d-10"> for</span><span> ssa</span><span class="z-l-8 z-d-10"> in</span><span class="z-l-1 z-d-4"> self</span><span>.</span><span>args</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">		  #</span><span class="z-l-5 z-d-3"> Hmm something feels off about hash(attr)...</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		+</span><span class="z-l-1 z-d-4"> tuple</span><span>(</span><span class="z-l-1 z-d-4">hash</span><span>(</span><span>attr</span><span>)</span><span class="z-l-8 z-d-10"> for</span><span> attr</span><span class="z-l-8 z-d-10"> in</span><span class="z-l-1 z-d-4"> self</span><span>.</span><span>attributes</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		+</span><span class="z-l-1 z-d-4"> tuple</span><span>(</span><span class="z-l-1 z-d-4">id</span><span>(</span><span>succ</span><span>)</span><span class="z-l-8 z-d-10"> for</span><span> succ</span><span class="z-l-8 z-d-10"> in</span><span class="z-l-1 z-d-4"> self</span><span>.</span><span>successors</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		+</span><span class="z-l-1 z-d-4"> tuple</span><span>(</span><span class="z-l-1 z-d-4">id</span><span>(</span><span>region</span><span>)</span><span class="z-l-8 z-d-10"> for</span><span> region</span><span class="z-l-8 z-d-10"> in</span><span class="z-l-1 z-d-4"> self</span><span>.</span><span>regions</span><span>)</span></span>
+<span class="giallo-l"><span>	)</span></span>
+<span class="giallo-l"></span></code></pre>
+<p>If you think carefully though this still runs afoul of the identical hash problem that caused this bug in the first place! Indeed, if I take the program from the <a href="https://johnzl.com/posts/hash-1-hash-2-in-compilers-for-quantum/#the-problem">Problem section</a> but run it through CSE after rewriting it:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="python"><span class="giallo-l"><span class="z-l-8 z-d-10">from</span><span> bloqade</span><span class="z-l-8 z-d-10"> import</span><span> squin</span><span class="z-l-8 z-d-10"> as</span><span> sq</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">from</span><span> bloqade</span><span>.</span><span>stim</span><span>.</span><span>passes</span><span class="z-l-8 z-d-10"> import</span><span> SquinToStimPass</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">from</span><span> kirin</span><span>.</span><span>rewrite</span><span class="z-l-8 z-d-10"> import</span><span> Walk</span><span>,</span><span> CommonSubexpressionElimination</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-l-6 z-d-7">@</span><span class="z-l-6 z-d-7">sq</span><span class="z-l-6 z-d-7">.</span><span class="z-l-6 z-d-7">kernel</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">def</span><span class="z-l-6 z-d-7"> example</span><span>(</span><span>)</span><span>:</span></span>
+<span class="giallo-l"><span>    qs</span><span class="z-l-8 z-d-10"> =</span><span> sq</span><span>.</span><span>qalloc</span><span>(</span><span class="z-l-1 z-d-4">10</span><span>)</span></span>
+<span class="giallo-l"><span>    ms</span><span class="z-l-8 z-d-10"> =</span><span> sq</span><span>.</span><span>broadcast</span><span>.</span><span>measure</span><span>(</span><span>qs</span><span>)</span></span>
+<span class="giallo-l"><span>    sq</span><span>.</span><span>set_detector</span><span>(</span><span>[</span><span>ms</span><span>[</span><span class="z-l-8 z-d-10">-</span><span class="z-l-1 z-d-4">1</span><span>]</span><span>,</span><span> ms</span><span>[</span><span class="z-l-8 z-d-10">-</span><span class="z-l-1 z-d-4">2</span><span>]</span><span>]</span><span>,</span><span class="z-l-9 z-d-12"> coordinates</span><span class="z-l-8 z-d-10">=</span><span>[</span><span class="z-l-1 z-d-4">0</span><span>,</span><span class="z-l-1 z-d-4">0</span><span>]</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>SquinToStimPass</span><span>(</span><span class="z-l-9 z-d-12">dialects</span><span class="z-l-8 z-d-10">=</span><span>example</span><span>.</span><span>dialects</span><span>)</span><span>(</span><span>example</span><span>)</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">#</span><span class="z-l-5 z-d-3"> SquinToStimPass already has CSE applied inside of it, </span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">#</span><span class="z-l-5 z-d-3"> but I&#39;m doing it again outside for clarity.</span></span>
+<span class="giallo-l"><span>Walk</span><span>(</span><span>CommonSubexpressionElimination</span><span>(</span><span>)</span><span>)</span><span>.</span><span>rewrite</span><span>(</span><span>example</span><span>.</span><span>code</span><span>)</span></span></code></pre>
+<p>(With some <code>print</code> statements inside CSE rewrite rule for debugging), the <code>Info</code>-generated hash ends up being exactly the same for the <code>-1</code> and <code>-2</code> constant statements.</p>
+<p>How can it be the case that CSE behaves correctly this time though?</p>
+<p><code>Info</code> has one additional magic/”dunder” method that’s been explicitly implemented, which is <code>__eq__</code>. When two Python dictionary keys with identical hashes are encountered there’s a fallback to <code>__eq__</code><sup class="footnote-reference"><a href="#5">5</a></sup>. <code>__eq__</code> in <code>Info</code> explicitly looks at the equality between the same elements that went into producing the custom hash.</p>
+<p>Here it should be clear that <code>False</code> gets spit out between the <code>-1</code> and <code>-2</code> constant statements and CSE doesn’t touch anything.</p>
+<p>The <code>__eq__</code> implementation looks like this:</p>
+<pre class="giallo z-l-code z-d-code" ><code data-lang="python"><span class="giallo-l"><span class="z-l-8 z-d-10">def</span><span class="z-l-1 z-d-4"> __eq__</span><span>(</span><span>self</span><span>,</span><span> other</span><span>:</span><span class="z-l-1 z-d-4"> object</span><span>)</span><span> -&gt;</span><span class="z-l-1 z-d-4"> bool</span><span>:</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">	if</span><span class="z-l-8 z-d-10"> not</span><span class="z-l-1 z-d-4"> isinstance</span><span>(</span><span>other</span><span>,</span><span> Info</span><span>)</span><span>:</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		return</span><span class="z-l-1 z-d-4"> False</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">	return</span><span> (</span></span>
+<span class="giallo-l"><span class="z-l-1 z-d-4">		self</span><span>.</span><span>head</span><span class="z-l-8 z-d-10"> ==</span><span> other</span><span>.</span><span>head</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		and</span><span class="z-l-1 z-d-4"> self</span><span>.</span><span>args</span><span class="z-l-8 z-d-10"> ==</span><span> other</span><span>.</span><span>args</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">		#</span><span class="z-l-5 z-d-3"> attribute comparison immediately gives False with</span></span>
+<span class="giallo-l"><span class="z-l-5 z-d-3">		#</span><span class="z-l-5 z-d-3"> the ones in our program.</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		and</span><span class="z-l-1 z-d-4"> self</span><span>.</span><span>attributes</span><span class="z-l-8 z-d-10"> ==</span><span> other</span><span>.</span><span>attributes</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		and</span><span class="z-l-1 z-d-4"> self</span><span>.</span><span>successors</span><span class="z-l-8 z-d-10"> ==</span><span> other</span><span>.</span><span>successors</span></span>
+<span class="giallo-l"><span class="z-l-8 z-d-10">		and</span><span class="z-l-1 z-d-4"> self</span><span>.</span><span>regions</span><span class="z-l-8 z-d-10"> ==</span><span> other</span><span>.</span><span>regions</span></span>
+<span class="giallo-l"><span>	)</span></span></code></pre><h2 id="conclusion">Conclusion<a class="zola-anchor" href="#conclusion" aria-label="Anchor link for: conclusion" style="visibility: hidden;"></a>
+</h2>
+<p>If you’re as boggled as I am that <code>hash(-1) == hash(-2)</code> has just been a thing in Python, welcome to the club 😅</p>
+<p>While the process of writing this post was a lot of fun<sup class="footnote-reference"><a href="#6">6</a></sup> I’m certainly glad this is no longer an issue. I do admit feeling a bit of nostalgia seeing how much Kirin has grown and once again, I’m grateful to work on a team where things like this can be quickly hammered out.</p>
+<p>In the grander scheme of things this was also a humbling reminder to me that while current Quantum Computers are noisy and prone to error, even in the domain of classical computation there’s still plenty of problems to be found (:</p>
+<p><em>If you'd like to leave a comment or have a suggestion/concern, please feel free to reach out to me via my e-mail at: (my first name)z(first letter of my last name).dev@gmail.com</em></p>
+<details>
+<summary><span>Changelog</span></summary>
+<p>Mar 23, 2026</p>
+<ul>
+<li>Added additional note from talking with Phillip Weinberg on idiomatic C</li>
+<li>Make it clearer Kai-Hsin Wu and Xiu-Zhe (Roger) Luo also helped with finding the bug</li>
+<li>Added missing contact information</li>
+<li>Got rid of the first line of the post, kind of spoiled the conclusion :P</li>
+</ul>
+<p>Mar 24, 2026</p>
+<ul>
+<li>Fixed code example (incorrect kernel name)</li>
+<li>Fixed footnote on Bloqade SDK as a namespace package. Forgot to mention <code>bloqade-decoders</code> as source for other relevant eDSL.</li>
+</ul>
+</details>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>The Bloqade SDK is really a namespace package. The eDSLs I mention here mostly belong in the <code>bloqade-circuit</code> package that gets pulled in, although the ability to define detectors/observables comes from <code>bloqade-decoders</code>.</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>The program I cooked up here should be compatible with the latest version of <code>bloqade-circuit</code> (v0.13.1). The syntax here is actually slightly different from what I remember working with because back then tuples with constants (ex: <code>(1,5)</code>) were the way to go for coordinates. Now lists are preferred, especially considering they offer more flexibility for construction/manipulation.</p>
+</div>
+<div class="footnote-definition" id="3"><sup class="footnote-definition-label">3</sup>
+<p>I actually wonder if <a rel="nofollow noreferrer external" href="https://www.python.org/download/alternatives/">other Python implementations</a> have this behavior as well but I haven’t confirmed it.</p>
+</div>
+<div class="footnote-definition" id="4"><sup class="footnote-definition-label">4</sup>
+<p>The latest version of Kirin (v0.22.8 as of the time of writing this) has even more logic in CSE  but the core remains pretty much the same.</p>
+</div>
+<div class="footnote-definition" id="5"><sup class="footnote-definition-label">5</sup>
+<p><a rel="nofollow noreferrer external" href="https://hynek.me/articles/hashes-and-equality/">Hynek Schlawack’s</a> and <a rel="nofollow noreferrer external" href="https://eng.lyft.com/hashing-and-equality-in-python-2ea8c738fb9d">Roy Williams’</a> posts on the topic were especially helpful in understanding this behavior!</p>
+</div>
+<div class="footnote-definition" id="6"><sup class="footnote-definition-label">6</sup>
+<p>Ha! You thought I was going to refute that in this footnote, but no (: It was however, also a decent amount of work. I wasn’t the most familiar with the <code>__eq__</code> fallback behavior before writing this and caught onto it with the two blog posts above as well as help from an embedded <code>print(f"eq invoked on {obj} against {self}")</code> statement.</p>
+</div>
+
+      </article>
+
+      
+      
+
+      
+      
+    </div>
+
+    
+
+  
+  
+
+<footer>
+  <div class="left">
+    <div class="copyright">
+      © 2026 John Long
+      
+      <span>|</span>
+      Built with <a href="https://www.getzola.org" rel="noreferrer" target="_blank">zola</a> and <a href="https://github.com/isunjn/serene" rel="noreferrer" target="_blank">serene</a>
+      
+    </div>
+  </div>
+
+  <div class="right">
+    
+    <a id="rss-btn" href="https://johnzl.com/posts/feed.xml">RSS</a>
+    
+
+    
+    
+    
+    <button id="theme-toggle" aria-label="theme switch">
+      <span class="moon-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z" fill="currentColor"></path></svg>
+</span>
+      <span class="sun-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z" fill="currentColor"></path></svg>
+</span>
+    </button>
+    
+  </div>
+</footer>
+
+
+
+<dialog id="rss-mask">
+  <div>
+    <a href="https://johnzl.com/posts/feed.xml">https://johnzl.com/posts/feed.xml</a>
+    
+    
+    <button autofocus aria-label="copy" data-link="https://johnzl.com/posts/feed.xml" data-copy-icon="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+" data-check-icon="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;&lt;path d=&quot;M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+" >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z" fill="currentColor"></path></svg>
+
+    </button>
+  </div>
+</dialog>
+
+
+  </main>
+</div>
+
+  
+<script src="/js/lightense.min.js"></script>
+
+
+
+  <script src="https://johnzl.com/js/main.js"></script>
+</body>
+
+</html>

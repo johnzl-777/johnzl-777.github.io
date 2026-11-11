@@ -1,0 +1,42 @@
+layout = "row"
+flow = "stack"
+
+[[item]]
+title = "Quantum Computing at Davis"
+subtitle = "0.5 to Neutral Atoms"
+badge = "Oct 2026"
+
+[[item]]
+title = "Quantum Computing Now podcast"
+link = "https://creators.spotify.com/pod/profile/quantumcomputingnow/episodes/Compilers--Compilers--Compilers--with-John-Long-QuEra-e3ov367"
+subtitle = "Compilers, Compilers, Compilers!"
+badge = "Sep 2026"
+
+[[item]]
+title = "Beaver Works Summer Institute @ MIT"
+link = "https://bwsi.mit.edu/"
+subtitle = "Parallels in the Stack for Quantum and Classical Computation"
+badge = "Jul 2026"
+
+[[item]]
+title = "Quantum Computing at Davis"
+link = "https://quist.ucdavis.edu/events/qcad-seminar-john-long-quera"
+subtitle = "Building Software for Neutral Atom Quantum Computers"
+badge = "Nov 2023"
+
+[[item]]
+title = "Laguna Creek High School"
+subtitle = "(Quantum) Software Engineering as a Career"
+badge = "Feb 2023"
+
+[[item]]
+title = "Q-munity Hack-Q-Thon"
+link = "https://youtu.be/e4WHN3Gd3Mk?si=k7O_9qSF6A0MeaYG"
+subtitle = "New Perspectives on Quantum Annealing"
+badge = "May 2022"
+
+[[item]]
+title = "ExpoLab at UC Davis"
+link = "https://www.youtube.com/watch?v=itJl0T2l81E"
+subtitle = "How Ethereum Works"
+badge = "Oct 2020"
