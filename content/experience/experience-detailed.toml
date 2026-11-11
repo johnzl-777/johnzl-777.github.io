@@ -3,7 +3,7 @@ layout = "card"
 [[item]]
 title = "HPE Labs"
 location = "Roseville, CA"
-link = "https://www.hpe.com/us/en/hpe-labs.html"
+link = "https://www.hpe.com/us/en/hpe-labs/quantum-computing.html"
 badge = "November 2026 - Present"
 subtitle = "Senior Research Engineer"
 
