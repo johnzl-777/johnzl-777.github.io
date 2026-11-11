@@ -1,6 +1,13 @@
 layout = "card"
 
 [[item]]
+title = "HPE Labs"
+location = "Roseville, CA"
+link = "https://www.hpe.com/us/en/hpe-labs.html"
+badge = "November 2026 - Present"
+subtitle = "Senior Research Engineer"
+
+[[item]]
 title = "QuEra Computing Inc."
 location = "Boston, MA"
 link = "https://github.com/QuEraComputing"

@@ -2,6 +2,12 @@ layout = "row"
 flow = "stack"
 
 [[item]]
+title = "HPE Labs"
+link = "https://www.hpe.com/us/en/hpe-labs.html"
+subtitle = "Senior Research Engineer"
+badge = "Nov 2026 - Present"
+
+[[item]]
 title = "QuEra Computing Inc"
 link = "https://github.com/QuEraComputing"
 subtitle = "Scientific Software Engineer"
